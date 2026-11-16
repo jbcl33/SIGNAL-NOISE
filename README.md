@@ -36,3 +36,5 @@ python -m http.server 8000 --directory _site
 ## 制作与手机通知
 
 见 [OPERATIONS.md](OPERATIONS.md)。`data/publications.json` 登记独立分刊，构建后首页生成阅读入口，并输出线上 `publications.json` 供通知任务核实本期是否可读。制作和提醒是独立任务，首次定时生产尚需实际运行验证。
+
+2026-11-17 最新修订：独立晨刊使用完整杂志刊封面；音乐改为六张乐评电子精选，用户分/媒体分、原始分制、样本数、核查日期与来源在 `static/morning/001/music-selection.json` 记录。RYM 实时评分无法读取，本期未虚构 RYM 评分，展示核实的 AOTY 分数并保留确认的 RYM 专辑入口。其余栏目保留。
