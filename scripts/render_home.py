@@ -8,7 +8,7 @@ def render_home(root,out,published):
         p=next((p for p in published if p['edition']==key),None)
         links.append('<a href="'+e(p['path'])+'"><span>'+en+'</span>'+zh+' ↗</a>' if p else '<div class="unavailable"><span>'+en+'</span>'+zh+' · 待刊</div>')
     last='<a href="'+e(latest['path'])+'">最近更新 / '+e(latest['date'])+' / '+e(latest['title'])+' ↗</a>'
-    s=(root/'scripts/home.template.html').read_text().replace('{{LATEST_DATE}}',e(latest['date'].replace('-','.'))).replace('{{EDITION_LINKS}}',''.join(links)).replace('{{LATEST_LINK}}',last)
+    s=(root/'scripts/home.template.html').read_text().replace('{{LATEST_DATE}}',e(latest['date'].replace('-','.'))).replace('{{EDITION_LINKS}}',''.join(links)).replace('{{LATEST_LINK}}',last).replace('{{LATEST_PATH}}',e(latest['path']))
     # Keep the entry page self-contained: mobile networks must not be able to
     # load the markup while leaving the entire theme/animation behind.
     css=(root/'assets/home.css').read_text()
