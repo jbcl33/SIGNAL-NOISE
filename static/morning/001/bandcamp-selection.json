@@ -1,0 +1,116 @@
+{
+  "checkedDate": "2026-11-17",
+  "note": "No public score dashboard. Source summaries are paraphrased, with original Bandcamp links.",
+  "albums": [
+    {
+      "artist": "Starving Weirdos",
+      "title": "Squall Line",
+      "date": "2026-11-13",
+      "url": "https://discrepant.bandcamp.com/album/squall-line",
+      "image": "assets/album-1.webp",
+      "genre": "Drone / Experimental / Ambient",
+      "aboutSummary": "厂牌介绍以人声、小提琴、长笛与合成器、效果器和田野录音交织。Brian Pyle 与 Merrick McKinlay 的双人声音实践，是从地下电子走向电声与长音的一条入口。",
+      "discoveredFrom": null,
+      "checkedDate": "2026-11-17"
+    },
+    {
+      "artist": "Mucoid",
+      "title": "Flat Earth",
+      "date": "2026-11-15",
+      "url": "https://mucoid.bandcamp.com/album/flat-earth",
+      "image": "assets/album-2.webp",
+      "genre": "Glitch / IDM / Granular",
+      "aboutSummary": "作者用 Orbit FM 颗粒采样软件制作：样本在界面里成为“行星”，用接触触发声音片段。发行页说明声音与图像由人制作，软件由人指导、代码工具辅助完成。",
+      "discoveredFrom": null,
+      "checkedDate": "2026-11-17"
+    },
+    {
+      "artist": "blonie",
+      "title": "Toneworks",
+      "date": "2026-11-12",
+      "url": "https://blonie.bandcamp.com/album/toneworks",
+      "image": "assets/album-3.webp",
+      "genre": "Braindance / Experimental Electronic",
+      "aboutSummary": "发行页未填写独立的 About 长介绍。保留原始曲目与试听入口，让作品本身说话；不把编辑的风格判断冒充作者自述。",
+      "discoveredFrom": null,
+      "checkedDate": "2026-11-17"
+    },
+    {
+      "artist": "Lastboss",
+      "title": "Coaxial",
+      "date": "2026-11-06",
+      "url": "https://etherealprojector.bandcamp.com/album/coaxial",
+      "image": "assets/album-4.webp",
+      "genre": "Breakcore / IDM / Drum & Bass",
+      "aboutSummary": "厂牌将作品置于 Breakcore、IDM、Drum & Bass、环境声与噪声的交汇处，着重描述断裂节奏、细小结构和紧张的氛围层。",
+      "discoveredFrom": null,
+      "checkedDate": "2026-11-17"
+    },
+    {
+      "artist": "KCR1",
+      "title": "EXTRAXXION",
+      "date": "2026-11-12",
+      "url": "https://kcr1.bandcamp.com/album/extraxxion-2",
+      "image": "assets/album-5.webp",
+      "genre": "Bass / Dub / Gqom",
+      "aboutSummary": "委内瑞拉音乐人 Magú 的 KCR1 首张个人专辑；发行文案把舞动、愤怒、节奏与记忆并置。可以沿他的多项目背景继续寻找拉丁美洲地下声音。",
+      "discoveredFrom": null,
+      "checkedDate": "2026-11-17"
+    },
+    {
+      "artist": "Ruhta",
+      "title": "Syncretism",
+      "date": "2026-11-13",
+      "url": "https://ruhta.bandcamp.com/album/syncretism",
+      "image": "assets/album-6.webp",
+      "genre": "Deconstructed Club / Bass",
+      "aboutSummary": "Ruhta 以新身份发布的七曲首专，发行介绍列出 Leftfield Bass、解构俱乐部与 Dub，并结合说唱和 Post-Trap；主题围绕节奏、恍惚与意识状态。",
+      "discoveredFrom": null,
+      "checkedDate": "2026-11-17"
+    },
+    {
+      "artist": "Various Artists",
+      "title": "160 Unity Volume 1",
+      "date": "2026-11-13",
+      "url": "https://160unity.bandcamp.com/album/160-unity-volume-1",
+      "image": "assets/album-7.webp",
+      "genre": "Footwork / Club",
+      "aboutSummary": "厂牌将 17 首芝加哥 Footwork 与高速俱乐部曲目首次压制成黑胶。发行页特别注明仅售黑胶、没有数字下载，购买前请确认格式；此处不是数字专辑下载推荐。",
+      "discoveredFrom": null,
+      "checkedDate": "2026-11-17"
+    },
+    {
+      "artist": "heavensouls",
+      "title": "“cantu” of the sower",
+      "date": "2026-10-07",
+      "url": "https://officialauthks.bandcamp.com/album/cantu-of-the-sower",
+      "image": "assets/review-album-1.webp",
+      "genre": "IDM / Glitch / Electronic",
+      "aboutSummary": "发行页列出多位合作音乐人的吉他、萨克斯、和声与部分制作贡献，是理解这张电子拼贴作品的具体入口。由 Pitchfork / Fantano 乐评发现，再回到作者页面听完整作品。",
+      "discoveredFrom": "https://pitchfork.com/reviews/albums/heavensouls-cantu-of-the-sower-ep/",
+      "checkedDate": "2026-11-17"
+    },
+    {
+      "artist": "Clark",
+      "title": "Steep Stims II",
+      "date": "2026-10-23",
+      "url": "https://clark.bandcamp.com/album/steep-stims-ii",
+      "image": "assets/discovery-8.webp",
+      "genre": "Braindance / Techno / Experimental",
+      "aboutSummary": "Bandcamp 介绍将 Modal、Opponent 与 Entity Stims 系列重新汇入本专辑，包含改写的动机、现场即兴和档案材料；Access Virus 合成器也是这一阶段的制作线索。",
+      "discoveredFrom": "https://igloomag.com/reviews/clark-steep-stims-ii-throttle",
+      "checkedDate": "2026-11-17"
+    },
+    {
+      "artist": "Tangent",
+      "title": "Disclosure",
+      "date": "2026-10-16",
+      "url": "https://tangentnl.bandcamp.com/album/disclosure",
+      "image": "assets/discovery-9.webp",
+      "genre": "IDM / Modular / Ambient",
+      "aboutSummary": "Tangent 在三年间歇后回归：发行介绍强调模块合成、模拟质感、温暖而有触感的声部，与其一贯阴影感的合成器空间和精细 IDM 节奏结合。",
+      "discoveredFrom": "https://igloomag.com/reviews/tangent-disclosure-n5md",
+      "checkedDate": "2026-11-17"
+    }
+  ]
+}

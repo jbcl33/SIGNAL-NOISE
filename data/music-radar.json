@@ -1,0 +1,517 @@
+{
+  "schemaVersion": 1,
+  "collectedAt": "2026-11-16T19:20:49.185897+00:00",
+  "note": "RSS titles/dates/categories only; discovery candidates are not scored recommendations. Failed feeds retain visibly dated previous entries.",
+  "sources": [
+    {
+      "id": "pitchfork",
+      "name": "Pitchfork",
+      "url": "https://pitchfork.com/",
+      "feed": "https://pitchfork.com/feed/feed-album-reviews/rss",
+      "focus": "专业乐评 / Experimental / Electronic",
+      "checkedAt": "2026-11-16T19:20:49.185897+00:00",
+      "status": "ok",
+      "lastSuccessAt": "2026-11-16T19:20:49.185897+00:00",
+      "entries": [
+        {
+          "title": "Trouble Mountain",
+          "url": "https://pitchfork.com/reviews/albums/aesop-rock-blockhead-trouble-mountain/",
+          "publishedAt": "2026-11-16T05:03:00+00:00",
+          "categories": [
+            "Reviews / Albums"
+          ],
+          "status": "discovery-only",
+          "score": null
+        },
+        {
+          "title": "Music for Empty Stadiums",
+          "url": "https://pitchfork.com/reviews/albums/or-music-for-empty-stadiums/",
+          "publishedAt": "2026-11-16T05:01:00+00:00",
+          "categories": [
+            "Reviews / Albums"
+          ],
+          "status": "discovery-only",
+          "score": null
+        },
+        {
+          "title": "Advanced White Trash",
+          "url": "https://pitchfork.com/reviews/albums/sam-gendel-advanced-white-trash/",
+          "publishedAt": "2026-11-16T05:01:00+00:00",
+          "categories": [
+            "Reviews / Albums"
+          ],
+          "status": "discovery-only",
+          "score": null
+        },
+        {
+          "title": "Saints in the Wethouse",
+          "url": "https://pitchfork.com/reviews/albums/blackhaine-saints-in-the-wethouse/",
+          "publishedAt": "2026-11-16T05:00:00+00:00",
+          "categories": [
+            "Reviews / Albums"
+          ],
+          "status": "discovery-only",
+          "score": null
+        },
+        {
+          "title": "Yield",
+          "url": "https://pitchfork.com/reviews/albums/pearl-jam-yield/",
+          "publishedAt": "2026-11-15T05:00:00+00:00",
+          "categories": [
+            "Reviews / Albums"
+          ],
+          "status": "discovery-only",
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "needle-drop",
+      "name": "Fantano / The Needle Drop",
+      "url": "https://theneedledrop.com/",
+      "feed": "https://theneedledrop.com/rss/",
+      "focus": "视频乐评 / 个人评分",
+      "checkedAt": "2026-11-16T19:20:49.185897+00:00",
+      "status": "ok",
+      "lastSuccessAt": "2026-11-16T19:20:49.185897+00:00",
+      "entries": [
+        {
+          "title": "Twisted Teens - The Holy Cross Tigers",
+          "url": "https://theneedledrop.com/album-reviews/twisted-teens-the-holy-cross-tigers-album-review-heznib1gum8/",
+          "publishedAt": "2026-11-16T14:04:37+00:00",
+          "categories": [
+            "Album Reviews",
+            "Edited by Isaiah",
+            "twisted teens",
+            "7/10",
+            "country punk",
+            "garage rock"
+          ],
+          "status": "discovery-only",
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "igloo",
+      "name": "Igloo Magazine",
+      "url": "https://igloomag.com/",
+      "feed": "https://igloomag.com/feed",
+      "focus": "IDM / Glitch / Braindance / 地下电子",
+      "checkedAt": "2026-11-16T19:20:49.185897+00:00",
+      "status": "ok",
+      "lastSuccessAt": "2026-11-16T19:20:49.185897+00:00",
+      "entries": [
+        {
+          "title": "Solypsis :: Invisible Ticks (Component)",
+          "url": "https://igloomag.com/reviews/solypsis-invisible-ticks-component",
+          "publishedAt": "2026-11-15T22:07:38+00:00",
+          "categories": [
+            "Headlines",
+            "Reviews",
+            "Abstract",
+            "Breakbeat",
+            "Breakcore",
+            "Breaks",
+            "Component",
+            "Electronics",
+            "Experimental",
+            "Glitch",
+            "IDM",
+            "Industrial IDM",
+            "James Miller",
+            "Noise",
+            "Solypsis",
+            "Techno"
+          ],
+          "status": "discovery-only",
+          "score": null
+        },
+        {
+          "title": "Arthur Hnatek :: Undertow EP (Hessle Audio)",
+          "url": "https://igloomag.com/reviews/arthur-hnatek-undertow-hessle-audio",
+          "publishedAt": "2026-11-15T21:24:58+00:00",
+          "categories": [
+            "Headlines",
+            "Reviews",
+            "Abstract",
+            "Arthur Hnatek",
+            "Barker and Stenny",
+            "Bass",
+            "Braindance",
+            "Breakbeat",
+            "Breaks",
+            "Drums",
+            "Electronics",
+            "Experimental",
+            "Experimental Jazz",
+            "Glitch",
+            "Hessle Audio",
+            "IDM",
+            "Jonathan Labusch",
+            "Jungle",
+            "Manu Egger",
+            "Nadine Nützi",
+            "Scape Mastering",
+            "Stefan Betke",
+            "Techno"
+          ],
+          "status": "discovery-only",
+          "score": null
+        },
+        {
+          "title": "FAX :: Afar EP (Highpoint Lowlife)",
+          "url": "https://igloomag.com/reviews/fax-afar-highpoint-lowlife",
+          "publishedAt": "2026-11-15T18:01:41+00:00",
+          "categories": [
+            "Headlines",
+            "Reviews",
+            "Amati",
+            "Bass",
+            "Diahgonal",
+            "Dub",
+            "Electronics",
+            "Facade Electronics",
+            "Fax",
+            "Glitch",
+            "Highpoint Lowlife",
+            "IDM",
+            "Microsound",
+            "Minimal",
+            "Rubén A. Tamayo",
+            "Trash Panda QC"
+          ],
+          "status": "discovery-only",
+          "score": null
+        },
+        {
+          "title": "Marcin Lasek + rsn :: Plone/None (Mahorka)",
+          "url": "https://igloomag.com/reviews/marcin-lasek-rsn-plone-none-mahorka",
+          "publishedAt": "2026-11-15T17:38:48+00:00",
+          "categories": [
+            "Headlines",
+            "Reviews",
+            "Ambient",
+            "Drone",
+            "Electroacoustic",
+            "Experimental",
+            "Mahorka",
+            "Marcin Lasek",
+            "Rsn",
+            "Thomas Rosen"
+          ],
+          "status": "discovery-only",
+          "score": null
+        },
+        {
+          "title": "VOLNA :: THRESHOLD (Self Released)",
+          "url": "https://igloomag.com/reviews/volna-threshold",
+          "publishedAt": "2026-11-15T17:21:21+00:00",
+          "categories": [
+            "Headlines",
+            "Reviews",
+            "12k",
+            "Ambient",
+            "Andrey Fedoseev",
+            "Best of 2026",
+            "Cinematic",
+            "Drone",
+            "Experimental",
+            "Soundscape",
+            "Soundtrack",
+            "Taylor Deupree",
+            "Volna"
+          ],
+          "status": "discovery-only",
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "acl",
+      "name": "A Closer Listen",
+      "url": "https://acloserlisten.com/",
+      "feed": "https://acloserlisten.com/feed/",
+      "focus": "实验 / Ambient / Drone / 田野录音",
+      "checkedAt": "2026-11-16T19:20:49.185897+00:00",
+      "status": "ok",
+      "lastSuccessAt": "2026-11-16T19:20:49.185897+00:00",
+      "entries": [
+        {
+          "title": "Lucy Claire ~ With Child, Without",
+          "url": "https://acloserlisten.com/2026/11/16/lucy-claire-with-child-without/",
+          "publishedAt": "2026-11-16T00:01:48+00:00",
+          "categories": [
+            "Modern Composition",
+            "Bigo & Twigetti",
+            "Lucy Claire",
+            "Richard Allen",
+            "With Child Without"
+          ],
+          "status": "discovery-only",
+          "score": null
+        },
+        {
+          "title": "Ranges ~ If",
+          "url": "https://acloserlisten.com/2026/11/15/ranges-if/",
+          "publishedAt": "2026-11-15T00:01:05+00:00",
+          "categories": [
+            "Rock, Post-Rock, Folk & Jazz",
+            "A Thousand Arms",
+            "If",
+            "Ranges",
+            "Richard Allen"
+          ],
+          "status": "discovery-only",
+          "score": null
+        },
+        {
+          "title": "Ukrainian Field Notes LX",
+          "url": "https://acloserlisten.com/2026/11/14/ukrainian-field-notes-lx/",
+          "publishedAt": "2026-11-14T00:01:34+00:00",
+          "categories": [
+            "Featured Articles",
+            "58918012",
+            "Acid Division",
+            "Brainhack Musicbox",
+            "Музична Шкатулка",
+            "вже",
+            "неймовіра × нетрі",
+            "Eazyopoluse",
+            "gianmarco del re",
+            "Horizon Resonances",
+            "Iklañ",
+            "Lostlojic",
+            "Mires",
+            "NFNR",
+            "Otoy",
+            "Proletarskyi",
+            "Raavel",
+            "Renata Kazhan",
+            "Ship Her Son",
+            "Simple Pimple",
+            "Solimpulse",
+            "sominaryst",
+            "Vera Logdanidi",
+            "Yuliia Nidzelska"
+          ],
+          "status": "discovery-only",
+          "score": null
+        },
+        {
+          "title": "SLIKBACK X KMRU ~ ENEO",
+          "url": "https://acloserlisten.com/2026/11/13/slikback-x-kmru-eneo/",
+          "publishedAt": "2026-11-13T00:01:32+00:00",
+          "categories": [
+            "Electronic",
+            "kmru",
+            "Slikback"
+          ],
+          "status": "discovery-only",
+          "score": null
+        },
+        {
+          "title": "Ralph Chbeir ~ Brief Encounters / Familiar Grounds",
+          "url": "https://acloserlisten.com/2026/11/12/ralph-chbeir-brief-encounters/",
+          "publishedAt": "2026-11-12T00:01:03+00:00",
+          "categories": [
+            "Ambient",
+            "gianmarco del re",
+            "Ralph Chbeir"
+          ],
+          "status": "discovery-only",
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "hc",
+      "name": "Headphone Commute",
+      "url": "https://headphonecommute.com/",
+      "feed": "https://headphonecommute.com/feed/",
+      "focus": "Ambient / 电声 / 艺术家访谈",
+      "checkedAt": "2026-11-16T19:20:49.185897+00:00",
+      "status": "ok",
+      "lastSuccessAt": "2026-11-16T19:20:49.185897+00:00",
+      "entries": [
+        {
+          "title": "Featured Artist: Arovane",
+          "url": "https://headphonecommute.com/2026/11/02/featured-artist-arovane/",
+          "publishedAt": "2026-11-02T17:36:38+00:00",
+          "categories": [
+            "Headphone Community"
+          ],
+          "status": "discovery-only",
+          "score": null
+        },
+        {
+          "title": "Headphone Commute Radar",
+          "url": "https://headphonecommute.com/2026/10/25/headphone-commute-radar/",
+          "publishedAt": "2026-10-25T04:37:27+00:00",
+          "categories": [
+            "Out Today"
+          ],
+          "status": "discovery-only",
+          "score": null
+        },
+        {
+          "title": "Interview with ASC",
+          "url": "https://headphonecommute.com/2026/10/04/interview-with-asc/",
+          "publishedAt": "2026-10-04T04:40:55+00:00",
+          "categories": [
+            "Artist Interviews"
+          ],
+          "status": "discovery-only",
+          "score": null
+        },
+        {
+          "title": "Benoît Pioulard – Stanza IV",
+          "url": "https://headphonecommute.com/2026/09/10/benoit-pioulard-stanza-iv/",
+          "publishedAt": "2026-09-10T04:47:38+00:00",
+          "categories": [
+            "Albums",
+            "Headphone Community"
+          ],
+          "status": "discovery-only",
+          "score": null
+        },
+        {
+          "title": "Benoît Pioulard – Noyaux",
+          "url": "https://headphonecommute.com/2026/08/22/benoit-pioulard-noyaux/",
+          "publishedAt": "2026-08-22T09:12:30+00:00",
+          "categories": [
+            "EPs",
+            "Reviews"
+          ],
+          "status": "discovery-only",
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "quietus",
+      "name": "The Quietus",
+      "url": "https://thequietus.com/reviews/",
+      "feed": "https://thequietus.com/feed/",
+      "focus": "独立地下 / Experimental / Electronic",
+      "checkedAt": "2026-11-16T19:20:49.185897+00:00",
+      "status": "ok",
+      "lastSuccessAt": "2026-11-16T19:20:49.185897+00:00",
+      "entries": [
+        {
+          "title": "The Body & Cel Genesis – Whole Wide World",
+          "url": "https://thequietus.com/quietus-reviews/the-body-cel-genesis-whole-wide-world-review/",
+          "publishedAt": "2026-11-16T10:42:29+00:00",
+          "categories": [
+            "Reviews"
+          ],
+          "status": "discovery-only",
+          "score": null
+        },
+        {
+          "title": "Tara Cunningham – Warm Ground",
+          "url": "https://thequietus.com/quietus-reviews/tara-cunningham-warm-ground-review/",
+          "publishedAt": "2026-11-13T06:00:00+00:00",
+          "categories": [
+            "Reviews"
+          ],
+          "status": "discovery-only",
+          "score": null
+        },
+        {
+          "title": "Spydergum – Spydergum",
+          "url": "https://thequietus.com/quietus-reviews/spydergum-spydergum-review/",
+          "publishedAt": "2026-11-12T09:48:16+00:00",
+          "categories": [
+            "Reviews"
+          ],
+          "status": "discovery-only",
+          "score": null
+        },
+        {
+          "title": "Paint it Black: Saints in The Wethouse by Blackhaine",
+          "url": "https://thequietus.com/quietus-reviews/album-of-the-week/blackhaine-saints-in-the-wethouse-review/",
+          "publishedAt": "2026-11-12T06:00:00+00:00",
+          "categories": [
+            "Album of the Week"
+          ],
+          "status": "discovery-only",
+          "score": null
+        },
+        {
+          "title": "Coil – Gold is the Metal (with the Broadest Shoulders)",
+          "url": "https://thequietus.com/quietus-reviews/coil/",
+          "publishedAt": "2026-11-11T08:30:00+00:00",
+          "categories": [
+            "Reviews"
+          ],
+          "status": "discovery-only",
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "inverted",
+      "name": "Inverted Audio",
+      "url": "https://inverted-audio.com/",
+      "feed": "https://inverted-audio.com/feed/",
+      "focus": "地下舞曲 / 厂牌 / 制作人",
+      "checkedAt": "2026-11-16T19:20:49.185897+00:00",
+      "status": "ok",
+      "lastSuccessAt": "2026-11-16T19:20:49.185897+00:00",
+      "entries": [
+        {
+          "title": "Florian Kupfer launches Lifetrax imprint with reissue of his L.I.E.S. debut",
+          "url": "https://inverted-audio.com/florian-kupfer-lifetrax/",
+          "publishedAt": "2026-11-11T11:28:38+00:00",
+          "categories": [
+            "News"
+          ],
+          "status": "discovery-only",
+          "score": null
+        },
+        {
+          "title": "Ben Kaczor returns to St. Odes with fourth solo album Organ Romance",
+          "url": "https://inverted-audio.com/ben-kaczor-organ-romance/",
+          "publishedAt": "2026-11-10T12:01:47+00:00",
+          "categories": [
+            "Display in homepage slider",
+            "News"
+          ],
+          "status": "discovery-only",
+          "score": null
+        },
+        {
+          "title": "Inverted Audio In-Store: fka boursin (Scissor and Thread)",
+          "url": "https://inverted-audio.com/fka-boursin-in-store/",
+          "publishedAt": "2026-11-06T17:09:48+00:00",
+          "categories": [
+            "Event"
+          ],
+          "status": "discovery-only",
+          "score": null
+        },
+        {
+          "title": "Premiere: Masaka Masaka – Say",
+          "url": "https://inverted-audio.com/premiere-masaka-masaka-say/",
+          "publishedAt": "2026-10-28T17:13:01+00:00",
+          "categories": [
+            "Premiere"
+          ],
+          "status": "discovery-only",
+          "score": null
+        },
+        {
+          "title": "Listen back to Inverted Audio with DJ Antepop at Café 1001",
+          "url": "https://inverted-audio.com/dj-antepop-cafe-1001-october-2026/",
+          "publishedAt": "2026-10-26T12:11:34+00:00",
+          "categories": [
+            "Display in homepage slider"
+          ],
+          "status": "discovery-only",
+          "score": null
+        }
+      ]
+    }
+  ]
+}

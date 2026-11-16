@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "id": "pitchfork",
+      "name": "Pitchfork",
+      "url": "https://pitchfork.com/",
+      "feed": "https://pitchfork.com/feed/feed-album-reviews/rss",
+      "focus": "专业乐评 / Experimental / Electronic"
+    },
+    {
+      "id": "needle-drop",
+      "name": "Fantano / The Needle Drop",
+      "url": "https://theneedledrop.com/",
+      "feed": "https://theneedledrop.com/rss/",
+      "focus": "视频乐评 / 个人评分"
+    },
+    {
+      "id": "igloo",
+      "name": "Igloo Magazine",
+      "url": "https://igloomag.com/",
+      "feed": "https://igloomag.com/feed",
+      "focus": "IDM / Glitch / Braindance / 地下电子"
+    },
+    {
+      "id": "acl",
+      "name": "A Closer Listen",
+      "url": "https://acloserlisten.com/",
+      "feed": "https://acloserlisten.com/feed/",
+      "focus": "实验 / Ambient / Drone / 田野录音"
+    },
+    {
+      "id": "hc",
+      "name": "Headphone Commute",
+      "url": "https://headphonecommute.com/",
+      "feed": "https://headphonecommute.com/feed/",
+      "focus": "Ambient / 电声 / 艺术家访谈"
+    },
+    {
+      "id": "quietus",
+      "name": "The Quietus",
+      "url": "https://thequietus.com/reviews/",
+      "feed": "https://thequietus.com/feed/",
+      "focus": "独立地下 / Experimental / Electronic"
+    },
+    {
+      "id": "inverted",
+      "name": "Inverted Audio",
+      "url": "https://inverted-audio.com/",
+      "feed": "https://inverted-audio.com/feed/",
+      "focus": "地下舞曲 / 厂牌 / 制作人"
+    }
+  ]
+}

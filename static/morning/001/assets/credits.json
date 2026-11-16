@@ -106,5 +106,19 @@
   {
     "file": "cover-v3.webp",
     "source": "Original AI-assisted complete magazine cover; conceptual silicon illustration, not a real die photograph."
+  },
+  {
+    "file": "frequency.svg",
+    "source": "Original programmatic vector signal-field illustration for SIGNAL / NOISE; HTML/CSS magazine identity."
+  },
+  {
+    "file": "discovery-8.webp",
+    "source": "https://clark.bandcamp.com/album/steep-stims-ii",
+    "image": "https://f4.bcbits.com/img/a1037621716_5.jpg"
+  },
+  {
+    "file": "discovery-9.webp",
+    "source": "https://tangentnl.bandcamp.com/album/disclosure",
+    "image": "https://f4.bcbits.com/img/a1934645762_5.jpg"
   }
 ]

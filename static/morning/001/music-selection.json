@@ -22,7 +22,25 @@
       "reviewUrl": "https://www.albumoftheyear.org/album/1885198-heavensouls-cantu-of-the-sower.php",
       "checkedDate": "2026-11-17",
       "scoreScale": 100,
-      "bandcampId": 2776417967
+      "bandcampId": 2776417967,
+      "individualReviews": [
+        {
+          "source": "Pitchfork",
+          "score": 8.2,
+          "scale": 10,
+          "url": "https://pitchfork.com/reviews/albums/heavensouls-cantu-of-the-sower-ep/",
+          "evidence": "Original embedded rating.score; Best New Music",
+          "checkedDate": "2026-11-17"
+        },
+        {
+          "source": "The Needle Drop / Anthony Fantano",
+          "score": 8,
+          "scale": 10,
+          "url": "https://theneedledrop.com/album-reviews/heavensouls-cantu-of-the-sower-album-review-z88g-jkrf78/",
+          "evidence": "Original transcript: decent eight",
+          "checkedDate": "2026-11-17"
+        }
+      ]
     },
     {
       "artist": "Boards of Canada",

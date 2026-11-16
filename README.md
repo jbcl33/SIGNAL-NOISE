@@ -38,3 +38,9 @@ python -m http.server 8000 --directory _site
 见 [OPERATIONS.md](OPERATIONS.md)。`data/publications.json` 登记独立分刊，构建后首页生成阅读入口，并输出线上 `publications.json` 供通知任务核实本期是否可读。制作和提醒是独立任务，首次定时生产尚需实际运行验证。
 
 2026-11-17 最新修订：独立晨刊使用完整杂志刊封面；音乐改为六张乐评电子精选，用户分/媒体分、原始分制、样本数、核查日期与来源在 `static/morning/001/music-selection.json` 记录。RYM 实时评分无法读取，本期未虚构 RYM 评分，展示核实的 AOTY 分数并保留确认的 RYM 专辑入口。其余栏目保留。
+
+## 乐评采集与发现
+
+`python scripts/collect_music_sources.py` 采集七个音乐媒体/独立博客的公开 RSS 元数据（每站最多5条，限制响应体、超时、并发，失败保留历史记录并标注）。采集结果仅供内部选题，页面不提供评分系统或独立雷达入口。原文评分与证据独立存储，不从标题或 RSS 自动推测评分；目前已有 Pitchfork 8.2/10 和 Fantano 8/10 的原始来源核实示例。
+
+最新视觉以纯白、黑字、荧光绿及原创波形 SVG 为准。音乐恢复10张 Bandcamp 发现（7张原小众推荐 + 3张媒体发现），附发行页中文简述；当前记录为 `static/morning/001/bandcamp-selection.json`。旧评分资料保留为历史来源，不作为页面评分面板。

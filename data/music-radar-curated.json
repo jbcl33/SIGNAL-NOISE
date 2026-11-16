@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "articles": [
+    {
+      "source": "pitchfork",
+      "title": "heavensouls — “cantu” of the sower",
+      "url": "https://pitchfork.com/reviews/albums/heavensouls-cantu-of-the-sower-ep/",
+      "date": "2026-10-26",
+      "kind": "乐评",
+      "note": "把它放进当代数字拼贴的讨论中，再与 Fantano 的意见对照。",
+      "score": 8.2,
+      "scale": 10,
+      "evidence": "原始网页内嵌 rating.score 字段，标题匹配；Best New Music",
+      "checkedDate": "2026-11-17"
+    },
+    {
+      "source": "needle-drop",
+      "title": "heavensouls — “cantu” of the sower",
+      "url": "https://theneedledrop.com/album-reviews/heavensouls-cantu-of-the-sower-album-review-z88g-jkrf78/",
+      "date": "2026-10-26",
+      "kind": "视频乐评 / 文字稿",
+      "note": "重点看他如何评价多风格展开与整体连贯性，而不只截取一个数字。",
+      "score": 8,
+      "scale": 10,
+      "evidence": "原站文字稿明确给出 decent eight；保留原始10分制",
+      "checkedDate": "2026-11-17"
+    },
+    {
+      "source": "igloo",
+      "title": "Clark — Steep Stims II",
+      "url": "https://igloomag.com/reviews/clark-steep-stims-ii-throttle",
+      "date": "2026-11-14",
+      "kind": "乐评",
+      "note": "从结构、合成器与碎拍的关系切入，适合沿 Braindance 与 IDM 继续找作品。",
+      "checkedDate": "2026-11-17"
+    },
+    {
+      "source": "igloo",
+      "title": "Tangent — Disclosure",
+      "url": "https://igloomag.com/reviews/tangent-disclosure-n5md",
+      "date": "2026-11-06",
+      "kind": "乐评",
+      "note": "n5MD 的一条发现线索；注意评论对音色变化的肯定，也保留其对熟悉套路的质疑。",
+      "checkedDate": "2026-11-17"
+    },
+    {
+      "source": "acl",
+      "title": "SLIKBACK × KMRU — ENEO",
+      "url": "https://acloserlisten.com/2026/11/13/slikback-x-kmru-eneo/",
+      "date": "2026-11-13",
+      "kind": "乐评",
+      "note": "把地下俱乐部和声音艺术放在同一张桌上，关注节奏与环境声如何互相改变。",
+      "checkedDate": "2026-11-17"
+    },
+    {
+      "source": "hc",
+      "title": "Interview with ASC",
+      "url": "https://headphonecommute.com/2026/10/04/interview-with-asc/",
+      "date": "2026-10-04",
+      "kind": "制作人访谈",
+      "note": "不只找专辑：从 Tracker、Renoise、发行经历与制作工作流理解音乐。",
+      "checkedDate": "2026-11-17"
+    },
+    {
+      "source": "inverted",
+      "title": "Ben Kaczor — Organ Romance",
+      "url": "https://inverted-audio.com/ben-kaczor-organ-romance/",
+      "date": "2026-11-10",
+      "kind": "发行报道",
+      "note": "作为地下厂牌发现入口；这是发行报道，不把它当作打分乐评。",
+      "checkedDate": "2026-11-17"
+    },
+    {
+      "source": "quietus",
+      "title": "The Body & Cel Genesis — Whole Wide World",
+      "url": "https://thequietus.com/quietus-reviews/the-body-cel-genesis-whole-wide-world-review/",
+      "date": "2026-11-16",
+      "kind": "乐评",
+      "note": "给工业、噪声与独立场景留位置，避免整份选刊只剩社区热门电子。",
+      "checkedDate": "2026-11-17"
+    }
+  ]
+}
