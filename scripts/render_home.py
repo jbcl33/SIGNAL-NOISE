@@ -1,33 +1,41 @@
-"""Render the text-first magazine index with inline CSS and no scripts."""
+"""Render a C-source magazine index; links remain native HTML anchors."""
 from html import escape as e
+import json
 
 
 def render_home(root, out, published):
     latest = published[0]
-    links = []
-    for number, (key, en, zh) in enumerate([
-        ('morning', 'MORNING', '晨刊'),
-        ('noon', 'OPEN CIRCUIT', '午刊'),
-        ('night', 'AFTER HOURS', '晚刊'),
-    ], start=1):
+    rows = []
+    latest_index = 0
+    for index, (key, zh) in enumerate([
+        ('morning', '晨刊'), ('noon', '午刊'), ('night', '晚刊'),
+    ]):
         item = next((p for p in published if p['edition'] == key), None)
-        label = '<span class="row-number" aria-hidden="true">0' + str(number) + '</span><span class="row-label"><span lang="en">' + en + '</span><span>' + zh + '</span></span>'
+        if item and item['path'] == latest['path']:
+            latest_index = index
+        path = e(json.dumps(item['path'], ensure_ascii=False)) if item else 'NULL'
+        rows.append('    { &quot;' + zh + '&quot;, ' + path + ' },' + (' <span class="comment">/* 待刊 */</span>' if not item else ''))
+    links = []
+    for index, (key, zh) in enumerate([('morning', '晨刊'), ('noon', '午刊'), ('night', '晚刊')]):
+        item = next((p for p in published if p['edition'] == key), None)
+        call = 'read_issue(&amp;issues[' + str(index) + ']);'
         if item:
-            links.append('<a href="' + e(item['path'], quote=True) + '">' + label + '<span class="row-status">阅读 ↗</span></a>')
+            links.append('    <a href="' + e(item['path'], quote=True) + '" aria-label="阅读' + zh + '">' + call + '</a> <span class="comment">// ' + zh + ' ↗</span>')
         else:
-            links.append('<span class="pending">' + label + '<span class="row-status">待刊</span></span>')
+            links.append('    <span class="comment">// ' + call + ' ' + zh + '待刊</span>')
+    # A lab publication can be the latest even though it is outside the three editions.
+    latest_pointer = '&issues[' + str(latest_index) + ']' if latest['edition'] in ('morning', 'noon', 'night') else '&latest_issue'
+    extra = '' if latest['edition'] in ('morning', 'noon', 'night') else 'const Issue latest_issue = { "工具实验室", ' + json.dumps(latest['path'], ensure_ascii=False) + ' };\n'
     values = {
-        'LATEST_ISSUE': latest['issue'],
-        'LATEST_DATE': latest['date'].replace('-', '.'),
-        'LATEST_ISO_DATE': latest['date'],
-        'LATEST_PATH': latest['path'],
-        'LATEST_TITLE': latest['title'],
-        'PUBLISHED_COUNT': str(len(published)).zfill(2),
+        'LATEST_ISSUE': latest['issue'], 'LATEST_DATE': latest['date'],
+        'LATEST_PATH': latest['path'], 'LATEST_TITLE': latest['title'],
+        'PUBLISHED_COUNT': str(len(published)), 'LATEST_POINTER': latest_pointer,
+        'EXTRA_LATEST': extra,
     }
     page = (root / 'scripts/home.template.html').read_text()
     for key, value in values.items():
         page = page.replace('{{' + key + '}}', e(value, quote=True))
-    page = page.replace('{{EDITION_LINKS}}', '\n'.join(links))
+    page = page.replace('{{ISSUE_ROWS}}', '\n'.join(rows)).replace('{{READ_CALLS}}', '\n'.join(links))
     css = (root / 'assets/home.css').read_text()
     assert '</style' not in css.lower()
     page = page.replace('<link rel="stylesheet" href="assets/home.css">', '<style>' + css + '</style>')

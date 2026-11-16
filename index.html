@@ -3,70 +3,79 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#eeede9">
-<meta name="description" content="SIGNAL / NOISE：硬件、源码与数字文化杂志。阅读晨刊、午刊、晚刊与历史归档。">
+<meta name="theme-color" content="#0c0c0c">
+<meta name="description" content="SIGNAL / NOISE：硬件、源码与数字文化。C语言风格的期刊索引。">
 <title>SIGNAL / NOISE — 信号与噪声</title>
-<style>:root{color-scheme:light;font-family:"SFMono-Regular",Consolas,"Liberation Mono","Noto Sans Mono CJK SC",monospace;color:#20201e;background:#eeede9;font-synthesis:none}
+<style>:root{color-scheme:dark;background:#0c0c0c;color:#e5e5e5;font-family:Consolas,"SFMono-Regular","Liberation Mono","Noto Sans Mono CJK SC",monospace;font-synthesis:none}
 *{box-sizing:border-box}
-body{margin:0;padding:38px 16px 55px}
-p,h1,h2{margin:0}
-.receipt{position:relative;max-width:460px;margin:auto;padding:30px 28px 32px;background:#fff;box-shadow:0 4px 22px #24201a0b}
-.receipt:after{content:"";position:absolute;left:0;right:0;bottom:-8px;height:8px;background:linear-gradient(135deg,#fff 25%,transparent 25%) -8px 0/16px 16px,linear-gradient(225deg,#fff 25%,transparent 25%) -8px 0/16px 16px;pointer-events:none}
-.receipt-top,.receipt-meta,.section-meta,.total{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
-.receipt-top{font-size:11px;letter-spacing:.03em}
-h1{font-size:36px;line-height:1.05;letter-spacing:-.075em;text-align:center;margin:29px 0 14px;white-space:nowrap;font-weight:900}
-.description{text-align:center;font-size:13px;letter-spacing:.08em}
-.receipt-meta{font-size:10px;margin-top:28px;padding-bottom:14px;line-height:1.5}
-nav{border-top:2px solid #292925;border-bottom:2px solid #292925;padding:4px 0}
-nav>a,nav>.pending{display:grid;grid-template-columns:20px minmax(0,1fr) auto;align-items:center;column-gap:12px;min-height:72px;padding:12px 0;border-bottom:1px dashed #aaa}
-nav>:last-child{border-bottom:0}
-a{color:inherit;text-decoration:none}
-.row-number{font-size:10px;align-self:start;padding-top:3px}
-.row-label{display:flex;flex-direction:column;gap:5px;font-size:15px;line-height:1.3}
-.row-label>span:last-child{font-size:12px}
-.row-status{font-size:12px;white-space:nowrap}
-nav a .row-status{text-decoration:underline;text-underline-offset:4px}
-.pending{color:#777}
-a:hover{background:#f5f5f1}
-a:focus-visible{outline:2px solid #111;outline-offset:4px}
-.latest{padding:21px 0;border-bottom:1px dashed #999}
-.section-meta{font-size:11px;margin-bottom:15px}
-h2{font-size:inherit;font-weight:400}
-.latest>a{display:block;font-size:15px;line-height:1.65;overflow-wrap:anywhere}
-.read-link{display:block;width:max-content;font-size:12px;margin-top:12px;border-bottom:1px solid #333}
-.total{font-size:12px;margin:19px 0 27px}
-.total strong{font-size:21px;font-weight:400}
-.barcode{height:39px;width:184px;max-width:100%;margin:0 auto 9px;background:repeating-linear-gradient(90deg,#222 0 2px,transparent 2px 4px,#222 4px 5px,transparent 5px 8px,#222 8px 12px,transparent 12px 14px,#222 14px 15px,transparent 15px 19px,#222 19px 22px,transparent 22px 26px);opacity:.85}
-.serial,.colophon{text-align:center;font-size:9px;letter-spacing:.06em;line-height:1.6}
-.colophon{margin-top:19px;font-size:10px;letter-spacing:.1em}
-@media(max-width:380px){body{padding:20px 12px 40px}.receipt{padding:26px 20px 28px}h1{font-size:29px}.receipt-meta{font-size:9px}.row-label{font-size:13px}.row-status{font-size:11px}nav>a,nav>.pending{column-gap:8px;grid-template-columns:16px minmax(0,1fr) auto}}
-@media print{body{background:#fff;padding:0}.receipt{box-shadow:none}.receipt:after{display:none}}
+body{margin:0}
+main{width:min(100%,720px);margin:auto;padding:34px 28px 38px}
+p,h1{margin:0}
+.prompt{font-size:12px;line-height:1.6;color:#aaa;overflow-wrap:anywhere}
+h1{font-size:clamp(26px,5.5vw,43px);letter-spacing:-.055em;line-height:1.1;margin:26px 0 12px;white-space:nowrap}
+h1 span{color:#aaa}
+.tagline{font-size:13px;letter-spacing:.08em;color:#bbb;margin-bottom:32px}
+.terminal-frame{position:relative;border:1px solid #b9b9b9;padding:24px 20px 21px}
+.terminal-frame:before,.terminal-frame:after{position:absolute;left:-1px;right:-1px;height:10px;line-height:10px;pointer-events:none;color:#ddd;font:14px/10px monospace;background:#0c0c0c;overflow:hidden;white-space:nowrap;letter-spacing:0}
+.terminal-frame:before{content:"┌───────────────────────────────────────────────────────────────────────────────────────────────┐";top:-5px}
+.terminal-frame:after{content:"└───────────────────────────────────────────────────────────────────────────────────────────────┘";bottom:-5px}
+.frame-caption{position:absolute;top:-9px;right:18px;z-index:1;background:#0c0c0c;padding:0 7px;font-size:12px;color:#bbb}
+pre{margin:0;white-space:pre-wrap;overflow-wrap:anywhere;tab-size:4;font-family:inherit;font-size:13px;line-height:1.85}
+code{font-family:inherit;font-size:13px;line-height:1.85}
+.comment{color:#a8a8a8}
+a{color:#fff;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px;display:inline-block;min-height:32px;padding:4px 0;vertical-align:baseline}
+a:hover{background:#e5e5e5;color:#0c0c0c}
+a:focus-visible{outline:1px dashed #fff;outline-offset:4px}
+footer{margin-top:22px}
+.latest-title{font-size:11px;line-height:1.8;color:#aaa;margin-bottom:18px;overflow-wrap:anywhere}
+.colophon{font-size:10px;line-height:1.8;color:#888;margin-top:27px}
+.cursor{color:#eee}
+@media(max-width:420px){main{padding:25px 16px 30px}.terminal-frame{padding:22px 12px 18px}code{font-size:11px;line-height:1.9}pre{font-size:11px}h1{font-size:29px}.prompt{font-size:11px}.tagline{font-size:12px}a{min-height:44px}}
+@media(max-width:340px){main{padding-inline:12px}.terminal-frame{padding-inline:9px}code{font-size:10px}h1{font-size:26px}}
+
+.frame-corners i,.frame-corners b{position:absolute;right:-1px;background:#0c0c0c;color:#ddd;font:14px/10px monospace;z-index:2;font-style:normal;font-weight:400;pointer-events:none}.frame-corners i{top:-5px}.frame-corners b{bottom:-5px}
 </style>
 </head>
 <body>
-<main class="receipt">
-<header>
-<p class="receipt-top"><span>信号与噪声</span><span>S/N — 001</span></p>
-<h1>SIGNAL / NOISE</h1>
-<p class="description">硬件 · 源码 · 数字文化</p>
-<p class="receipt-meta"><span>期刊索引 / ISSUE INDEX</span><time datetime="2026-11-17">2026.11.17</time></p>
-</header>
-<nav aria-label="期刊导航">
-<a href="morning/001/"><span class="row-number" aria-hidden="true">01</span><span class="row-label"><span lang="en">MORNING</span><span>晨刊</span></span><span class="row-status">阅读 ↗</span></a>
-<span class="pending"><span class="row-number" aria-hidden="true">02</span><span class="row-label"><span lang="en">OPEN CIRCUIT</span><span>午刊</span></span><span class="row-status">待刊</span></span>
-<span class="pending"><span class="row-number" aria-hidden="true">03</span><span class="row-label"><span lang="en">AFTER HOURS</span><span>晚刊</span></span><span class="row-status">待刊</span></span>
-<a href="archive.html"><span class="row-number" aria-hidden="true">04</span><span class="row-label"><span lang="en">ARCHIVE</span><span>历史归档</span></span><span class="row-status">查看 ↗</span></a>
-</nav>
-<section class="latest" aria-labelledby="latest-heading">
-<div class="section-meta"><h2 id="latest-heading">最近更新</h2><time datetime="2026-11-17">2026-11-17</time></div>
-<a href="morning/001/"><span>MORNING FREQUENCY · 晨刊 001</span><span class="read-link">阅读本期 ↗</span></a>
+<main>
+<header><p class="prompt">C:\SIGNAL-NOISE&gt; type index.c</p><h1>SIGNAL / NOISE<span aria-hidden="true">_</span></h1><p class="tagline">硬件 · 源码 · 数字文化</p></header>
+<section class="terminal-frame" aria-label="C语言期刊索引">
+<span class="frame-corners" aria-hidden="true"><i>┐</i><b>┘</b></span>
+<span class="frame-caption"> index.c </span>
+<pre><code><span class="comment">/* S/N — 001 / 期刊索引 */</span>
+#include &lt;stddef.h&gt;
+
+typedef struct {
+    const char *name;
+    const char *url;
+} Issue;
+
+const Issue issues[] = {
+    { &quot;晨刊&quot;, &quot;morning/001/&quot; },
+    { &quot;午刊&quot;, NULL }, <span class="comment">/* 待刊 */</span>
+    { &quot;晚刊&quot;, NULL }, <span class="comment">/* 待刊 */</span>
+};
+
+const size_t published = 1;
+const char updated[] = "2026-11-17";
+
+void read_issue(const Issue *issue);
+void open_archive(void);
+
+int main(void)
+{
+<span class="comment">    // 最新一期 ↗</span>
+    <a class="latest-link" href="morning/001/" aria-label="阅读最新一期">read_issue(&amp;issues[0]);</a>
+
+<span class="comment">    // 分刊导航：点击函数打开</span>
+    <a href="morning/001/" aria-label="阅读晨刊">read_issue(&amp;issues[0]);</a> <span class="comment">// 晨刊 ↗</span>
+    <span class="comment">// read_issue(&amp;issues[1]); 午刊待刊</span>
+    <span class="comment">// read_issue(&amp;issues[2]); 晚刊待刊</span>
+    <a class="archive-link" href="archive.html" aria-label="历史归档">open_archive();</a> <span class="comment">// 归档 ↗</span>
+    return 0;
+}</code></pre>
 </section>
-<footer>
-<div class="total"><span>已发布分刊 / ISSUES</span><strong>01</strong></div>
-<div class="barcode" aria-hidden="true"></div>
-<p class="serial">S/N · 2026-11-17 · 001</p>
-<p class="colophon" lang="en">CIRCUITS / SOUND / CODE</p>
-</footer>
+<footer><p class="latest-title">// MORNING FREQUENCY · 晨刊 001</p><p class="prompt">C:\SIGNAL-NOISE&gt; <span class="cursor" aria-hidden="true">_</span></p><p class="colophon">信号与噪声 / CIRCUITS · SOUND · CODE</p></footer>
 </main>
 </body>
 </html>
