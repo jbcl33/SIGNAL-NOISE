@@ -61,3 +61,9 @@ Pitchfork 普通文本视图可能出现 0.0 占位，不能当实际评分；�
 首页现为独立杂志门户：`scripts/home.template.html` + `assets/home.css` + `assets/home.js`，由 `scripts/render_home.py` 渲染。保留原整期页面 `issues/001.html`，不再用整期内容覆盖根首页。新分刊登记到data/publications.json后会自动出现在首页。技术选读是已发布001的固定编辑入口，如需更新必须同步图片、文字和目标链接，不能仅换成最新分刊URL。
 
 首页汇编为RISC-V风格的视觉状态演示，不是真实CPU仿真器。PC、寄存器和内存字节随步骤变化，支持暂停/单步；系统减少动态效果时默认暂停，页面隐藏时停止定时推进，导航不等待动画。未来修改不得删除这些可访问性行为。
+
+## 当前首页与音乐定额（覆盖前述旧方案）
+
+首页独立采用黑底、白色汇编助记符组成的像素立方体动画，单屏、少文字，只提供刊名、分刊与归档入口。正文分刊继续使用纯白背景。参考研究：textmode.js（https://code.textmode.art/）的字符图形与 ASCII Motion（https://ascii-motion.app/）的字符动画思路；本实现为原创 Canvas 绘制，不引入其代码和框架。暂停、减少动态效果和隐藏页面时暂停的行为保留；不再显示寄存器面板、单步或大块技术选读。
+
+每日音乐定额固定为晨刊3张、午刊3张、晚刊1张，工具实验室0张；覆盖过去“所有分刊2–3张”等描述。保持短介绍、紧凑Bandcamp卡片，不扩展评分系统，同日各刊不重复选片。每期在对应目录存放 `bandcamp-selection.json`（albums数组），在 `data/publications.json` 写入 musicCount，数量必须符合 `data/editorial-policy.json`；构建会核对数据与登记配额。不能为了凑数编造专辑或来源，遇到资料不足时报告阻塞，不伪造上线。

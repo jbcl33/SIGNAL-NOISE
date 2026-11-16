@@ -19,6 +19,7 @@ def build():
     registry=json.loads((ROOT/'data/publications.json').read_text())
     assert registry['schemaVersion']==1
     published=registry['publications']
+    policy=json.loads((ROOT/'data/editorial-policy.json').read_text())['musicPerEdition']
     publication_keys=set()
     for publication in published:
         date.fromisoformat(publication['date'])
@@ -26,9 +27,14 @@ def build():
         key=(publication['date'],publication['edition'])
         assert key not in publication_keys, f'Duplicate publication: {key}'
         publication_keys.add(key)
+        assert publication.get('musicCount')==policy[publication['edition']], 'Music count must match editorial policy'
         path=publication['path']
         assert re.fullmatch(r'[a-z0-9/-]+/',path) and not path.startswith('/')
         assert (OUT/path/'index.html').is_file(), f'Missing publication page: {path}'
+        selection=OUT/path/'bandcamp-selection.json'
+        if policy[publication['edition']]>0:
+            assert selection.is_file(), f'Missing album selection: {path}'
+            assert len(json.loads(selection.read_text())['albums'])==policy[publication['edition']], 'Album records do not match quota'
     edition_order={'morning':0,'noon':1,'lab':2,'night':3}
     published=sorted(published,key=lambda p:(p['date'],edition_order[p['edition']]),reverse=True)
     feed={'schemaVersion':1,'deploymentCommit':os.environ.get('GITHUB_SHA','local-preview'),

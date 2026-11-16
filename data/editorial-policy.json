@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "musicPerEdition": {
+    "morning": 3,
+    "noon": 3,
+    "night": 1,
+    "lab": 0
+  },
+  "notes": "Daily selections must not repeat across editions; short Bandcamp cards, technology first."
+}
