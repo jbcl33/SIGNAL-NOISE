@@ -1,15 +1,33 @@
-"""Render a component-based editorial PCB, with self-contained assets."""
+"""Render the text-first magazine index with inline CSS and no scripts."""
 from html import escape as e
 
-def render_home(root,out,published):
-    latest=published[0];modules=[]
-    for number,key,zh in [(2,'morning','晨刊'),(3,'noon','午刊'),(4,'night','晚刊')]:
-        item=next((p for p in published if p['edition']==key),None)
-        inside='<span class="reference">U'+str(number)+' / LDO</span><span class="ldo-package"><small>3V3</small></span><i class="ldo-led" aria-hidden="true"></i><span class="ldo-label">'+zh+(' ↗' if item else '')+'</span><span class="status">'+(e(item['date'][5:].replace('-','.'))+' · '+e(item['issue']) if item else '尚未发布')+'</span>'
-        modules.append('<a class="ldo available" data-node="'+key+'" href="'+e(item['path'])+'" aria-label="阅读'+zh+'">'+inside+'</a>' if item else '<button class="ldo" data-node="'+key+'" disabled aria-label="'+zh+'尚未发布">'+inside+'</button>')
-    short={'morning':'MORNING','noon':'OPEN CIRCUIT','night':'AFTER HOURS','lab':'TOOL LAB'}[latest['edition']]+' / '+latest['issue']
-    s=(root/'scripts/home.template.html').read_text().replace('{{LATEST_DATE}}',e(latest['date'].replace('-','.'))).replace('{{LATEST_PATH}}',e(latest['path'])).replace('{{LATEST_SHORT}}',e(short)).replace('{{LDO_MODULES}}',''.join(modules)).replace('{{LATEST_TITLE}}',e(latest['title'])).replace('{{LATEST_SUMMARY}}',e(latest['summary']))
-    css=(root/'assets/home.css').read_text();js=(root/'assets/home.js').read_text()
-    assert '</style' not in css.lower() and '</script' not in js.lower()
-    s=s.replace('<link rel="stylesheet" href="assets/home.css">','<style>'+css+'</style>').replace('<script src="assets/home.js" defer></script>','').replace('</body>','<script>'+js+'</script></body>')
-    (out/'index.html').write_text(s)
+
+def render_home(root, out, published):
+    latest = published[0]
+    links = []
+    for key, en, zh in [
+        ('morning', 'MORNING', '晨刊'),
+        ('noon', 'OPEN CIRCUIT', '午刊'),
+        ('night', 'AFTER HOURS', '晚刊'),
+    ]:
+        item = next((p for p in published if p['edition'] == key), None)
+        label = '<span lang="en">' + en + '</span> ' + zh
+        if item:
+            links.append('<a href="' + e(item['path'], quote=True) + '">' + label + ' ↗</a>')
+        else:
+            links.append('<span class="pending">' + label + ' · 待刊</span>')
+    values = {
+        'LATEST_ISSUE': latest['issue'],
+        'LATEST_DATE': latest['date'].replace('-', '.'),
+        'LATEST_ISO_DATE': latest['date'],
+        'LATEST_PATH': latest['path'],
+        'LATEST_TITLE': latest['title'],
+    }
+    page = (root / 'scripts/home.template.html').read_text()
+    for key, value in values.items():
+        page = page.replace('{{' + key + '}}', e(value, quote=True))
+    page = page.replace('{{EDITION_LINKS}}', '\n'.join(links))
+    css = (root / 'assets/home.css').read_text()
+    assert '</style' not in css.lower()
+    page = page.replace('<link rel="stylesheet" href="assets/home.css">', '<style>' + css + '</style>')
+    (out / 'index.html').write_text(page)
