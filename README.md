@@ -32,3 +32,7 @@ python -m http.server 8000 --directory _site
 `static/morning/001/index.html` 为 2026-11-17 独立晨刊，来自用户提供的 `SIGNAL_NOISE_MORNING_001_REDOWNLOAD.zip`，随构建复制到 `/morning/001/`。保留原稿、原创封面及原始来源链接；仅增加首页返回入口和目录键盘交互。首页新增独立晨刊入口，原三刊内容保留。外部 Bandcamp 播放器依赖原站网络，本文不代表已重新核实全部报道或实现自动写稿。
 
 晨刊视觉修订：七张真实专辑封面、四条技术简报配图与三张深读/制作图，均为对应来源的本地展示副本；详细出处在 `static/morning/001/assets/credits.json`。新版刊封面为 AI 辅助生成的原创几何视觉，保留像素字体、侧边目录与 Bandcamp 展开试听。
+
+## 制作与手机通知
+
+见 [OPERATIONS.md](OPERATIONS.md)。`data/publications.json` 登记独立分刊，构建后首页生成阅读入口，并输出线上 `publications.json` 供通知任务核实本期是否可读。制作和提醒是独立任务，首次定时生产尚需实际运行验证。

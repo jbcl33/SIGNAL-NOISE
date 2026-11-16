@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "publications": [
+    {
+      "date": "2026-11-17",
+      "edition": "morning",
+      "issue": "001",
+      "title": "MORNING FREQUENCY · 晨刊 001",
+      "path": "morning/001/",
+      "summary": "七张电子音乐唱片、硬件简报、源码深读与独立互联网。"
+    }
+  ]
+}
