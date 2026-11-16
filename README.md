@@ -50,3 +50,5 @@ python -m http.server 8000 --directory _site
 最新首页为黑底白色汇编字符组成的旋转像素立方体，保留暂停与减少动态效果；不再采用白色仪表盘门户。内页保持白底。音乐配额在 `data/editorial-policy.json`：晨3、午3、晚1、实验室0；分刊登记musicCount并提供bandcamp-selection.json，构建核对数量。视觉参考见OPERATIONS.md，Canvas动画为原创实现。
 
 首页动画现按屏幕刷新节奏推进，字符预渲染为图集；分刊、归档和暂停控制移入左上角展开菜单。默认画面只留动画与刊名，支持键盘、减少动态效果和后台暂停。
+
+当前首页为汇编字符星云。分刊返回首页链接已按GitHub Pages项目路径修正；构建校验本地链接不越出/SIGNAL-NOISE/且目标存在，`python -m unittest discover -s tests` 覆盖返回路径回归。

@@ -10,15 +10,15 @@ const words=['MOV','XOR','ADD','JMP','RET','CMP','NOP','SHL','SUB','AND','OR','L
 const atlas=document.createElement('canvas'),tileW=96,tileH=56;atlas.width=tileW*words.length;atlas.height=tileH;
 const ink=atlas.getContext('2d');ink.font='28px monospace';ink.textAlign='center';ink.textBaseline='middle';ink.fillStyle='#f5f5f5';words.forEach((word,i)=>ink.fillText(word,(i+.5)*tileW,tileH/2));
 let paused=reduce.matches,phase=.65,frame=null,last=0,width=0,height=0;
-const faces=[],n=15;
-for(let face=0;face<6;face++){const points=[],sign=face%2?1:-1;for(let a=0;a<n;a++)for(let b=0;b<n;b++){const u=2*a/(n-1)-1,v=2*b/(n-1)-1;let x,y,z;if(face<2){x=sign;y=u;z=v}else if(face<4){x=u;y=sign;z=v}else{x=u;y=v;z=sign}points.push({x,y,z,glyph:(a*7+b*3+face)%words.length})}faces.push({points,x:face<2?sign:0,y:face>=2&&face<4?sign:0,z:face>=4?sign:0,depth:0})}
+// Deterministic volumetric spiral cloud. No per-frame point allocation or sorting.
+let seed=8123;function random(){seed=(Math.imul(seed,1664525)+1013904223)>>>0;return(seed+.5)/4294967296}function normal(){return Math.sqrt(-2*Math.log(random()))*Math.cos(6.283185307*random())}
+const particles=[];for(let i=0;i<2000;i++){const core=i%6===0,r=core?Math.pow(random(),.8)*.25:.15+Math.pow(random(),.8)*.91,arm=i%3,angle=arm*2.094395102+r*5.2+normal()*(core?.8:.15+.1*r),spread=normal()*(.02+.04*r);particles.push({x:Math.cos(angle)*r+spread,y:Math.sin(angle)*r+spread,z:normal()*(.045+.09*r),r,glyph:i%words.length,noise:random()*6.283185307,brightness:.32+random()*.68})}
+const stars=[];for(let i=0;i<65;i++)stars.push({x:random(),y:random(),alpha:.08+random()*.26});
 function draw(){
 ctx.globalAlpha=1;ctx.fillStyle='#050505';ctx.fillRect(0,0,width,height);
-const ax=.38+Math.sin(phase*.51)*.22,ay=phase*.32,cx=Math.cos(ax),sx=Math.sin(ax),cy=Math.cos(ay),sy=Math.sin(ay),size=Math.min(width*.255,height*.34),font=Math.max(4.7,Math.min(7.5,width/105)),scale=font/28,centerX=width/2,centerY=height/2;
-// Six planar faces can be depth-sorted without allocating/sorting 1,350 objects.
-for(const face of faces)face.depth=face.y*sx+(-face.x*sy+face.z*cy)*cx;
-faces.sort((a,b)=>b.depth-a.depth);
-for(const face of faces)for(const p of face.points){const swell=1+.025*Math.sin(p.y*4+phase*1.6),px=p.x*swell,py=p.y*swell,pz=p.z*swell,x=px*cy+pz*sy,z=-px*sy+pz*cy,y=py*cx-z*sx,depth=py*sx+z*cx,k=4/(4+depth),w=tileW*scale*k,h=tileH*scale*k;ctx.globalAlpha=Math.max(.06,Math.min(.95,.5-depth*.28));ctx.drawImage(atlas,p.glyph*tileW,0,tileW,tileH,centerX+x*size*k-w/2,centerY+y*size*k-h/2,w,h)}ctx.globalAlpha=1;
+const turn=phase*.14,ct=Math.cos(turn),st=Math.sin(turn),tilt=.68+Math.sin(phase*.21)*.09,size=Math.min(width*.40,height*.43),font=Math.max(4.6,Math.min(7.4,width/108)),scale=font/28,centerX=width/2,centerY=height/2,count=width<600?1400:2000;
+ctx.fillStyle='#fff';for(const star of stars){ctx.globalAlpha=star.alpha;ctx.fillRect(star.x*width,star.y*height,1,1)}
+for(let i=0;i<count;i++){const p=particles[i],drift=.012*Math.sin(phase*.75+p.noise),px=p.x+drift,py=p.y+drift*.4,x=px*ct-py*st,y=(px*st+py*ct)*tilt+p.z*.7,z=p.z+Math.sin(phase*.19)*py*.12,k=4/(4+z),w=tileW*scale*k,h=tileH*scale*k;ctx.globalAlpha=Math.min(.9,(.08+.67*(1-p.r*.65))*p.brightness*(.9+.1*Math.sin(p.noise+phase*.4)));ctx.drawImage(atlas,p.glyph*tileW,0,tileW,tileH,centerX+x*size*k-w/2,centerY+y*size*k-h/2,w,h)}ctx.globalAlpha=1;
 }
 function resize(){const box=canvas.getBoundingClientRect(),dpr=Math.min(devicePixelRatio||1,box.width<600?1.5:2);width=box.width;height=box.height;canvas.width=Math.round(width*dpr);canvas.height=Math.round(height*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);draw()}
 function loop(time){frame=null;if(paused||document.hidden)return;if(last)phase+=Math.min((time-last)/1000,.05)*.56;last=time;draw();frame=requestAnimationFrame(loop)}
