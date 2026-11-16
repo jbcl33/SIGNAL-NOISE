@@ -8,6 +8,8 @@ def build():
     OUT.mkdir()
     shutil.copytree(ROOT/'assets', OUT/'assets')
     shutil.copytree(ROOT/'data', OUT/'data')
+    # Standalone editions retain their own asset paths.
+    shutil.copytree(ROOT/'static', OUT, dirs_exist_ok=True)
     catalog=json.loads((ROOT/'data/issues.json').read_text())
     assert catalog['schemaVersion']==1 and catalog['issues'], 'Empty or unsupported catalog'
     entries=sorted(catalog['issues'],key=lambda x:(x['date'],x['id']),reverse=True)

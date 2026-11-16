@@ -26,3 +26,7 @@ python -m http.server 8000 --directory _site
 ## 部署
 
 仓库 Settings → Pages → Source 选择 **GitHub Actions**。推送 main 或手动运行 `Deploy magazine to GitHub Pages`，工作流校验期刊结构、构建 `_site`、上传并部署 Pages。无密钥、无付费 API、无定时写稿任务。项目路径使用相对链接，兼容 GitHub Pages 仓库子路径。
+
+## 独立晨刊
+
+`static/morning/001/index.html` 为 2026-11-17 独立晨刊，来自用户提供的 `SIGNAL_NOISE_MORNING_001_REDOWNLOAD.zip`，随构建复制到 `/morning/001/`。保留原稿、原创封面及原始来源链接；仅增加首页返回入口和目录键盘交互。首页新增独立晨刊入口，原三刊内容保留。外部 Bandcamp 播放器依赖原站网络，本文不代表已重新核实全部报道或实现自动写稿。
