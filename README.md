@@ -44,3 +44,5 @@ python -m http.server 8000 --directory _site
 `python scripts/collect_music_sources.py` 采集七个音乐媒体/独立博客的公开 RSS 元数据（每站最多5条，限制响应体、超时、并发，失败保留历史记录并标注）。采集结果仅供内部选题，页面不提供评分系统或独立雷达入口。原文评分与证据独立存储，不从标题或 RSS 自动推测评分；目前已有 Pitchfork 8.2/10 和 Fantano 8/10 的原始来源核实示例。
 
 最新视觉以纯白、黑字、荧光绿及原创波形 SVG 为准。音乐恢复10张 Bandcamp 发现（7张原小众推荐 + 3张媒体发现），附发行页中文简述；当前记录为 `static/morning/001/bandcamp-selection.json`。旧评分资料保留为历史来源，不作为页面评分面板。
+
+首页已独立为汇编动画门户，代码位于 `scripts/home.template.html`、`scripts/render_home.py` 与 `assets/home.*`；包含分刊入口、固定技术选读、归档，以及可暂停和单步的RISC-V风格视觉演示。原整期继续保存在 `issues/001.html`。晨刊音乐现压缩为三张紧凑卡片，位于技术内容之后。
