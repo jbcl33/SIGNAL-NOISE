@@ -67,3 +67,5 @@ Pitchfork 普通文本视图可能出现 0.0 占位，不能当实际评分；�
 首页独立采用黑底、白色汇编助记符组成的像素立方体动画，单屏、少文字，只提供刊名、分刊与归档入口。正文分刊继续使用纯白背景。参考研究：textmode.js（https://code.textmode.art/）的字符图形与 ASCII Motion（https://ascii-motion.app/）的字符动画思路；本实现为原创 Canvas 绘制，不引入其代码和框架。暂停、减少动态效果和隐藏页面时暂停的行为保留；不再显示寄存器面板、单步或大块技术选读。
 
 每日音乐定额固定为晨刊3张、午刊3张、晚刊1张，工具实验室0张；覆盖过去“所有分刊2–3张”等描述。保持短介绍、紧凑Bandcamp卡片，不扩展评分系统，同日各刊不重复选片。每期在对应目录存放 `bandcamp-selection.json`（albums数组），在 `data/publications.json` 写入 musicCount，数量必须符合 `data/editorial-policy.json`；构建会核对数据与登记配额。不能为了凑数编造专辑或来源，遇到资料不足时报告阻塞，不伪造上线。
+
+首页渲染必须保持单文件交付：构建时把assets/home.css与assets/home.js内联到首页HTML，脚本置于body末尾；维护源文件仍独立。避免手机只拿到HTML、外部CSS/JS加载失败时整页失去样式或动画。首页不依赖外部字体或库，回归检查需阻断全部外部样式/脚本请求验证。
