@@ -120,5 +120,10 @@
     "file": "discovery-9.webp",
     "source": "https://tangentnl.bandcamp.com/album/disclosure",
     "image": "https://f4.bcbits.com/img/a1934645762_5.jpg"
+  },
+  {
+    "file": "usb-development.jpg",
+    "source": "https://mitxela.com/projects/smsc",
+    "image": "https://mitxela.com/img/uploads/sillysynth/c/ch32v003-usb2.jpg"
   }
 ]
