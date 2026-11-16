@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "issues": [
+    {
+      "id": "001",
+      "date": "2026-11-17",
+      "title": "从 GPIO 到声音发生器。",
+      "status": "sample",
+      "description": "附件选题整理的模拟试刊，非实时新闻。"
+    }
+  ]
+}
