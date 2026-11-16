@@ -3,26 +3,32 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#eeede9">
 <meta name="description" content="SIGNAL / NOISE：硬件、源码与数字文化杂志。阅读晨刊、午刊、晚刊与历史归档。">
 <title>SIGNAL / NOISE — 信号与噪声</title>
 <link rel="stylesheet" href="assets/home.css">
 </head>
 <body>
-<main>
+<main class="receipt">
 <header>
-<p class="issue-number">S/N — {{LATEST_ISSUE}}</p>
+<p class="receipt-top"><span>信号与噪声</span><span>S/N — {{LATEST_ISSUE}}</span></p>
 <h1>SIGNAL / NOISE</h1>
 <p class="description">硬件 · 源码 · 数字文化</p>
+<p class="receipt-meta"><span>期刊索引 / ISSUE INDEX</span><time datetime="{{LATEST_ISO_DATE}}">{{LATEST_DATE}}</time></p>
 </header>
 <nav aria-label="期刊导航">
 {{EDITION_LINKS}}
-<a href="archive.html"><span lang="en">ARCHIVE</span> 历史归档 ↗</a>
+<a href="archive.html"><span class="row-number" aria-hidden="true">04</span><span class="row-label"><span lang="en">ARCHIVE</span><span>历史归档</span></span><span class="row-status">查看 ↗</span></a>
 </nav>
-<p class="latest"><a href="{{LATEST_PATH}}">最近更新 / <time datetime="{{LATEST_ISO_DATE}}">{{LATEST_ISO_DATE}}</time> / {{LATEST_TITLE}} ↗</a></p>
+<section class="latest" aria-labelledby="latest-heading">
+<div class="section-meta"><h2 id="latest-heading">最近更新</h2><time datetime="{{LATEST_ISO_DATE}}">{{LATEST_ISO_DATE}}</time></div>
+<a href="{{LATEST_PATH}}"><span>{{LATEST_TITLE}}</span><span class="read-link">阅读本期 ↗</span></a>
+</section>
 <footer>
-<div><span>信号与噪声</span><time datetime="{{LATEST_ISO_DATE}}">{{LATEST_DATE}}</time></div>
-<p lang="en">CIRCUITS / SOUND / CODE</p>
+<div class="total"><span>已发布分刊 / ISSUES</span><strong>{{PUBLISHED_COUNT}}</strong></div>
+<div class="barcode" aria-hidden="true"></div>
+<p class="serial">S/N · {{LATEST_ISO_DATE}} · {{LATEST_ISSUE}}</p>
+<p class="colophon" lang="en">CIRCUITS / SOUND / CODE</p>
 </footer>
 </main>
 </body>
