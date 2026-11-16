@@ -48,3 +48,5 @@ python -m http.server 8000 --directory _site
 首页已独立为汇编动画门户，代码位于 `scripts/home.template.html`、`scripts/render_home.py` 与 `assets/home.*`；包含分刊入口、固定技术选读、归档，以及可暂停和单步的RISC-V风格视觉演示。原整期继续保存在 `issues/001.html`。晨刊音乐现压缩为三张紧凑卡片，位于技术内容之后。
 
 最新首页为黑底白色汇编字符组成的旋转像素立方体，保留暂停与减少动态效果；不再采用白色仪表盘门户。内页保持白底。音乐配额在 `data/editorial-policy.json`：晨3、午3、晚1、实验室0；分刊登记musicCount并提供bandcamp-selection.json，构建核对数量。视觉参考见OPERATIONS.md，Canvas动画为原创实现。
+
+首页动画现按屏幕刷新节奏推进，字符预渲染为图集；分刊、归档和暂停控制移入左上角展开菜单。默认画面只留动画与刊名，支持键盘、减少动态效果和后台暂停。
