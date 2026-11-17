@@ -1,0 +1,16 @@
+SIGNAL / NOISE TOOL LAB 001
+
+解压后打开 index.html。若浏览器限制本地文件访问：
+1. 在解压目录打开终端。
+2. 运行 python -m http.server 8000
+3. 浏览器打开 http://localhost:8000
+4. 结束时在终端按 Ctrl+C。
+
+实验脚本、示意图与数值记录均在包内，不请求第三方服务。
+外部项目、来源与杂志首页仍需联网。
+
+核对结果（需要 Python 3，无需第三方包）：
+python verify.py
+python verify-extensions.py
+
+本实验是数学信号与理想RC模型，不是开发板实测。

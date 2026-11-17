@@ -1,0 +1,84 @@
+{
+  "date": "2026-11-17",
+  "method": "Node execution of analog-core.js; ideal unloaded RC analytical model and uncompressed PCM buffer arithmetic, not hardware measurements",
+  "rcCases": [
+    {
+      "resistance": 10000,
+      "capacitance": 1e-8,
+      "frequency": 1000,
+      "cutoff": 1591.5494309189535,
+      "gain": 0.8467330159648304,
+      "db": -1.445070116205287,
+      "phase": -32.14190763534206,
+      "tau": 0.0001
+    },
+    {
+      "resistance": 10000,
+      "capacitance": 1e-8,
+      "frequency": 1600,
+      "cutoff": 1591.5494309189535,
+      "gain": 0.7052320351631289,
+      "db": -3.0333593619813417,
+      "phase": -45.151707132165285,
+      "tau": 0.0001
+    },
+    {
+      "resistance": 10000,
+      "capacitance": 1e-8,
+      "frequency": 8000,
+      "cutoff": 1591.5494309189535,
+      "gain": 0.19511986277060733,
+      "db": -14.193970362741473,
+      "phase": -78.74827427505329,
+      "tau": 0.0001
+    },
+    {
+      "resistance": 10000,
+      "capacitance": 1e-7,
+      "frequency": 1000,
+      "cutoff": 159.15494309189535,
+      "gain": 0.15717672547758987,
+      "db": -16.072235265805517,
+      "phase": -80.95693892096232,
+      "tau": 0.001
+    }
+  ],
+  "bufferCases": [
+    {
+      "rate": 48000,
+      "channels": 1,
+      "bits": 16,
+      "frames": 256,
+      "bytesPerFrame": 2,
+      "bytesPerSecond": 96000,
+      "blockBytes": 512,
+      "blockMs": 5.333333333333333,
+      "doubleBytes": 1024,
+      "totalBytes": 5760000
+    },
+    {
+      "rate": 48000,
+      "channels": 2,
+      "bits": 16,
+      "frames": 256,
+      "bytesPerFrame": 4,
+      "bytesPerSecond": 192000,
+      "blockBytes": 1024,
+      "blockMs": 5.333333333333333,
+      "doubleBytes": 2048,
+      "totalBytes": 11520000
+    },
+    {
+      "rate": 48000,
+      "channels": 1,
+      "bits": 16,
+      "frames": 1024,
+      "bytesPerFrame": 2,
+      "bytesPerSecond": 96000,
+      "blockBytes": 2048,
+      "blockMs": 21.333333333333332,
+      "doubleBytes": 4096,
+      "totalBytes": 5760000
+    }
+  ]
+}

@@ -25,7 +25,7 @@
       "issue": "001",
       "title": "TOOL LAB · 工具实验室 001",
       "path": "lab/2026-11-17/",
-      "summary": "声音采样实验台：调采样率观察混叠，降位深比较量化误差，试听与导出WAV，再衔接开发板ADC；附独立复现脚本。",
+      "summary": "声音采样与RC低通互动实验、缓存计算器、ADC→FIFO→DMA源码拆解，附四个工具发现、制作笔记与Ellsworth Kelly文化短栏。",
       "musicCount": 0
     },
     {

@@ -21,5 +21,39 @@
     "path": "assets/sampling-cover.svg",
     "author": "SIGNAL / NOISE",
     "type": "original mathematical diagram; not a hardware measurement"
-  }
+  },
+  "expandedSources": [
+    {
+      "url": "https://github.com/raspberrypi/pico-examples/blob/3f6e1a4caf88ecd4235abb092ce62a7158c957bb/adc/dma_capture/dma_capture.c",
+      "type": "primary project README or code; read, fixed commit"
+    },
+    {
+      "url": "https://github.com/sharpie7/circuitjs1/blob/dd47cf43a1baa91e2d6ae0f5884ccf0f589989bf/README.md",
+      "type": "primary project README or code; read, fixed commit"
+    },
+    {
+      "url": "https://github.com/wavedrom/wavedrom/blob/45a2de255a2bbd92a80d15769b21eba4b4808b51/README.md",
+      "type": "primary project README or code; read, fixed commit"
+    },
+    {
+      "url": "https://github.com/wokwi/rp2040js/blob/9c0c110d2521d17d08807ae53b80341b66dbc328/README.md",
+      "type": "primary project README or code; read, fixed commit"
+    },
+    {
+      "url": "https://www.gbstudio.dev/docs/assets/sound-effects/",
+      "type": "primary documentation; read"
+    },
+    {
+      "url": "https://www.moma.org/collection/works/37202",
+      "type": "museum object record; read"
+    },
+    {
+      "url": "https://ellsworthkelly.org/exhibition/ellsworth-kelly-spectrum-colors-arranged-by-chance/",
+      "type": "artist foundation series account; read"
+    }
+  ],
+  "originalDiagrams": [
+    "assets/rc-topology.svg",
+    "assets/dma-flow.svg"
+  ]
 }
