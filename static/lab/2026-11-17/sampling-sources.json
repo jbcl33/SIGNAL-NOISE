@@ -1,0 +1,25 @@
+{
+  "checked": "2026-11-17",
+  "sources": [
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/Audio_concepts",
+      "status": "read; HTTP200",
+      "purpose": "sampling, aliasing and quantization explanation"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/raspberrypi/pico-examples/master/adc/hello_adc/hello_adc.c",
+      "status": "read; HTTP200",
+      "purpose": "GPIO26 ADC0, 12-bit reading and printf; no board test"
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/play",
+      "status": "read; HTTP200",
+      "purpose": "user initiated playback"
+    }
+  ],
+  "artwork": {
+    "path": "assets/sampling-cover.svg",
+    "author": "SIGNAL / NOISE",
+    "type": "original mathematical diagram; not a hardware measurement"
+  }
+}

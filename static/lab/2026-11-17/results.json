@@ -1,0 +1,72 @@
+{
+  "method": "Node execution of sampler-core.js, 2 s, amplitude 0.8; amplitudes at stated discrete frequencies, not a full spectrum",
+  "cases": [
+    {
+      "frequency": 3000,
+      "sampleRate": 8000,
+      "bits": 12,
+      "sampleCount": 16000,
+      "alias": 3000,
+      "step": 0.0004884004884004884,
+      "rms": 0.0001944818101386143,
+      "amplitudes": {
+        "1000": 7.741648500149618e-05,
+        "3000": 0.8002115811041609
+      }
+    },
+    {
+      "frequency": 3000,
+      "sampleRate": 4000,
+      "bits": 12,
+      "sampleCount": 8000,
+      "alias": 1000,
+      "step": 0.0004884004884004884,
+      "rms": 0.000244200243671552,
+      "amplitudes": {
+        "1000": 0.8002442125632387,
+        "3000": 0.8002442125632384
+      }
+    },
+    {
+      "frequency": 1000,
+      "sampleRate": 48000,
+      "bits": 3,
+      "sampleCount": 96000,
+      "alias": 1000,
+      "step": 0.2857142857142857,
+      "rms": 0.07881753829876655,
+      "amplitudes": {
+        "1000": 0.7664539041900101,
+        "3000": 0.02813884982602347
+      }
+    },
+    {
+      "frequency": 1000,
+      "sampleRate": 48000,
+      "bits": 8,
+      "sampleCount": 96000,
+      "alias": 1000,
+      "step": 0.00784313725490196,
+      "rms": 0.002757044216620163,
+      "amplitudes": {
+        "1000": 0.8018192968279632,
+        "3000": 0.0005690506664882533
+      }
+    },
+    {
+      "frequency": 1000,
+      "sampleRate": 48000,
+      "bits": 12,
+      "sampleCount": 96000,
+      "alias": 1000,
+      "step": 0.0004884004884004884,
+      "rms": 0.00017053980510336696,
+      "amplitudes": {
+        "1000": 0.8000246268366562,
+        "3000": 3.210959940465632e-05
+      }
+    }
+  ],
+  "aliasIdentityMaxError": 1.1501360833568267e-11,
+  "aliasIdentity": "sin(2\u03c0\u00b73000n/4000) = -sin(2\u03c0\u00b71000n/4000), floating point residual"
+}

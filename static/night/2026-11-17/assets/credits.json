@@ -1,0 +1,33 @@
+{
+  "checkedDate": "2026-11-17",
+  "images": [
+    {
+      "file": "assets/pico-portable.jpg",
+      "source": "https://democloid.com/2023/06/22/picoTrackerPortable.html",
+      "imageUrl": "https://democloid.com/assets/img/2023-6-22-picoTrackerPortable/final.jpg",
+      "creator": "democloid",
+      "type": "Author photograph of Portable build, 2023; editorial project identification with attribution"
+    },
+    {
+      "file": "assets/pico-components.jpg",
+      "source": "https://github.com/xiphonics/picoTracker/blob/e19ab31f0df96c70b11da659e97cb2cb20b42739/docs/BUILD-portable.md",
+      "creator": "picoTracker / Xiphonics contributors",
+      "type": "Build-guide component photo",
+      "license": "Project BSD-3-Clause license included; third-party notices retained"
+    },
+    {
+      "file": "assets/pico-pcb.png",
+      "source": "https://github.com/xiphonics/picoTracker-pcb/blob/dde81382136d3e9cb56e40ea1b28fc2e5b65d4bc/img/pcb.png",
+      "creator": "Xiphonics / project contributors",
+      "type": "Official hardware layout preview, not a fabricated board photograph",
+      "license": "Hardware data CC0; trademarks not included"
+    },
+    {
+      "file": "assets/eneo.jpg",
+      "source": "https://slikback.bandcamp.com/album/eneo",
+      "creator": "SLIKBACK X KMRU / original artwork rights holders",
+      "type": "Unchanged original album cover for editorial identification",
+      "license": "All rights reserved"
+    }
+  ]
+}

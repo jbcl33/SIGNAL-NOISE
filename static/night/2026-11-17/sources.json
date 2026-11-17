@@ -1,0 +1,55 @@
+{
+  "checkedDate": "2026-11-17",
+  "hardwareTested": false,
+  "audioRendered": false,
+  "sources": [
+    {
+      "title": "picoTracker source",
+      "url": "https://github.com/xiphonics/picoTracker/tree/e19ab31f0df96c70b11da659e97cb2cb20b42739",
+      "evidence": "RP2040 original versus Advance; sample memory limits and feature limitations"
+    },
+    {
+      "title": "Portable build guide",
+      "url": "https://github.com/xiphonics/picoTracker/blob/e19ab31f0df96c70b11da659e97cb2cb20b42739/docs/BUILD-portable.md",
+      "evidence": "Parts; LCD flex alignment; recommended Floyd Steinberg video. Video itself not viewed/verified frame by frame"
+    },
+    {
+      "title": "Author build record",
+      "url": "https://democloid.com/2023/06/22/picoTrackerPortable.html",
+      "evidence": "2023 author account: case-first sizing, thicker battery, 2mm board-height change and keycap choice"
+    },
+    {
+      "title": "PCB hardware",
+      "url": "https://github.com/xiphonics/picoTracker-pcb",
+      "evidence": "Hardware design files CC0; project trademarks excluded"
+    },
+    {
+      "title": "Sonic Pi samples",
+      "url": "https://sonic-pi.net/tutorial-03.html",
+      "evidence": "Relative sample start/finish, playback rate and desktop versus web local-file support; no local execution asserted"
+    },
+    {
+      "title": "NGA Molnar",
+      "url": "https://www.nga.gov/artworks/216160-interruptions",
+      "evidence": "1969 NGA object, computer drawing on plotter paper; no artwork copied"
+    },
+    {
+      "title": "Toledo Molnar",
+      "url": "https://infiniteimages.toledomuseum.org/artwork/interruptions",
+      "evidence": "1968 version, parameter changes, computational/plotter context; distinguished from 1969 NGA object"
+    },
+    {
+      "title": "ENEO release",
+      "url": "https://slikback.bandcamp.com/album/eneo",
+      "evidence": "Release date 2026-10-02; four tracks; minimal About KE/RONGAI"
+    },
+    {
+      "title": "ACL review",
+      "url": "https://acloserlisten.com/2026/11/13/slikback-x-kmru-eneo/",
+      "evidence": "Gianmarco Del Re, 2026-11-13; no score used"
+    }
+  ],
+  "accessLimitations": [
+    "Tate and Morgan pages were not used after access failures; artwork image downloads were not used after access refusal; no access controls bypassed."
+  ]
+}

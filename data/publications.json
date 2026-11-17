@@ -25,8 +25,17 @@
       "issue": "001",
       "title": "TOOL LAB · 工具实验室 001",
       "path": "lab/2026-11-17/",
-      "summary": "KiCad9.0.2实跑：故障原理图为何仍返回0？核对ERC、JSON与失败退出码，附正常/故障样例及复现包。",
+      "summary": "声音采样实验台：调采样率观察混叠，降位深比较量化误差，试听与导出WAV，再衔接开发板ADC；附独立复现脚本。",
       "musicCount": 0
+    },
+    {
+      "date": "2026-11-17",
+      "edition": "night",
+      "issue": "001",
+      "title": "AFTER HOURS · 晚刊 001",
+      "path": "night/2026-11-17/",
+      "summary": "picoTracker开源声音设备与作者制作经验、Sonic Pi采样选段、Vera Molnar文化短栏，附SLIKBACK X KMRU《ENEO》。",
+      "musicCount": 1
     }
   ]
 }
