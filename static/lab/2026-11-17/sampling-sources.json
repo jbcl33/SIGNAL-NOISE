@@ -50,10 +50,27 @@
     {
       "url": "https://ellsworthkelly.org/exhibition/ellsworth-kelly-spectrum-colors-arranged-by-chance/",
       "type": "artist foundation series account; read"
+    },
+    {
+      "url": "https://github.com/PaulStoffregen/Audio",
+      "type": "primary project README; read 2026-11-17; no hardware test"
+    },
+    {
+      "url": "https://github.com/daisyaudio/DaisyExamples",
+      "type": "primary README; read 2026-11-17; no hardware test"
     }
   ],
   "originalDiagrams": [
     "assets/rc-topology.svg",
-    "assets/dma-flow.svg"
-  ]
+    "assets/dma-flow.svg",
+    "assets/rc-response.svg",
+    "assets/sampling-alias.svg"
+  ],
+  "currentFormat": "Editorial sharing; embedded samplers, calculators and experiment package removed per reader feedback.",
+  "photo": {
+    "file": "assets/teensy-audio-inputs.jpg",
+    "source": "https://github.com/PaulStoffregen/Audio/blob/master/gui/img/audioshield_inputs.jpg",
+    "creator": "PJRC / Paul Stoffregen",
+    "type": "original project photograph for editorial identification; not the magazine hardware test"
+  }
 }

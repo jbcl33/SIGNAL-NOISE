@@ -25,7 +25,7 @@
       "issue": "001",
       "title": "TOOL LAB · 工具实验室 001",
       "path": "lab/2026-11-17/",
-      "summary": "声音采样与RC低通互动实验、缓存计算器、ADC→FIFO→DMA源码拆解，附四个工具发现、制作笔记与Ellsworth Kelly文化短栏。",
+      "summary": "Teensy Audio与DaisyExamples项目分享、ADC/FIFO/DMA源码阅读、采样与模拟前端笔记，附工具发现、制作经验及Ellsworth Kelly文化短栏。",
       "musicCount": 0
     },
     {
