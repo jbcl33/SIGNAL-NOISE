@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SIGNAL / NOISE | MORNING FREQUENCY 2026.11.18</title>
+<meta name="description" content="2026 年 11 月 18 日 SIGNAL / NOISE 晨刊第 002 期。PicoGUS、SmartKnob、PCB 开源工具与采样读图，附独立制作记录、Lygia Clark 与三张唱片。">
+<style>
+:root {
+  --ink: #111;
+  --muted: #555;
+  --line: #d0d0d0;
+  --accent: #c6ff00;
+  --mono: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+  --sans: Arial, 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-padding-top: 20px; }
+body { margin: 0; color: var(--ink); background: #fff; font: 16px/1.7 var(--sans); }
+a { color: inherit; text-underline-offset: .2em; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible, summary:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+img { display: block; max-width: 100%; height: auto; }
+p, h1, h2, h3, figcaption, a { overflow-wrap: anywhere; }
+figure { margin: 0; min-width: 0; }
+mark { padding: .2em .36em; background: var(--accent); color: var(--ink); }
+
+.mast, .back-home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px 24px;
+  padding: 12px clamp(16px, 5vw, 76px);
+}
+.mast { color: #fff; background: #10130e; }
+.mast .logo { flex-shrink: 0; font-size: 20px; font-weight: 900; letter-spacing: -.055em; text-decoration: none; }
+.identity-dot { color: var(--accent); font-size: .8em; margin-right: .12em; }
+.mast small, .back-home { font: 12px/1.5 var(--mono); }
+.mast small { color: #c7c7c7; text-align: right; }
+.mast a:focus-visible, .reference-cover a:focus-visible { outline-color: var(--accent); }
+.back-home { border-bottom: 1px solid var(--line); }
+
+.reference-cover { padding: 30px 24px 0; }
+.reference-cover .cover-poster { max-width: 1000px; margin: auto; padding: 24px; color: #fff; background: var(--ink); }
+.reference-folio {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px 20px;
+  align-items: center;
+  padding-bottom: 18px;
+  font: 12px/1.5 var(--mono);
+}
+.reference-folio > span:last-child { text-align: right; color: #ccc; }
+.reference-folio i { color: var(--accent); font-style: normal; }
+.reference-visual { position: relative; }
+.reference-visual img { width: 100%; max-height: 550px; object-fit: cover; object-position: 50% 41%; filter: grayscale(1) contrast(1.16); }
+.image-label {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  padding: 7px 10px;
+  color: var(--ink);
+  background: var(--accent);
+  font: 13px/1.2 var(--mono);
+}
+.reference-cover figcaption { margin-top: 9px; font: 11px/1.5 var(--mono); color: #c7c7c7; }
+.reference-cover-title { padding: 27px 0 1px; }
+.reference-cover-title .eyebrow { color: var(--accent); }
+.reference-cover-title h1 {
+  margin: 8px 0 13px;
+  font: 900 clamp(37px, 8vw, 90px)/.92 var(--sans);
+  letter-spacing: -.055em;
+  overflow-wrap: normal;
+}
+.reference-cover-title p { margin: 0; color: #ddd; font-size: 13px; }
+.issue-opening { max-width: 1000px; margin: auto; padding: 62px 38px 34px; }
+.opening-label { color: var(--muted); font: 12px/1.6 var(--mono); }
+.opening-wordmark {
+  margin: 27px 0 42px;
+  font: 900 clamp(64px, 13vw, 160px)/.83 var(--sans);
+  letter-spacing: -.09em;
+  overflow-wrap: normal;
+}
+.opening-wordmark em { color: #ec492f; font-style: normal; }
+.issue-opening h2 { margin: 0 0 13px; font-size: clamp(25px, 4.2vw, 43px); line-height: 1.23; letter-spacing: -.04em; }
+.issue-opening p { max-width: 65ch; margin: 0 0 25px; font-size: clamp(15px, 1.8vw, 18px); line-height: 1.8; }
+.opening-folio {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px 16px;
+  border-top: 2px solid var(--ink);
+  padding-top: 12px;
+  color: var(--muted);
+  font: 12px/1.5 var(--mono);
+}
+.opening-folio span:last-child { text-align: right; }
+.ticker {
+  margin: 0;
+  padding: 9px clamp(16px, 5vw, 76px);
+  border-block: 1px solid var(--ink);
+  background: var(--accent);
+  font: 12px/1.5 var(--mono);
+  letter-spacing: .025em;
+}
+
+.editorial-grid {
+  display: grid;
+  grid-template-columns: minmax(140px, 170px) minmax(0, 1fr);
+  gap: clamp(28px, 4vw, 62px);
+  align-items: start;
+  max-width: 1320px;
+  margin: auto;
+  padding: 0 clamp(20px, 4.5vw, 68px);
+}
+.contents-desktop { position: sticky; top: 26px; margin: 38px 0 0; }
+.contents-desktop, .contents-mobile { font: 13px/1.5 var(--mono); }
+.contents-desktop h2 { margin: 0 0 10px; font: 700 13px/1.5 var(--mono); }
+.contents-desktop ul, .contents-mobile ul { list-style: none; padding: 0; margin: 0; }
+.contents-desktop a, .contents-mobile a { display: block; padding: 8px 0; border-bottom: 1px solid var(--line); text-decoration: none; }
+.contents-desktop a:hover, .contents-mobile a:hover { text-decoration: underline; background: var(--accent); }
+.contents-mobile { display: none; }
+.contents-mobile summary { cursor: pointer; padding: 9px 0; font-weight: 700; }
+main { min-width: 0; }
+.section { padding: 36px 0 22px; }
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 20px;
+  border-bottom: 3px solid var(--ink);
+  margin-bottom: 18px;
+  padding-bottom: 11px;
+}
+.section-head h2 {
+  margin: 8px 0 1px;
+  font: 900 clamp(32px, 5vw, 61px)/1.02 var(--sans);
+  letter-spacing: -.06em;
+}
+.section-head p { max-width: 36ch; margin: 0; color: var(--muted); font-size: 13px; }
+.eyebrow, .meta { color: var(--muted); font: 12px/1.5 var(--mono); letter-spacing: .025em; }
+.eyebrow { font-weight: 700; }
+.section-head .eyebrow { color: var(--ink); }
+.news-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 26px; align-items: start; }
+.news { border-bottom: 1px solid var(--line); padding: 10px 0 20px; min-width: 0; }
+.news h3 { margin: 9px 0 7px; font-size: clamp(22px, 2.65vw, 31px); line-height: 1.24; letter-spacing: -.045em; }
+.news p { margin: 0 0 10px; font-size: 15px; line-height: 1.77; }
+.news .technical-image { margin-top: 10px; }
+.news .technical-image img { max-height: 260px; }
+.news-grid .news:nth-child(n + 3) { margin-top: 13px; }
+.feature { border-top: 1px solid var(--ink); padding: 20px 0 26px; }
+.feature:first-of-type { border-top: 0; padding-top: 10px; }
+.feature h3 { margin: 9px 0 4px; font-size: clamp(30px, 4.4vw, 53px); line-height: 1.09; letter-spacing: -.055em; }
+.feature .feature-deck { max-width: 68ch; margin: 10px 0 18px; font-size: clamp(16px, 1.8vw, 19px); line-height: 1.69; }
+.feature-grid { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr); gap: 20px 26px; align-items: start; }
+.feature-copy p { margin: 0 0 13px; font-size: 15px; line-height: 1.82; }
+.feature-copy h4 { font-size: 16px; line-height: 1.4; margin: 15px 0 6px; }
+.feature-copy h4:first-child { margin-top: 0; }
+.technical-image { margin: 0 0 14px; }
+.technical-image img { width: 100%; max-height: 420px; object-fit: contain; background: #f3f3f3; }
+.technical-image figcaption { border-top: 1px solid var(--line); margin-top: 6px; padding-top: 5px; color: var(--muted); font-size: 11px; line-height: 1.56; }
+.feature-lead-photo { margin: 0 0 18px; }
+.feature-lead-photo img { width: 100%; max-height: 390px; object-fit: contain; background: #f3f3f3; }
+.feature-lead-photo figcaption { font: 11px/1.6 var(--mono); color: var(--muted); margin-top: 7px; }
+.sources { display: flex; flex-wrap: wrap; gap: 5px 13px; margin: 12px 0 0; line-height: 1.45; }
+.sources a, .record .link { font: 11px/1.55 var(--mono); }
+.browsing-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 26px; align-items: start; }
+.browsing-grid .news { border-top: 3px solid var(--ink); border-bottom: 0; margin-top: 8px; }
+
+.music-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.record { min-width: 0; border-bottom: 1px solid var(--line); padding-bottom: 16px; }
+.album-art { display: block; background: #f2f2f2; }
+.album-art img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+.album-art-credit { display: block; margin-top: 5px; color: var(--muted); font-size: 10px; line-height: 1.5; }
+.record h3 { font-size: clamp(21px, 2.2vw, 27px); line-height: 1.15; letter-spacing: -.045em; margin: 10px 0 4px; }
+.record .artist { font-size: 13px; font-weight: 700; }
+.record .meta, .genres { margin-top: 5px; color: var(--muted); font-size: 11px; }
+.record .bandcamp-about { margin: 7px 0; font-size: 13px; line-height: 1.7; }
+.record .editor-origin { display: block; font-size: 11px; margin-top: 3px; }
+.listen { border-top: 1px solid var(--line); margin-top: 9px; padding-top: 8px; }
+.listen summary { cursor: pointer; font: 12px/1.6 var(--mono); }
+.listen iframe { display: block; width: 100%; height: 120px; border: 0; margin-top: 8px; }
+.foot { border-top: 3px solid var(--ink); margin-top: 30px; padding: 22px clamp(16px, 5vw, 76px) 33px; }
+.foot p { color: var(--muted); font: 12px/1.7 var(--mono); margin: 0 0 7px; }
+.foot .sources { margin-top: 0; }
+
+@media (max-width: 850px) {
+  .editorial-grid { display: block; max-width: 760px; }
+  .contents-desktop { display: none; }
+  .contents-mobile { display: block; margin-top: 15px; border-bottom: 1px solid var(--line); }
+  .contents-mobile a { margin-left: 16px; border-bottom: 0; }
+  .contents-mobile ul { margin-bottom: 7px; }
+  .reference-visual img { max-height: 485px; }
+}
+
+@media (max-width: 610px) {
+  .mast, .back-home { padding-inline: 16px; }
+  .mast .logo { font-size: 17px; }
+  .mast small, .back-home { font-size: 10px; }
+  .reference-cover { padding: 18px 16px 0; }
+  .reference-cover .cover-poster { padding: 15px; }
+  .reference-folio { font-size: 10px; padding-bottom: 12px; }
+  .reference-visual img { aspect-ratio: 4/3; max-height: none; object-position: 50% 47%; }
+  .image-label { left: 9px; bottom: 9px; font-size: 10px; }
+  .reference-cover figcaption { font-size: 10px; }
+  .reference-cover-title { padding-top: 18px; }
+  .reference-cover-title h1 { font-size: clamp(30px, 10vw, 61px); }
+  .reference-cover-title .eyebrow, .opening-label, .opening-folio { font-size: 10px; }
+  .reference-cover-title p { font-size: 11px; }
+  .issue-opening { padding: 44px 21px 25px; }
+  .opening-wordmark { font-size: clamp(59px, 15.8vw, 96px); margin: 23px 0 33px; }
+  .ticker { font-size: 10px; }
+  .editorial-grid { padding-inline: 16px; }
+  .section { padding-top: 26px; }
+  .section-head { display: block; margin-bottom: 13px; }
+  .section-head h2 { margin-bottom: 4px; }
+  .feature-grid, .news-grid, .browsing-grid { grid-template-columns: 1fr; }
+  .feature-grid { gap: 8px; }
+  .news { padding: 14px 0 18px; }
+  .news-grid .news:nth-child(n + 3) { margin-top: 0; }
+  .feature-lead-photo img { max-height: 345px; }
+  .music-grid { grid-template-columns: 1fr; gap: 17px; }
+  .record { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 0 13px; align-items: start; }
+  .record h3 { margin-top: 0; }
+  .listen { grid-column: 1/-1; }
+}
+
+@media (max-height: 490px) and (orientation: landscape) {
+  .reference-visual img { max-height: 270px; object-fit: cover; }
+  .contents-desktop { position: static; }
+}
+</style>
+</head>
+<body>
+<header class="mast">
+<a class="logo" href="#top"><span class="identity-dot" aria-hidden="true">●</span> SIGNAL / NOISE</a>
+<small>VOL. 002 / 2026.11.18</small>
+</header>
+<nav class="back-home" aria-label="站点导航">
+<a href="../../index.html">← 杂志首页</a>
+<a href="../../archive.html">归档</a>
+</nav>
+<section class="cover reference-cover" id="top" aria-labelledby="cover-title">
+<div class="cover-poster">
+<div class="reference-folio">
+<span>S/N <i>●</i> SIGNAL / NOISE</span>
+<span>VOL. 002<br><time datetime="2026-11-18">2026.11.18 WED</time></span>
+</div>
+<figure>
+<div class="reference-visual">
+<img src="assets/smartknob-prototype.webp" width="1200" height="1600" alt="Scott Bezek 拍摄的 SmartKnob Handheld 原型，圆形电机与小屏幕安装在长方形底座上，屏幕显示 22 和档位参数" fetchpriority="high" decoding="async">
+<span class="image-label">SMARTKNOB / PROTOTYPE</span>
+</div>
+<figcaption>Scott Bezek 的 SmartKnob Handheld 面包板原型（2022）· 照片局部 · <a href="https://github.com/scottbez1/smartknob/blob/ac6ef1557a2cd2d05f2b77032bf0d8bb9da227a8/README.md#smartknob-handheld" target="_blank" rel="noopener">原图 ↗</a> · <a href="assets/smartknob-license.txt">Apache-2.0</a></figcaption>
+</figure>
+<div class="reference-cover-title">
+<span class="eyebrow">18 NOV 2026 / MORNING EDITION</span>
+<h1 id="cover-title">MORNING<br>FREQUENCY</h1>
+<p>晨刊 002 · 开源硬件 · PCB 与采样工具 · 独立互联网</p>
+</div>
+</div>
+</section>
+<section class="issue-opening" aria-label="本期开篇">
+<div class="opening-label">独立技术知识与文化杂志 / 晨刊 002</div>
+<div class="opening-wordmark" role="img" aria-label="SIGNAL / NOISE">SIGNAL<br>/<em>NOISE</em></div>
+<h2>复古 PC 声卡与力反馈旋钮</h2>
+<p>从 PicoGUS 的 ISA 总线接口读到 DOS 声卡仿真，再看 SmartKnob 怎样用马达做出可调的档位与止挡。简报介绍四件能用来读 PCB、核对外壳、调试开发板或观察采样的工具。</p>
+<div class="opening-folio">
+<span>18 NOV 2026 / WED</span>
+<span>HARDWARE / SOUND / INTERNET</span>
+</div>
+</section>
+<p class="ticker">PicoGUS / SmartKnob / KiCanvas / KiCad StepUp / probe-rs / Sonic Visualiser</p>
+<div class="editorial-grid">
+<nav class="contents-desktop" aria-label="本期目录">
+<h2><mark>目录 / CONTENTS</mark></h2>
+<ul>
+<li><a href="#top">封面</a></li>
+<li><a href="#deep">项目深读</a></li>
+<li><a href="#news">技术简报</a></li>
+<li><a href="#notes">知识笔记</a></li>
+<li><a href="#picodmg-audio">独立互联网</a></li>
+<li><a href="#clark-sundial">文化短栏</a></li>
+<li><a href="#music">唱片</a></li>
+</ul>
+</nav>
+<details class="contents-mobile mobile-nav">
+<summary>本期目录 / CONTENTS</summary>
+<nav aria-label="本期目录"><ul>
+<li><a href="#top">封面</a></li>
+<li><a href="#deep">项目深读</a></li>
+<li><a href="#news">技术简报</a></li>
+<li><a href="#notes">知识笔记</a></li>
+<li><a href="#picodmg-audio">独立互联网</a></li>
+<li><a href="#clark-sundial">文化短栏</a></li>
+<li><a href="#music">唱片</a></li>
+</ul></nav>
+</details>
+<main>
+<section class="section" id="deep" aria-labelledby="deep-heading">
+<header class="section-head">
+<div><span class="eyebrow"><mark>PROJECT NOTES</mark></span><h2 id="deep-heading">项目深读</h2></div>
+</header>
+<article class="feature" id="picogus">
+<span class="eyebrow"><mark>项目选读</mark> 复古 PC / 声音硬件</span>
+<h3>PicoGUS：给老 PC 接回一块声卡</h3>
+<p class="feature-deck">Ian Scott 的 PicoGUS 是插在复古 PC 的 ISA 扩展槽里的开源声卡。它以 RP2040 模拟 Gravis UltraSound，也能切换到 AdLib、Sound Blaster 等模式。Gravis 模式从内存取样本、调音高和音量再混音，AdLib 模式则用 FM 合成发声。DOS 应用仍按它认识的那种声卡访问 I/O 端口，这让一张板卡成了观察两种发声方式的入口。作者发布的 2.0 硬件把 RP2040 直接焊在板上，和插着一块 Pico 开发板的早期方案可以分开看。</p>
+<div class="feature-grid">
+<div class="feature-copy">
+<h4>从 ISA 地址线读起</h4>
+<p>从 v1.2 原理图第 1 页的 ISA 连接器出发，沿 A0 和 D0 找到地址、数据之间的复用逻辑。再打开固件里的 <code>isa_io.pio</code>。写入状态机等 ISA 的写信号，取 10 位地址，切换复用器，再取 8 位数据。固件识别地址后，状态机可借 IOCHRDY 让主机等这次写操作处理完。读入状态机的另一面是决定何时驱动数据线。这些细节解释了为什么仅仅把相同的音色算法移植到开发板，还做不出一张能用的 ISA 声卡。</p>
+<h4>样本怎样离开声卡</h4>
+<p>声卡的另一头可以从 <code>gusplay.cpp</code> 追。混出的左右声道样本经 I²S 送出，v1.2 原理图第 2 页把 BCK、LRCK 和 DIN 接到 PCM5100，模拟输出再经阻容网络送往线路输出。这里有一个值得用在自己 PCB 上的读图顺序。先把旧主机接口、样本处理和模拟输出划成三段，再找每段之间的信号和时钟。</p>
+<h4>对照兼容表与版本</h4>
+<p>11 月 7 日（北京时间）的 <code>v4.2.0-beta.2</code> 仍是预发行版。作者提到一处具体修改是让模拟的 GF1 在软件关闭线路输出时实际静音，解决 CapaMOD 暂停后仍有音符发声的问题。判断是否适合自己的老机器，可以先查兼容清单里的主板和程序，再看对应模式的 DOS 配置，核实 I/O 地址、IRQ 和 DMA。准备做板时，按手头的硬件版本找原理图和 BOM。</p>
+</div>
+<div>
+<figure class="technical-image">
+<img src="assets/picogus-isa-schematic.png" width="1825" height="1290" alt="PicoGUS v1.2 总原理图，左侧 ISA 插槽，中间 Raspberry Pi Pico 与地址数据复用器，右侧控制和音频接口" loading="lazy" decoding="async">
+<figcaption>PicoGUS v1.2（2023-12-13）原理图，第 1 页 · ISA 总线与控制电路 · Ian Scott · <a href="https://github.com/polpo/picogus/blob/d3f4df66d6f748809fd3ba2c7fb48419a46d59cf/hw/PicoGUS-schematic.pdf" target="_blank" rel="noopener">图像出处 ↗</a> · <a href="assets/picogus-isa-schematic.png" target="_blank" rel="noopener">查看大图 ↗</a> · <a href="assets/picogus-hw-license.txt">CERN-OHL-P-2.0</a></figcaption>
+</figure>
+<figure class="technical-image">
+<img src="assets/picogus-audio-detail.png" width="980" height="525" alt="PicoGUS v1.2 的 PCM5100 音频电路局部，左边是 I²S 信号，右边是左右模拟输出" loading="lazy" decoding="async">
+<figcaption>PicoGUS v1.2（2023-12-13）原理图第 2 页局部 · PCM5100 音频输出 · Ian Scott · <a href="https://github.com/polpo/picogus/blob/d3f4df66d6f748809fd3ba2c7fb48419a46d59cf/hw/PicoGUS-schematic.pdf" target="_blank" rel="noopener">图像出处 ↗</a> · <a href="assets/picogus-audio-detail.png" target="_blank" rel="noopener">查看大图 ↗</a> · <a href="assets/picogus-hw-license.txt">CERN-OHL-P-2.0</a></figcaption>
+</figure>
+</div>
+</div>
+<div class="sources">
+<a href="https://picogus.com/" target="_blank" rel="noopener">Ian Scott 项目主页与 2.0 实物照片</a>
+<a href="https://github.com/polpo/picogus/blob/d3f4df66d6f748809fd3ba2c7fb48419a46d59cf/sw/isa/isa_io.pio#L29-L97" target="_blank" rel="noopener">ISA I/O 状态机源码</a>
+<a href="https://github.com/polpo/picogus/blob/d3f4df66d6f748809fd3ba2c7fb48419a46d59cf/sw/gusplay.cpp#L52-L100" target="_blank" rel="noopener">GUS 音频输出源码</a>
+<a href="https://github.com/polpo/picogus/blob/d3f4df66d6f748809fd3ba2c7fb48419a46d59cf/hw/PicoGUS-schematic.pdf" target="_blank" rel="noopener">v1.2 硬件 PDF 原理图</a>
+<a href="https://github.com/polpo/picogus/releases/tag/v4.2.0-beta.2" target="_blank" rel="noopener">固件 v4.2.0-beta.2 变更记录</a>
+<a href="https://github.com/polpo/picogus/wiki/Compatibility-list" target="_blank" rel="noopener">主板与 DOS 程序兼容表</a>
+</div>
+</article>
+<article class="feature" id="smartknob">
+<span class="eyebrow"><mark>制作记录 / 项目选读</mark> 电机 / PCB / 人机界面</span>
+<h3>SmartKnob：旋钮的档位感由代码决定</h3>
+<p class="feature-deck">Scott Bezek 的 SmartKnob 是一个会向手指施加反向扭矩的输入设备。磁编码器读取轴角，无刷云台电机负责把旋钮拉向设定的档位。档位的间距、力度和两端的止挡都可以在固件里变。作者展示过用它操作一个模拟视频时间轴。剪辑边界可以做成有手感的刻度，也可以换成带回中的快放控制。项目发布了机械图、两块 PCB 的设计和固件。</p>
+<div class="feature-grid">
+<div class="feature-copy">
+<h4>让电机给手指反馈</h4>
+<p>读源码可以从 <code>motor_task.cpp</code> 的角度误差入手。旋钮偏离当前的档位中心时，代码根据偏差给电机一个力矩；越过吸附阈值，中心移到下一个档位。当软件设定了取值范围，继续往边界外转时会用另一套止挡力度。硬件本身也有手感。作者指出一些廉价云台电机断电时便有明显的齿槽转矩，转动过程中会偏向若干角度。选电机可以先用手转一圈，判断这个固有阻力是否会盖住固件想做出的细档。</p>
+<h4>把按压检测做进底板</h4>
+<p>按压检测藏在底板里。较早的演示版本在会轻微弯曲的 PCB 上粘应变片，底板 v0.5 改用 2512 封装的贴片电阻感知形变。原理图上可以看到这组电阻到 HX711 的信号，也可以分别找到 MT6701 编码器和 TMC6300 电机驱动器。另一个空间限制在旋转轴心。带屏 View 版本要让屏幕布线穿过空心轴，作者记录了八根细线穿线的空间压力。</p>
+<h4>从原理视频读到制造文件</h4>
+<p>适合先看作者的原理视频，对着底板图把“转角输入、力矩输出、按压检测”各圈一遍，再读控制循环。若只想理解虚拟档位，作者建议先看 TMC6300 转接板的面包板原型路线。打算做带屏成品时，v0.5 发行页同时列出了该版原理图、PCB 制造文件与 BOM，方便把固件和实物设计对应起来。</p>
+</div>
+<div>
+<figure class="technical-image">
+<img src="assets/smartknob-base-v05-schematic.png" width="2142" height="1386" alt="SmartKnob View v0.5 主板的原理图，绘有磁编码器、应变电阻和驱动电机的电路" loading="lazy" decoding="async">
+<figcaption>SmartKnob View v0.5 底板原理图（2023） · Scott Bezek · <a href="https://github.com/scottbez1/smartknob/releases/tag/releases/view_base/v0.5" target="_blank" rel="noopener">图像出处 ↗</a> · <a href="assets/smartknob-base-v05-schematic.png" target="_blank" rel="noopener">查看大图 ↗</a> · <a href="assets/smartknob-license.txt">Apache-2.0</a></figcaption>
+</figure>
+<figure class="technical-image">
+<img src="assets/smartknob-base-v05-render.png" width="1024" height="1072" alt="SmartKnob View v0.5 底板的官方 3D 渲染，方形电路板中央带有弧形开槽与环绕的 LED" loading="lazy" decoding="async">
+<figcaption>SmartKnob View v0.5 底板官方 3D 渲染（2023） · Scott Bezek · <a href="https://github.com/scottbez1/smartknob/releases/tag/releases/view_base/v0.5" target="_blank" rel="noopener">图像出处 ↗</a> · <a href="assets/smartknob-base-v05-render.png" target="_blank" rel="noopener">查看大图 ↗</a> · <a href="assets/smartknob-license.txt">Apache-2.0</a></figcaption>
+</figure>
+</div>
+</div>
+<div class="sources">
+<a href="https://github.com/scottbez1/smartknob/blob/4eb988399c3fda6ffd3006772856093dfe9adb86/README.md" target="_blank" rel="noopener">Scott Bezek 项目说明与视频入口</a>
+<a href="https://www.youtube.com/watch?v=Q76dMggUH1M" target="_blank" rel="noopener">SmartKnob View 工作原理视频</a>
+<a href="https://github.com/scottbez1/smartknob/blob/4eb988399c3fda6ffd3006772856093dfe9adb86/firmware/src/motor_task.cpp#L224-L285" target="_blank" rel="noopener">力反馈控制循环源码</a>
+<a href="https://github.com/scottbez1/smartknob/releases/tag/releases/view_base/v0.5" target="_blank" rel="noopener">v0.5 底板预发行版</a>
+</div>
+</article>
+</section>
+<section class="section" id="news" aria-labelledby="news-heading">
+<header class="section-head">
+<div><span class="eyebrow"><mark>TECH BRIEFS</mark></span><h2 id="news-heading">技术简报</h2></div>
+</header>
+<div class="news-grid">
+<article class="news" id="kicanvas">
+<span class="eyebrow"><mark>工具选读</mark> 网页 / PCB 评审</span>
+<h3>KiCanvas：把可放大的原理图发给朋友</h3>
+<p>请人帮忙看一块开源 PCB 时，可以把 KiCanvas 的浏览器视图和设计链接一起发出去。Thea Flowers 写的工具直接读取 KiCad 原理图和 PCB 文件，读者能缩放、选择对象、查看板层和网络。很适合约朋友对着同一个连接器核对引脚，提出修改时也能直接指出元件编号。项目仍标为早期 alpha，支持从 KiCad 6 开始的文件格式。碰到自定义字体等显示问题，到对应版本的 KiCad 里复核。</p>
+<div class="sources">
+<a href="https://kicanvas.org/home/" target="_blank" rel="noopener">KiCanvas 官网与已知问题</a>
+<a href="https://kicanvas.org/" target="_blank" rel="noopener">浏览器打开 KiCanvas</a>
+</div>
+</article>
+<article class="news" id="kicad-stepup">
+<span class="eyebrow"><mark>工具选读</mark> 机械装配 / ECAD–MCAD</span>
+<h3>KiCad StepUp：在 FreeCAD 里对好板子和外壳</h3>
+<p>一个 USB 插口能不能穿过外壳，取决于器件位置、高度和壳上的开孔。KiCad StepUp 是 FreeCAD 的工作台，可读入 KiCad PCB 和元件 3D 模型，在装配里导出 STEP、检查干涉，也可把板框拉进 FreeCAD Sketcher 修改后写回 KiCad。第一次用，拿一份板子的副本检查外伸的插头和最高的电容，把装配参考面定在板面或安装柱上。几何检查的前提是器件模型选对型号、方向和位置。</p>
+<div class="sources">
+<a href="https://github.com/easyw/kicadStepUpMod/blob/3db98be23aae40413eab041f19de5ab2e168157e/README.md" target="_blank" rel="noopener">StepUp 功能与作者演示</a>
+<a href="https://github.com/easyw/kicadStepUpMod/blob/3db98be23aae40413eab041f19de5ab2e168157e/demo/kicadStepUp-cheat-sheet.pdf" target="_blank" rel="noopener">作者速查表</a>
+</div>
+</article>
+<article class="news" id="probe-rs">
+<span class="eyebrow"><mark>工具选读</mark> 嵌入式调试 / SWD</span>
+<h3>probe-rs：在自己开发板上停下来读变量</h3>
+<p>固件跑起来却总是进错状态时，可以在开发板的 SWD 接口挂调试探针，让 probe-rs 在编辑器里停在状态切换处，单步查看变量。它用 Rust 实现调试后端，提供 VS Code 调试和 GDB 接入。适合先选一个已知会执行的 GPIO 初始化函数，确认断点和变量视图正常，再追实际问题。接线前核对芯片全名、探针支持和 SWD 引脚。v0.32.0 的目标定义就把 RP2040 的两个内核分别列出。</p>
+<div class="sources">
+<a href="https://probe.rs/docs/tools/debugger/" target="_blank" rel="noopener">调试器官方指南</a>
+<a href="https://github.com/probe-rs/probe-rs/blob/48f5e4d53c690a1d40c2454033c6f785b4f4f95c/probe-rs/targets/RP2040.yaml" target="_blank" rel="noopener">RP2040 目标定义</a>
+</div>
+</article>
+<article class="news" id="sonic-visualiser">
+<span class="eyebrow"><mark>工具选读</mark> 音频 / 时频分析</span>
+<h3>Sonic Visualiser：看一眼敲击与底噪各在何处</h3>
+<p>整理一段自己的敲击录音时，可以用 Sonic Visualiser 同时对照波形与频谱图，再加一层时间点标注。官方手册提供频谱窗口设置。较短的窗口更容易分辨短促起音的时间，较长的窗口更有利于分开相近频率的成分。先在同一段 WAV 上切换窗口大小，用 Time Instants 层标出响声起点与背景声段落的位置，顺手留下当时的窗口参数，下一次复查就能回到同样的视图。</p>
+<div class="sources">
+<a href="https://sonicvisualiser.org/doc/reference/5.2.1/en/#spectrogram" target="_blank" rel="noopener">5.2 手册的频谱图选项</a>
+<a href="https://sonicvisualiser.org/doc/reference/5.2.1/en/#timeinstants" target="_blank" rel="noopener">Time Instants 标注层</a>
+</div>
+</article>
+</div>
+</section>
+<section class="section" id="notes" aria-labelledby="notes-heading">
+<header class="section-head">
+<div><span class="eyebrow"><mark>BENCH NOTES</mark></span><h2 id="notes-heading">知识笔记</h2></div>
+</header>
+<div class="news-grid">
+<article class="news" id="pad-hole">
+<span class="eyebrow"><mark>官方文档选读</mark></span>
+<h3>画一个圆之前，先区分焊盘和孔</h3>
+<p>KiCad 的镀通孔焊盘有镀铜孔壁，可以连接网络。NPTH 机械孔的孔壁不镀铜。两者在画面上都像圆，工厂还需要知道孔壁是否镀铜、周围是否有铜环。KiCad 默认将 PTH 和 NPTH 输出为两份钻孔文件，合并前先查板厂的提交要求。</p>
+<p>检查安装位置时，选中焊盘看对象类型与网络，再量钻孔尺寸。机械孔还需要对照外壳和紧固件。</p>
+
+<div class="sources">
+<a href="https://docs.kicad.org/9.0/en/pcbnew/pcbnew.html" target="_blank" rel="noopener">KiCad 9 PCB Editor / Pad types、Drill files</a>
+</div>
+</article>
+<article class="news" id="pio-memory">
+<span class="eyebrow"><mark>数据手册选读</mark></span>
+<h3>四个状态机，共用哪一份程序？</h3>
+<p>RP2040 有两个 PIO 模块。每个模块的四个状态机共用一份 32 槽指令存储器，各自维护程序计数器与配置。它们可以执行同一程序，也可以从不同入口运行各自的程序，放在一个 PIO 模块里的程序总共要装进这 32 槽。</p>
+<p>读同时用到多种 PIO 协议的工程时，分别记下占用的状态机数和指令槽数。状态机有空位时，指令存储器可能已经满了。</p>
+<figure class="technical-image">
+<img src="assets/pio-memory.svg" width="810" height="300" alt="原创RP2040 PIO示意：一份32槽指令存储器供四个状态机访问" loading="lazy" decoding="async">
+<figcaption>单个 PIO 模块的共享指令存储 · SIGNAL / NOISE 原创示意 · <a href="https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf#page=312" target="_blank" rel="noopener">资料依据 ↗</a></figcaption>
+</figure>
+<div class="sources">
+<a href="https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf#page=312" target="_blank" rel="noopener">RP2040 Datasheet / §3.1–3.2（印刷页311–313）</a>
+</div>
+</article>
+</div>
+</section>
+<section class="section" id="web" aria-labelledby="web-heading">
+<header class="section-head">
+<div><span class="eyebrow"><mark>OPEN TABS</mark></span><h2 id="web-heading">独立互联网与文化</h2></div>
+</header>
+<div class="browsing-grid">
+<article class="news" id="picodmg-audio">
+<span class="eyebrow"><mark>作者制作记录</mark> 2026-05-31 · dodger-one</span>
+<h3>PicoDMG 买错了哪两件音频元件</h3>
+<p>五月的 PicoDMG 制作札记记录了两次选型失误。dodger-one 重做一台保留原壳和按键板的 Game Boy 时，买来以模拟信号作输入的 PAM8302，随后发现固件需要 MAX98357A 接收数字音频。另一件买错的是耳机座。作者原本看中它的尺寸，到手才发现它缺少原机插座的机械触点，插上耳机也不会切断扬声器线路。跟着接线表查功放输入，再看耳机座的规格图，可以分开核对这两个问题。</p>
+<div class="sources">
+<a href="https://dodger-one.github.io/PicoDMG/2026/05/31/episode05-mistakes.html" target="_blank" rel="noopener">作者制作札记原文</a>
+<a href="https://dodger-one.github.io/PicoDMG/tech/hardware.html" target="_blank" rel="noopener">作者硬件接线表</a>
+</div>
+</article>
+<article class="news" id="clark-sundial">
+<span class="eyebrow"><mark>文化短栏</mark> 1960 · 巴西新具体主义</span>
+<h3>Lygia Clark 与可以折动的《日晷》</h3>
+<p>1960 年，巴西艺术家 Lygia Clark 用铰链把几块阳极氧化铝片连成《Sundial（日晷）》。它属于她同年开始的 Bichos 系列。铝片能绕几条轴线翻折，也能摊成一个平面，因此 MoMA 把藏品尺寸列为可变。打开馆藏照，先找相邻两片铝板的接缝，再沿接缝辨认哪些片面伸向前方、哪些退到后方。铝片一旦张开，片与片之间让出的空隙也有了清楚的轮廓。</p>
+<p>Clark 是巴西新具体主义的重要成员。她让观众亲手改变作品的形体，把这个流派对观众参与的关注落实到动作上。金属边缘与铰链限定了几何关系，先翻动哪一片、翻转到什么角度，则由参与者决定。MoMA 的作品说明把这种接触解读为观众和作品彼此发现的过程。从一条折线开始看，就能看清一块平面怎样在几个动作中占据空间。</p>
+<div class="sources">
+<a href="https://www.moma.org/collection/works/91764" target="_blank" rel="noopener">MoMA 馆藏作品与照片</a>
+<a href="https://www.moma.org/calendar/exhibitions/1422?installation_image_index=0" target="_blank" rel="noopener">MoMA 2014 年回顾展</a>
+</div>
+</article>
+</div>
+</section>
+<section class="section" id="music" aria-labelledby="music-heading">
+<header class="section-head">
+<div><h2 id="music-heading">唱片 / RECORDS</h2></div>
+</header>
+<div class="music-grid">
+<article class="record">
+<div>
+<a class="album-art" href="https://aarondilloway.bandcamp.com/album/no-skill-comedy-mind-reading" target="_blank" rel="noopener"><img src="assets/record-dilloway.jpg" width="700" height="700" alt="《No Skill Comedy Mind Reading》封面，白底上是一张红蓝两色的张嘴图案" loading="lazy" decoding="async"></a>
+<small class="album-art-credit">封面 · Aaron Dilloway / Dais Records（Bandcamp 发行页）</small>
+</div>
+<div>
+<h3>No Skill Comedy Mind Reading</h3>
+<div class="artist">Aaron Dilloway</div>
+<div class="meta"><time datetime="2026-11-13">2026-11-13</time> · 11月发行</div>
+<div class="genres">Noise / Musique concrète</div>
+<p class="bandcamp-about">八首作品汇集近十年的拾得声音、田野录音和人声即兴。《Possession Audition Tape》把作者的朗读剪成断续回声。</p>
+<a href="https://aarondilloway.bandcamp.com/album/no-skill-comedy-mind-reading" target="_blank" rel="noopener" class="link bandcamp-link">Bandcamp 发行页 ↗</a>
+<a href="https://pitchfork.com/reviews/albums/aaron-dilloway-no-skill-comedy-mind-reading/" target="_blank" rel="noopener" class="editor-origin">Pitchfork 乐评 ↗</a>
+</div>
+<details class="listen">
+<summary>展开 Bandcamp 试听</summary>
+<iframe loading="lazy" title="Aaron Dilloway — No Skill Comedy Mind Reading Bandcamp 试听" src="https://bandcamp.com/EmbeddedPlayer/album=1968418029/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/artwork=small/transparent=true/"></iframe>
+</details>
+</article>
+<article class="record">
+<div>
+<a class="album-art" href="https://hapexzm.bandcamp.com/album/bt03-hexes" target="_blank" rel="noopener"><img src="assets/record-hapexzm.jpg" width="700" height="700" alt="《[BT03] HEXES》封面，一卷红色磁带斜放在纹样织物上" loading="lazy" decoding="async"></a>
+<small class="album-art-credit">封面 · HAPEXZM / Dust Planet Records（封面署名）</small>
+</div>
+<div>
+<h3>[BT03] HEXES</h3>
+<div class="artist">HAPEXZM</div>
+<div class="meta"><time datetime="2026-10-13">2026-10-13</time> · 10月回听</div>
+<div class="genres">Sample-based / Downtempo / Trip hop</div>
+<p class="bandcamp-about">用 SP-404 和 Ableton 剪切、循环黑胶、CD、网络档案和生活录音。十三个分轨之外，另附一条近二十九分钟的整卷混音。</p>
+<a href="https://hapexzm.bandcamp.com/album/bt03-hexes" target="_blank" rel="noopener" class="link bandcamp-link">Bandcamp 发行页 ↗</a>
+<a href="https://acloserlisten.com/2026/11/06/hapexzm-hexes/" target="_blank" rel="noopener" class="editor-origin">A Closer Listen 乐评 ↗</a>
+</div>
+<details class="listen">
+<summary>展开 Bandcamp 试听</summary>
+<iframe loading="lazy" title="HAPEXZM — [BT03] HEXES Bandcamp 试听" src="https://bandcamp.com/EmbeddedPlayer/album=2879065904/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/artwork=small/transparent=true/"></iframe>
+</details>
+</article>
+<article class="record">
+<div>
+<a class="album-art" href="https://mahorka.bandcamp.com/album/plone-none" target="_blank" rel="noopener"><img src="assets/record-plone-none.jpg" width="700" height="700" alt="《Plone/None》封面，失焦的绿色与白色背景上竖排印着艺人与专辑名" loading="lazy" decoding="async"></a>
+<small class="album-art-credit">封面 · Thomas Rosen（设计与排版）/ Mahorka（Bandcamp 发行页）</small>
+</div>
+<div>
+<h3>Plone/None</h3>
+<div class="artist">Marcin Lasek + rsn</div>
+<div class="meta"><time datetime="2026-10-23">2026-10-23</time> · 10月回听</div>
+<div class="genres">Electroacoustic / Ambient / Drone</div>
+<p class="bandcamp-about">两人的首次合作把 Lasek 的电声声景与 rsn 的持续音结合起来。两首作品各约二十一分钟，另有五十份限量磁带。</p>
+<a href="https://mahorka.bandcamp.com/album/plone-none" target="_blank" rel="noopener" class="link bandcamp-link">Bandcamp 发行页 ↗</a>
+<a href="https://igloomag.com/reviews/marcin-lasek-rsn-plone-none-mahorka" target="_blank" rel="noopener" class="editor-origin">Igloo Magazine 乐评 ↗</a>
+</div>
+<details class="listen">
+<summary>展开 Bandcamp 试听</summary>
+<iframe loading="lazy" title="Marcin Lasek + rsn — Plone/None Bandcamp 试听" src="https://bandcamp.com/EmbeddedPlayer/album=3795084273/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/artwork=small/transparent=true/"></iframe>
+</details>
+</article>
+</div>
+</section>
+</main>
+</div>
+<footer class="foot">
+<p>SIGNAL / NOISE · 晨刊 002 · <time datetime="2026-11-18">2026-11-18</time></p>
+<nav class="sources" aria-label="刊末链接">
+<a href="../../index.html">← 杂志首页</a>
+<a href="../../archive.html">归档</a>
+<a href="sources.json">核查资料</a>
+<a href="assets/credits.json">配图署名</a>
+</nav>
+</footer>
+</body>
+</html>

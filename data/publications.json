@@ -36,6 +36,15 @@
       "path": "night/2026-11-17/",
       "summary": "picoTracker开源声音设备与作者制作经验、Sonic Pi采样选段、Vera Molnar文化短栏，附SLIKBACK X KMRU《ENEO》。",
       "musicCount": 1
+    },
+    {
+      "date": "2026-11-18",
+      "edition": "morning",
+      "issue": "002",
+      "title": "MORNING FREQUENCY · 晨刊 002",
+      "path": "morning/2026-11-18/",
+      "summary": "PicoGUS复古PC声卡、SmartKnob力反馈旋钮，四条工程工具发现、PIO与钻孔笔记、PicoDMG制作经验及Lygia Clark文化短栏，附三张唱片。",
+      "musicCount": 3
     }
   ]
 }

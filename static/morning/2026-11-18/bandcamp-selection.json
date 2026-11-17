@@ -1,0 +1,53 @@
+{
+  "checkedDate": "2026-11-18",
+  "albums": [
+    {
+      "artist": "Aaron Dilloway",
+      "title": "No Skill Comedy Mind Reading",
+      "date": "2026-11-13",
+      "label": "Dais Records",
+      "url": "https://aarondilloway.bandcamp.com/album/no-skill-comedy-mind-reading",
+      "image": "assets/record-dilloway.jpg",
+      "imageSource": "https://f4.bcbits.com/img/a2011921614_5.jpg",
+      "imageCredit": "Aaron Dilloway / Dais Records（Bandcamp 发行页）",
+      "albumId": 1968418029,
+      "embedUrl": "https://bandcamp.com/EmbeddedPlayer/album=1968418029/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/artwork=small/transparent=true/",
+      "genre": "Noise / Musique concrète",
+      "aboutSummary": "八首作品汇集近十年的拾得声音、田野录音和人声即兴。《Possession Audition Tape》把作者的朗读剪成断续回声。",
+      "discoveredFrom": "https://pitchfork.com/reviews/albums/aaron-dilloway-no-skill-comedy-mind-reading/",
+      "checkedDate": "2026-11-18"
+    },
+    {
+      "artist": "HAPEXZM",
+      "title": "[BT03] HEXES",
+      "date": "2026-10-13",
+      "label": "Dust Planet Records",
+      "url": "https://hapexzm.bandcamp.com/album/bt03-hexes",
+      "image": "assets/record-hapexzm.jpg",
+      "imageSource": "https://f4.bcbits.com/img/a3729773965_5.jpg",
+      "imageCredit": "HAPEXZM / Dust Planet Records（封面署名）",
+      "albumId": 2879065904,
+      "embedUrl": "https://bandcamp.com/EmbeddedPlayer/album=2879065904/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/artwork=small/transparent=true/",
+      "genre": "Sample-based / Downtempo / Trip hop",
+      "aboutSummary": "用 SP-404 和 Ableton 剪切、循环黑胶、CD、网络档案和生活录音。十三个分轨之外，另附一条近二十九分钟的整卷混音。",
+      "discoveredFrom": "https://acloserlisten.com/2026/11/06/hapexzm-hexes/",
+      "checkedDate": "2026-11-18"
+    },
+    {
+      "artist": "Marcin Lasek + rsn",
+      "title": "Plone/None",
+      "date": "2026-10-23",
+      "label": "Mahorka",
+      "url": "https://mahorka.bandcamp.com/album/plone-none",
+      "image": "assets/record-plone-none.jpg",
+      "imageSource": "https://f4.bcbits.com/img/a0533622158_5.jpg",
+      "imageCredit": "Thomas Rosen（设计与排版）/ Mahorka（Bandcamp 发行页）",
+      "albumId": 3795084273,
+      "embedUrl": "https://bandcamp.com/EmbeddedPlayer/album=3795084273/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/artwork=small/transparent=true/",
+      "genre": "Electroacoustic / Ambient / Drone",
+      "aboutSummary": "两人的首次合作把 Lasek 的电声声景与 rsn 的持续音结合起来。两首作品各约二十一分钟，另有五十份限量磁带。",
+      "discoveredFrom": "https://igloomag.com/reviews/marcin-lasek-rsn-plone-none-mahorka",
+      "checkedDate": "2026-11-18"
+    }
+  ]
+}

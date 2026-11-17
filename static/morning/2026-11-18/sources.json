@@ -1,0 +1,452 @@
+{
+  "checkedAt": "2026-11-17T23:27:27.360981+00:00",
+  "date": "2026-11-18",
+  "issue": "002",
+  "edition": "morning",
+  "timeZone": "Asia/Shanghai",
+  "hardwareTested": false,
+  "deduplicatedAgainst": [
+    "morning/001/",
+    "noon/2026-11-17/",
+    "lab/2026-11-17/",
+    "night/2026-11-17/"
+  ],
+  "sources": [
+    {
+      "id": "picogus",
+      "title": "PicoGUS：给老 PC 接回一块声音卡",
+      "section": "deep-dive",
+      "sources": [
+        {
+          "title": "Ian Scott 项目主页与 2.0 实物照片",
+          "url": "https://picogus.com/",
+          "commit": null,
+          "date": null,
+          "evidence": "列出模拟模式，照片文字说明 2.0 把芯片直接装在板上，也链接作者视频与兼容表。"
+        },
+        {
+          "title": "项目仓库固定快照",
+          "url": "https://github.com/polpo/picogus/blob/d3f4df66d6f748809fd3ba2c7fb48419a46d59cf/README.md",
+          "commit": "d3f4df66d6f748809fd3ba2c7fb48419a46d59cf",
+          "date": null,
+          "evidence": "作者说明 RP2040、可模拟卡、硬件软件许可、早期版本及兼容范围。"
+        },
+        {
+          "title": "ISA I/O 状态机源码",
+          "url": "https://github.com/polpo/picogus/blob/d3f4df66d6f748809fd3ba2c7fb48419a46d59cf/sw/isa/isa_io.pio#L29-L97",
+          "commit": "d3f4df66d6f748809fd3ba2c7fb48419a46d59cf",
+          "date": null,
+          "evidence": "iow 处理写入，读取 10 位地址与 8 位数据，使用 side-set 切换复用器和驱动 IOCHRDY。ior 处理读取并切换数据 GPIO 方向。"
+        },
+        {
+          "title": "GUS 音频输出源码",
+          "url": "https://github.com/polpo/picogus/blob/d3f4df66d6f748809fd3ba2c7fb48419a46d59cf/sw/gusplay.cpp#L52-L100",
+          "commit": "d3f4df66d6f748809fd3ba2c7fb48419a46d59cf",
+          "date": null,
+          "evidence": "audio_sample_handler 调用 GUS_sample_stereo 并将立体声样本写入 I²S PIO FIFO。"
+        },
+        {
+          "title": "Gravis 样本混合源码",
+          "url": "https://github.com/polpo/picogus/blob/d3f4df66d6f748809fd3ba2c7fb48419a46d59cf/sw/gus/gus-x.cpp",
+          "commit": "d3f4df66d6f748809fd3ba2c7fb48419a46d59cf",
+          "date": null,
+          "evidence": "代码包含语音状态、样本内存访问和 GUS_sample_stereo 混音。"
+        },
+        {
+          "title": "v1.2 硬件 PDF 原理图",
+          "url": "https://github.com/polpo/picogus/blob/d3f4df66d6f748809fd3ba2c7fb48419a46d59cf/hw/PicoGUS-schematic.pdf",
+          "commit": "d3f4df66d6f748809fd3ba2c7fb48419a46d59cf",
+          "date": "2023-12-13",
+          "evidence": "第 1 页是 ISA 与 RP2040 等电路，第 2 页是 PCM5100 子页，两页标题明确标注 v1.2 与 2023-12-13。"
+        },
+        {
+          "title": "PicoGUS 2.0 开源硬件登记",
+          "url": "https://certification.oshwa.org/us002687.html",
+          "commit": null,
+          "date": "2024-10-21",
+          "evidence": "Ian Scott、硬件 2.0、CERN-OHL-P-2.0、2024-10-21。"
+        },
+        {
+          "title": "固件 v4.1.1",
+          "url": "https://github.com/polpo/picogus/releases/tag/v4.1.1",
+          "commit": "74f57e56217066a5ed29bc4fb140308577e9a44e",
+          "date": "2026-05-17T17:26:12Z",
+          "evidence": "GitHub 非预发行版，UTC 日期 2026-05-17 17:26:12。"
+        },
+        {
+          "title": "固件 v4.2.0-beta.2 变更记录",
+          "url": "https://github.com/polpo/picogus/releases/tag/v4.2.0-beta.2",
+          "commit": "d3f4df66d6f748809fd3ba2c7fb48419a46d59cf",
+          "date": "2026-11-06T20:25:36Z",
+          "evidence": "GitHub 标记预发行，作者记录 GF1 line-out disable 真正静音，同时说明 CapaMOD 暂停残留音符。"
+        },
+        {
+          "title": "DOS 初始化与模式配置",
+          "url": "https://github.com/polpo/picogus/blob/d3f4df66d6f748809fd3ba2c7fb48419a46d59cf/pgusinit/README.md",
+          "commit": "d3f4df66d6f748809fd3ba2c7fb48419a46d59cf",
+          "date": null,
+          "evidence": "单一 .uf2 和 DOS 工具按模式切换，GUS 和 Sound Blaster 的地址、IRQ、DMA 配置。"
+        },
+        {
+          "title": "主板与 DOS 程序兼容表",
+          "url": "https://github.com/polpo/picogus/wiki/Compatibility-list",
+          "commit": null,
+          "date": null,
+          "evidence": "项目整理的系统与程序兼容性记录。"
+        }
+      ],
+      "author": "Ian Scott",
+      "date": "2026-11-07",
+      "versionNote": "硬件 2.0 的 OSHWA 登记日期为 2024-10-21。GitHub 将固件 v4.1.1 列为最新正式发行，源站 UTC 发布于 2026-05-17 17:26，北京时间 05-18。预发行 v4.2.0-beta.2 源站 UTC 发布于 2026-11-06 20:25，北京时间 11-07。图为早期 PCB 布局路线的 v1.2 设计图（图纸 2023-12-13）。"
+    },
+    {
+      "id": "smartknob",
+      "title": "SmartKnob：旋钮的档位感由代码决定",
+      "section": "deep-dive",
+      "sources": [
+        {
+          "title": "Scott Bezek 项目说明与视频入口",
+          "url": "https://github.com/scottbez1/smartknob/blob/4eb988399c3fda6ffd3006772856093dfe9adb86/README.md",
+          "commit": "4eb988399c3fda6ffd3006772856093dfe9adb86",
+          "date": null,
+          "evidence": "View 的空心轴、磁编码器、BLDC、PCB 挠性按压；八根线、TMC6300 模块、齿槽转矩，协调选件。"
+        },
+        {
+          "title": "SmartKnob View 工作原理视频",
+          "url": "https://www.youtube.com/watch?v=Q76dMggUH1M",
+          "commit": null,
+          "date": null,
+          "evidence": "项目作者在 README 的 How it works 部分链接该视频。"
+        },
+        {
+          "title": "作者的模拟视频时间线演示",
+          "url": "https://www.youtube.com/watch?v=J9192DfZplk",
+          "commit": null,
+          "date": null,
+          "evidence": "项目说明标记为 mock video timeline，未宣称通用剪辑软件插件。"
+        },
+        {
+          "title": "力反馈控制循环源码",
+          "url": "https://github.com/scottbez1/smartknob/blob/4eb988399c3fda6ffd3006772856093dfe9adb86/firmware/src/motor_task.cpp#L224-L285",
+          "commit": "4eb988399c3fda6ffd3006772856093dfe9adb86",
+          "date": null,
+          "evidence": "根据轴角差更新档位中心，计算档位和止挡反馈强度，再由 motor.move 施加转矩。"
+        },
+        {
+          "title": "v0.5 底板预发行版",
+          "url": "https://github.com/scottbez1/smartknob/releases/tag/releases/view_base/v0.5",
+          "commit": "340eed936d04da718e66cbb89613ee2fdff4bf26",
+          "date": "2023-07-18T07:21:59Z",
+          "evidence": "贴片电阻替代粘接应变片，发布原理图、BOM 与制造文件。GitHub 标记预发行。"
+        },
+        {
+          "title": "v0.5 底板原理图",
+          "url": "https://smartknob-artifacts.s3.us-west-1.amazonaws.com/refs/tags/releases/view_base/v0.5/electronics/view_base-schematic.pdf",
+          "commit": "340eed936d04da718e66cbb89613ee2fdff4bf26",
+          "date": "2023-07-18",
+          "evidence": "标题块标 v0.5，可见导线与 MT6701、HX711、TMC6300 的连接。"
+        },
+        {
+          "title": "早期 README 与手持原型照片",
+          "url": "https://github.com/scottbez1/smartknob/blob/ac6ef1557a2cd2d05f2b77032bf0d8bb9da227a8/README.md",
+          "commit": "ac6ef1557a2cd2d05f2b77032bf0d8bb9da227a8",
+          "date": "2022-02-14",
+          "evidence": "Scott Bezek 在 2022-02-14 的 README 把这张原型照放在 SmartKnob Handheld 章节。"
+        }
+      ],
+      "author": "Scott Bezek",
+      "date": "2023-07-18",
+      "versionNote": "作者 2022-02-14 的 README 将照片列为 SmartKnob Handheld 原型。SmartKnob View v0.5 是 2023-07-18 的底板预发行版本，固件段依据 2024-01-22 的固定仓库快照。"
+    },
+    {
+      "id": "kicanvas",
+      "title": "KiCanvas：把可放大的原理图发给朋友",
+      "section": "briefs",
+      "sources": [
+        {
+          "title": "KiCanvas 官网与已知问题",
+          "url": "https://kicanvas.org/home/",
+          "commit": null,
+          "date": null,
+          "evidence": "Thea Flowers、只读查看、alpha、KiCad 6 起及自定义字体示例。"
+        },
+        {
+          "title": "浏览器打开 KiCanvas",
+          "url": "https://kicanvas.org/",
+          "commit": null,
+          "date": null,
+          "evidence": "作者提供的网页查看器。"
+        },
+        {
+          "title": "查看器控制和板层面板",
+          "url": "https://github.com/theacodes/kicanvas/blob/b031159eb74aaa7eef2b026fd85d35bc05ff2095/docs/docs/embedding.md",
+          "commit": "b031159eb74aaa7eef2b026fd85d35bc05ff2095",
+          "date": "2026-04-28",
+          "evidence": "可在原理图/PCB 中平移缩放和选取对象，项目文档列举图层和网络面板。"
+        },
+        {
+          "title": "PCB 网络面板源码",
+          "url": "https://github.com/theacodes/kicanvas/blob/b031159eb74aaa7eef2b026fd85d35bc05ff2095/src/kicanvas/elements/kc-board/nets-panel.ts",
+          "commit": "b031159eb74aaa7eef2b026fd85d35bc05ff2095",
+          "date": null,
+          "evidence": "网络面板和与 PCB 对象的交互。"
+        }
+      ],
+      "author": "Thea Flowers",
+      "date": "2026-04-28"
+    },
+    {
+      "id": "kicad-stepup",
+      "title": "KiCad StepUp：在 FreeCAD 里对好板子和外壳",
+      "section": "briefs",
+      "sources": [
+        {
+          "title": "StepUp 功能与作者演示",
+          "url": "https://github.com/easyw/kicadStepUpMod/blob/3db98be23aae40413eab041f19de5ab2e168157e/README.md",
+          "commit": "3db98be23aae40413eab041f19de5ab2e168157e",
+          "date": "2026-09-04",
+          "evidence": "从 KiCad 导入板与器件、导出 STEP、碰撞检查、Sketcher 板框双向同步。"
+        },
+        {
+          "title": "作者速查表",
+          "url": "https://github.com/easyw/kicadStepUpMod/blob/3db98be23aae40413eab041f19de5ab2e168157e/demo/kicadStepUp-cheat-sheet.pdf",
+          "commit": "3db98be23aae40413eab041f19de5ab2e168157e",
+          "date": null,
+          "evidence": "工作台命令与快捷入口。"
+        },
+        {
+          "title": "工作台版本元数据",
+          "url": "https://github.com/easyw/kicadStepUpMod/blob/3db98be23aae40413eab041f19de5ab2e168157e/package.xml",
+          "commit": "3db98be23aae40413eab041f19de5ab2e168157e",
+          "date": "2026-09-04",
+          "evidence": "作者字段 Maui，项目快照中的工作台版本为 11.09.6，许可证为 AGPLv3.0。"
+        }
+      ],
+      "author": "Maui（easyw）",
+      "date": "2026-09-04"
+    },
+    {
+      "id": "probe-rs",
+      "title": "probe-rs：在自己开发板上停下来读变量",
+      "section": "briefs",
+      "sources": [
+        {
+          "title": "probe-rs v0.32.0 工具说明",
+          "url": "https://github.com/probe-rs/probe-rs/blob/48f5e4d53c690a1d40c2454033c6f785b4f4f95c/README.md",
+          "commit": "48f5e4d53c690a1d40c2454033c6f785b4f4f95c",
+          "date": null,
+          "evidence": "工具用途包括内核停止/单步、断点、SWD 与编辑器/GDB 接入。"
+        },
+        {
+          "title": "调试器官方指南",
+          "url": "https://probe.rs/docs/tools/debugger/",
+          "commit": null,
+          "date": null,
+          "evidence": "VS Code 配置和调试入口，包含支持多内核的配置。"
+        },
+        {
+          "title": "RP2040 目标定义",
+          "url": "https://github.com/probe-rs/probe-rs/blob/48f5e4d53c690a1d40c2454033c6f785b4f4f95c/probe-rs/targets/RP2040.yaml",
+          "commit": "48f5e4d53c690a1d40c2454033c6f785b4f4f95c",
+          "date": null,
+          "evidence": "分别定义 core0 与 core1 及 ARM 调试接入信息。"
+        },
+        {
+          "title": "v0.32.0 发行记录",
+          "url": "https://github.com/probe-rs/probe-rs/releases/tag/v0.32.0",
+          "commit": "48f5e4d53c690a1d40c2454033c6f785b4f4f95c",
+          "date": "2026-07-22T22:23:09Z",
+          "evidence": "GitHub 版本和发布日期，2026-07-22 22:23:09Z，北京时间 07-23。"
+        }
+      ],
+      "author": "probe-rs 项目维护者",
+      "date": "2026-07-23"
+    },
+    {
+      "id": "sonic-visualiser",
+      "title": "Sonic Visualiser：看一眼敲击与底噪各在何处",
+      "section": "briefs",
+      "sources": [
+        {
+          "title": "Sonic Visualiser 项目说明与作者",
+          "url": "https://github.com/sonic-visualiser/sonic-visualiser/blob/cf7a16f54ce4987f6eeef2670ad807f047d311de/README.md",
+          "commit": "cf7a16f54ce4987f6eeef2670ad807f047d311de",
+          "date": null,
+          "evidence": "WAV、频谱与标注，Chris Cannam 和伦敦玛丽女王大学研究中心等开发者，GPL。"
+        },
+        {
+          "title": "5.2 手册的频谱图选项",
+          "url": "https://sonicvisualiser.org/doc/reference/5.2.1/en/#spectrogram",
+          "commit": null,
+          "date": null,
+          "evidence": "短窗提升时间分辨率，长窗提升频率分辨率。"
+        },
+        {
+          "title": "Time Instants 标注层",
+          "url": "https://sonicvisualiser.org/doc/reference/5.2.1/en/#timeinstants",
+          "commit": null,
+          "date": null,
+          "evidence": "可手工添加、标注和编辑时间点，与波形、频谱并列。"
+        },
+        {
+          "title": "v5.2.1 发布公告",
+          "url": "https://www.sonicvisualiser.org/news/index.html",
+          "commit": "cf7a16f54ce4987f6eeef2670ad807f047d311de",
+          "date": "2025-03-21",
+          "evidence": "项目公告标注 v5.2.1 发布于 2025-03-21。"
+        }
+      ],
+      "author": "Chris Cannam 等",
+      "date": "2025-03-21"
+    },
+    {
+      "id": "pad-hole",
+      "title": "画一个圆之前，先区分焊盘和孔",
+      "section": "notes",
+      "sources": [
+        {
+          "title": "KiCad 9 PCB Editor / Pad types、Drill files",
+          "url": "https://docs.kicad.org/9.0/en/pcbnew/pcbnew.html"
+        }
+      ]
+    },
+    {
+      "id": "pio-memory",
+      "title": "四个状态机，共用哪一份程序？",
+      "section": "notes",
+      "sources": [
+        {
+          "title": "RP2040 Datasheet / §3.1–3.2（印刷页311–313）",
+          "url": "https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf#page=312"
+        }
+      ]
+    },
+    {
+      "id": "picodmg-audio",
+      "title": "PicoDMG 买错了哪两件音频元件",
+      "section": "independent-web",
+      "sources": [
+        {
+          "label": "作者制作札记原文",
+          "url": "https://dodger-one.github.io/PicoDMG/2026/05/31/episode05-mistakes.html"
+        },
+        {
+          "label": "作者硬件接线表",
+          "url": "https://dodger-one.github.io/PicoDMG/tech/hardware.html"
+        },
+        {
+          "label": "项目源码仓库",
+          "url": "https://github.com/dodger-one/PicoDMG"
+        }
+      ],
+      "author": "dodger-one",
+      "publishedDate": "2026-05-31",
+      "sourceFacts": [
+        "个人制作札记明示作者署名 dodger-one、可见日期和结构化发布日期 2026-05-31。",
+        "札记区分了 PAM8302 的模拟输入、MAX98357A 的数字输入，以及插入耳机时断开扬声器所需的机械触点。",
+        "作者的硬件表给出 MAX98357A 的 DIN、BCLK、LRC 接线。耳机座机械触点事实来自札记。",
+        "项目仓库公开，未核实仓库的整体再分发许可证。"
+      ],
+      "imageReference": {
+        "mode": "text-card",
+        "sourcePage": "https://dodger-one.github.io/PicoDMG/2026/05/31/episode05-mistakes.html",
+        "originalUrl": "https://dodger-one.github.io/PicoDMG/media/episode05/IMG_20260419_212138.webp",
+        "alt": "dodger-one 制作札记中展示的耳机插座",
+        "credit": "dodger-one",
+        "dimensions": [
+          879,
+          765
+        ],
+        "access": "HTTP 200，WebP 完整解码。",
+        "rights": "未核实作者照片的转载许可。"
+      }
+    },
+    {
+      "id": "clark-sundial",
+      "title": "Lygia Clark 与可以折动的《日晷》",
+      "section": "culture",
+      "sources": [
+        {
+          "label": "MoMA 馆藏作品与照片",
+          "url": "https://www.moma.org/collection/works/91764"
+        },
+        {
+          "label": "MoMA 2014 年回顾展",
+          "url": "https://www.moma.org/calendar/exhibitions/1422?installation_image_index=0"
+        },
+        {
+          "label": "MoMA 展览作品清单",
+          "url": "https://press.moma.org/wp-content/uploads/2025/08/Artists-Choice_Arthur-Jafa_Exhibition-Checklist_11.18.25.pdf"
+        },
+        {
+          "label": "MoMA 图片授权说明",
+          "url": "https://www.moma.org/collection/about/licensing"
+        }
+      ],
+      "artist": "Lygia Clark",
+      "workYear": 1960,
+      "sourceFacts": [
+        "MoMA 藏品档案核对艺术家、英文题名、1960 年、阳极氧化铝、尺寸可变、藏品编号及多个配置和平展状态。",
+        "MoMA 回顾展说明将 Clark 列为巴西新具体主义的先驱，并明确其作品推动观众主动参与。",
+        "MoMA 的展览作品清单列出葡语原题 Relógio de sol，并将同件藏品的材质详述为 aluminum with gold patina；正文使用馆藏页的材质标注。",
+        "馆藏页的 credit 是捐赠署名。仅以原页链接呈现馆藏图。"
+      ],
+      "imageReference": {
+        "mode": "text-card",
+        "sourcePage": "https://www.moma.org/collection/works/91764",
+        "caption": "Lygia Clark，《Sundial》（1960），The Museum of Modern Art 藏",
+        "credit": "Gift of Patricia Phelps de Cisneros in honor of Rafael Romero",
+        "rights": "馆方有藏品图像复制授权流程。本刊未核实图片转载授权。",
+        "access": "馆藏页与图片标记可经网页工具读取。当前命令行直接请求馆藏页返回 403。"
+      }
+    }
+  ],
+  "music": [
+    {
+      "artist": "Aaron Dilloway",
+      "title": "No Skill Comedy Mind Reading",
+      "url": "https://aarondilloway.bandcamp.com/album/no-skill-comedy-mind-reading",
+      "releaseDate": "2026-11-13",
+      "evidence": "Bandcamp 发行页的介绍明确写近十年作品及采集声、田野录音、人声即兴，并说明第六曲的朗读经数字剪切。页面列八首，标注 11 月 13 日发行。",
+      "trackCount": 8,
+      "discovery": {
+        "type": "专辑乐评",
+        "publication": "Pitchfork",
+        "author": "Matthew Blackwell",
+        "date": "2026-11-17",
+        "url": "https://pitchfork.com/reviews/albums/aaron-dilloway-no-skill-comedy-mind-reading/"
+      }
+    },
+    {
+      "artist": "HAPEXZM",
+      "title": "[BT03] HEXES",
+      "url": "https://hapexzm.bandcamp.com/album/bt03-hexes",
+      "releaseDate": "2026-10-13",
+      "evidence": "Bandcamp 发行页写明素材原件与制作工具，发行日为 10 月 13 日。曲目表列十三首与可试听的 28:57 整卷混音。All Gone、Tunnel 与 No 三条分轨未提供独立试听源。",
+      "trackCount": 14,
+      "discovery": {
+        "type": "专辑乐评",
+        "publication": "A Closer Listen",
+        "author": "Richard Allen",
+        "date": "2026-11-06",
+        "url": "https://acloserlisten.com/2026/11/06/hapexzm-hexes/"
+      }
+    },
+    {
+      "artist": "Marcin Lasek + rsn",
+      "title": "Plone/None",
+      "url": "https://mahorka.bandcamp.com/album/plone-none",
+      "releaseDate": "2026-10-23",
+      "evidence": "Mahorka 的 Bandcamp 发行文案写明首次合作、电声与持续音；限量磁带五十份，页面列出 Plone（21:19）、None（21:17）两首及 10 月 23 日发行日期。文章直连对应厂牌发行页。",
+      "trackCount": 2,
+      "discovery": {
+        "type": "专辑乐评",
+        "publication": "Igloo Magazine",
+        "author": "Philippe Blache",
+        "date": "2026-11-15",
+        "url": "https://igloomag.com/reviews/marcin-lasek-rsn-plone-none-mahorka",
+        "access": "直接 HTTP 请求返回 406。已在公开网页浏览工具读取同一原站乐评，核实作者、日期、Reviews 栏目及指向厂牌的发行链接。"
+      }
+    }
+  ]
+}

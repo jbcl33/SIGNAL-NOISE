@@ -1,0 +1,108 @@
+[
+  {
+    "file": "smartknob-prototype.webp",
+    "source": "https://github.com/scottbez1/smartknob/blob/ac6ef1557a2cd2d05f2b77032bf0d8bb9da227a8/README.md#smartknob-handheld",
+    "image": "https://raw.githubusercontent.com/scottbez1/smartknob/ac6ef1557a2cd2d05f2b77032bf0d8bb9da227a8/doc/img/PXL_20220212_013249074.jpg",
+    "credit": "Scott Bezek",
+    "alt": "Scott Bezek 拍摄的 SmartKnob Handheld 原型，圆形电机与小屏幕安装在长方形底座上，屏幕显示 22 和档位参数",
+    "width": 1200,
+    "height": 1600,
+    "license": "Apache-2.0",
+    "licenseUrl": "https://github.com/scottbez1/smartknob/blob/4eb988399c3fda6ffd3006772856093dfe9adb86/LICENSE.txt",
+    "licenseFile": "smartknob-license.txt",
+    "changes": "缩放后转换为 WebP；刊封面以灰度展示照片局部。",
+    "copyright": "© 2022 Scott Bezek · Apache-2.0（项目文档）"
+  },
+  {
+    "file": "picogus-isa-schematic.png",
+    "source": "https://github.com/polpo/picogus/blob/d3f4df66d6f748809fd3ba2c7fb48419a46d59cf/hw/PicoGUS-schematic.pdf",
+    "image": "https://raw.githubusercontent.com/polpo/picogus/d3f4df66d6f748809fd3ba2c7fb48419a46d59cf/hw/PicoGUS-schematic.pdf",
+    "credit": "Ian Scott",
+    "alt": "PicoGUS v1.2 总原理图，左侧 ISA 插槽，中间 Raspberry Pi Pico 与地址数据复用器，右侧控制和音频接口",
+    "width": 1825,
+    "height": 1290,
+    "license": "CERN-OHL-P-2.0",
+    "licenseUrl": "https://github.com/polpo/picogus/blob/d3f4df66d6f748809fd3ba2c7fb48419a46d59cf/hw/LICENSE",
+    "licenseFile": "picogus-hw-license.txt",
+    "changes": "将项目官方 PDF 第 1 页原样栅格化为 PNG，未改电路。",
+    "copyright": "© Ian Scott · CERN-OHL-P-2.0"
+  },
+  {
+    "file": "picogus-audio-detail.png",
+    "source": "https://github.com/polpo/picogus/blob/d3f4df66d6f748809fd3ba2c7fb48419a46d59cf/hw/PicoGUS-schematic.pdf",
+    "image": "https://raw.githubusercontent.com/polpo/picogus/d3f4df66d6f748809fd3ba2c7fb48419a46d59cf/hw/PicoGUS-schematic.pdf",
+    "credit": "Ian Scott",
+    "alt": "PicoGUS v1.2 的 PCM5100 音频电路局部，左边是 I²S 信号，右边是左右模拟输出",
+    "width": 980,
+    "height": 525,
+    "license": "CERN-OHL-P-2.0",
+    "licenseUrl": "https://github.com/polpo/picogus/blob/d3f4df66d6f748809fd3ba2c7fb48419a46d59cf/hw/LICENSE",
+    "licenseFile": "picogus-hw-license.txt",
+    "changes": "从项目官方 PDF 第 2 页截取 PCM5100 区域并栅格化为 PNG，未改电路。",
+    "copyright": "© Ian Scott · CERN-OHL-P-2.0"
+  },
+  {
+    "file": "smartknob-base-v05-schematic.png",
+    "source": "https://github.com/scottbez1/smartknob/releases/tag/releases/view_base/v0.5",
+    "image": "https://smartknob-artifacts.s3.us-west-1.amazonaws.com/refs/tags/releases/view_base/v0.5/electronics/view_base-schematic.pdf",
+    "credit": "Scott Bezek",
+    "alt": "SmartKnob View v0.5 主板的原理图，绘有磁编码器、应变电阻和驱动电机的电路",
+    "width": 2142,
+    "height": 1386,
+    "license": "Apache-2.0",
+    "licenseUrl": "https://github.com/scottbez1/smartknob/blob/4eb988399c3fda6ffd3006772856093dfe9adb86/LICENSE.txt",
+    "licenseFile": "smartknob-license.txt",
+    "changes": "将项目官方 PDF 原样栅格化为 PNG，未改电路。",
+    "copyright": "© Scott Bezek · Apache-2.0（电子设计与文档）"
+  },
+  {
+    "file": "smartknob-base-v05-render.png",
+    "source": "https://github.com/scottbez1/smartknob/releases/tag/releases/view_base/v0.5",
+    "image": "https://smartknob-artifacts.s3.us-west-1.amazonaws.com/refs/tags/releases/view_base/v0.5/electronics/view_base-front-3d.png",
+    "credit": "Scott Bezek",
+    "alt": "SmartKnob View v0.5 底板的官方 3D 渲染，方形电路板中央带有弧形开槽与环绕的 LED",
+    "width": 1024,
+    "height": 1072,
+    "license": "Apache-2.0",
+    "licenseUrl": "https://github.com/scottbez1/smartknob/blob/4eb988399c3fda6ffd3006772856093dfe9adb86/LICENSE.txt",
+    "licenseFile": "smartknob-license.txt",
+    "changes": "原图，项目生成的电路板渲染。",
+    "copyright": "© Scott Bezek · Apache-2.0（电子设计与文档）"
+  },
+  {
+    "file": "pio-memory.svg",
+    "source": "https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf#page=312",
+    "image": null,
+    "credit": "SIGNAL / NOISE 原创示意",
+    "alt": "原创RP2040 PIO示意：一份32槽指令存储器供四个状态机访问",
+    "width": 810,
+    "height": 300
+  },
+  {
+    "file": "record-dilloway.jpg",
+    "source": "https://aarondilloway.bandcamp.com/album/no-skill-comedy-mind-reading",
+    "image": "https://f4.bcbits.com/img/a2011921614_5.jpg",
+    "credit": "Aaron Dilloway / Dais Records（Bandcamp 发行页）",
+    "alt": "《No Skill Comedy Mind Reading》封面，白底上是一张红蓝两色的张嘴图案",
+    "width": 700,
+    "height": 700
+  },
+  {
+    "file": "record-hapexzm.jpg",
+    "source": "https://hapexzm.bandcamp.com/album/bt03-hexes",
+    "image": "https://f4.bcbits.com/img/a3729773965_5.jpg",
+    "credit": "HAPEXZM / Dust Planet Records（封面署名）",
+    "alt": "《[BT03] HEXES》封面，一卷红色磁带斜放在纹样织物上",
+    "width": 700,
+    "height": 700
+  },
+  {
+    "file": "record-plone-none.jpg",
+    "source": "https://mahorka.bandcamp.com/album/plone-none",
+    "image": "https://f4.bcbits.com/img/a0533622158_5.jpg",
+    "credit": "Thomas Rosen（设计与排版）/ Mahorka（Bandcamp 发行页）",
+    "alt": "《Plone/None》封面，失焦的绿色与白色背景上竖排印着艺人与专辑名",
+    "width": 700,
+    "height": 700
+  }
+]
