@@ -1,0 +1,116 @@
+{
+  "kicadVersion": "9.0.2",
+  "inputs": {
+    "sym-lib-table": "da547c7cbbe30b1c5f80cc173ee19f7c61f429460e22cee41c7adbdb13aca9a7",
+    "good.kicad_sch": "6cf79fd3224fb8ea30315931c6a3262b77c6ca1502db24d48b2cb6a800ca4400",
+    "SignalNoise.kicad_sym": "a81f0cb824c2ef63e991b235e2b38858ecc630d16265a2dd79d2da3350b5e11b",
+    "bad.kicad_sch": "ab4ebc313a3bef9cb10dc55545ec7f6a0175539122d57750a6f1e606590860ea",
+    "good.kicad_pro": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "bad.kicad_pro": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+  },
+  "runs": [
+    {
+      "name": "good-strict",
+      "command": [
+        "kicad-cli",
+        "sch",
+        "erc",
+        "--format",
+        "json",
+        "--severity-all",
+        "--exit-code-violations",
+        "-o",
+        "results/good-strict.json",
+        "good.kicad_sch"
+      ],
+      "exitCode": 0,
+      "violationCount": 0,
+      "violationTypes": []
+    },
+    {
+      "name": "bad-strict",
+      "command": [
+        "kicad-cli",
+        "sch",
+        "erc",
+        "--format",
+        "json",
+        "--severity-all",
+        "--exit-code-violations",
+        "-o",
+        "results/bad-strict.json",
+        "bad.kicad_sch"
+      ],
+      "exitCode": 5,
+      "violationCount": 1,
+      "violationTypes": [
+        "pin_to_pin"
+      ]
+    },
+    {
+      "name": "bad-default",
+      "command": [
+        "kicad-cli",
+        "sch",
+        "erc",
+        "--format",
+        "json",
+        "--severity-all",
+        "-o",
+        "results/bad-default.json",
+        "bad.kicad_sch"
+      ],
+      "exitCode": 0,
+      "violationCount": 1,
+      "violationTypes": [
+        "pin_to_pin"
+      ]
+    },
+    {
+      "name": "bad-netlist",
+      "command": [
+        "kicad-cli",
+        "sch",
+        "export",
+        "netlist",
+        "--format",
+        "kicadxml",
+        "-o",
+        "results/bad.net",
+        "bad.kicad_sch"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "good-svg",
+      "command": [
+        "kicad-cli",
+        "sch",
+        "export",
+        "svg",
+        "--black-and-white",
+        "--exclude-drawing-sheet",
+        "-o",
+        "results/svg",
+        "good.kicad_sch"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "bad-svg",
+      "command": [
+        "kicad-cli",
+        "sch",
+        "export",
+        "svg",
+        "--black-and-white",
+        "--exclude-drawing-sheet",
+        "-o",
+        "results/svg",
+        "bad.kicad_sch"
+      ],
+      "exitCode": 0
+    }
+  ],
+  "scope": "Software ERC and exports only; no board fabrication, circuit simulation or hardware test."
+}

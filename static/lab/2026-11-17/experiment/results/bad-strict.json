@@ -1,0 +1,38 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-17T14:19:23+0800",
+    "kicad_version": "9.0.2",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/68e812ee-a142-5082-b6a1-37abcc42c2c3",
+            "violations": [
+                {
+                    "description": "Pins of type Output and Output are connected",
+                    "items": [
+                        {
+                            "description": "Symbol U1 Pin 1 [IO, Output, Line]",
+                            "pos": {
+                                "x": 0.8128,
+                                "y": 0.762
+                            },
+                            "uuid": "73badc75-b9c6-574b-8084-dbf2e26d2266"
+                        },
+                        {
+                            "description": "Symbol U2 Pin 1 [IO, Output, Line]",
+                            "pos": {
+                                "x": 1.016,
+                                "y": 0.762
+                            },
+                            "uuid": "532b2e91-be81-50f4-baf4-7f3f57f383df"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_to_pin"
+                }
+            ]
+        }
+    ],
+    "source": "bad.kicad_sch"
+}

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "collectedAt": "2026-11-17T03:19:12.802645+00:00",
+  "collectedAt": "2026-11-17T06:16:52.146144+00:00",
   "note": "RSS titles/dates/categories only; discovery candidates are not scored recommendations. Failed feeds retain visibly dated previous entries.",
   "sources": [
     {
@@ -9,54 +9,54 @@
       "url": "https://pitchfork.com/",
       "feed": "https://pitchfork.com/feed/feed-album-reviews/rss",
       "focus": "专业乐评 / Experimental / Electronic",
-      "checkedAt": "2026-11-17T03:19:12.802645+00:00",
+      "checkedAt": "2026-11-17T06:16:52.146144+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-17T03:19:12.802645+00:00",
+      "lastSuccessAt": "2026-11-17T06:16:52.146144+00:00",
       "entries": [
+        {
+          "title": "Legendary Love",
+          "url": "https://pitchfork.com/reviews/albums/snoh-aalegra-legendary-love/",
+          "publishedAt": "2026-11-17T05:03:00+00:00",
+          "categories": [
+            "Reviews / Albums"
+          ],
+          "status": "discovery-only",
+          "score": null
+        },
+        {
+          "title": "No Skill Comedy Mind Reading",
+          "url": "https://pitchfork.com/reviews/albums/aaron-dilloway-no-skill-comedy-mind-reading/",
+          "publishedAt": "2026-11-17T05:02:00+00:00",
+          "categories": [
+            "Reviews / Albums"
+          ],
+          "status": "discovery-only",
+          "score": null
+        },
+        {
+          "title": "history is not woven by innocent hands",
+          "url": "https://pitchfork.com/reviews/albums/cute-history-is-not-woven-by-innocent-hands/",
+          "publishedAt": "2026-11-17T05:01:00+00:00",
+          "categories": [
+            "Reviews / Albums"
+          ],
+          "status": "discovery-only",
+          "score": null
+        },
+        {
+          "title": "file_1",
+          "url": "https://pitchfork.com/reviews/albums/nori-file-1/",
+          "publishedAt": "2026-11-17T05:00:00+00:00",
+          "categories": [
+            "Reviews / Albums"
+          ],
+          "status": "discovery-only",
+          "score": null
+        },
         {
           "title": "Trouble Mountain",
           "url": "https://pitchfork.com/reviews/albums/aesop-rock-blockhead-trouble-mountain/",
           "publishedAt": "2026-11-16T05:03:00+00:00",
-          "categories": [
-            "Reviews / Albums"
-          ],
-          "status": "discovery-only",
-          "score": null
-        },
-        {
-          "title": "Music for Empty Stadiums",
-          "url": "https://pitchfork.com/reviews/albums/or-music-for-empty-stadiums/",
-          "publishedAt": "2026-11-16T05:01:00+00:00",
-          "categories": [
-            "Reviews / Albums"
-          ],
-          "status": "discovery-only",
-          "score": null
-        },
-        {
-          "title": "Advanced White Trash",
-          "url": "https://pitchfork.com/reviews/albums/sam-gendel-advanced-white-trash/",
-          "publishedAt": "2026-11-16T05:01:00+00:00",
-          "categories": [
-            "Reviews / Albums"
-          ],
-          "status": "discovery-only",
-          "score": null
-        },
-        {
-          "title": "Saints in the Wethouse",
-          "url": "https://pitchfork.com/reviews/albums/blackhaine-saints-in-the-wethouse/",
-          "publishedAt": "2026-11-16T05:00:00+00:00",
-          "categories": [
-            "Reviews / Albums"
-          ],
-          "status": "discovery-only",
-          "score": null
-        },
-        {
-          "title": "Yield",
-          "url": "https://pitchfork.com/reviews/albums/pearl-jam-yield/",
-          "publishedAt": "2026-11-15T05:00:00+00:00",
           "categories": [
             "Reviews / Albums"
           ],
@@ -71,9 +71,9 @@
       "url": "https://theneedledrop.com/",
       "feed": "https://theneedledrop.com/rss/",
       "focus": "视频乐评 / 个人评分",
-      "checkedAt": "2026-11-17T03:19:12.802645+00:00",
+      "checkedAt": "2026-11-17T06:16:52.146144+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-17T03:19:12.802645+00:00",
+      "lastSuccessAt": "2026-11-17T06:16:52.146144+00:00",
       "entries": [
         {
           "title": "Twisted Teens - The Holy Cross Tigers",
@@ -98,9 +98,9 @@
       "url": "https://igloomag.com/",
       "feed": "https://igloomag.com/feed",
       "focus": "IDM / Glitch / Braindance / 地下电子",
-      "checkedAt": "2026-11-17T03:19:12.802645+00:00",
+      "checkedAt": "2026-11-17T06:16:52.146144+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-17T03:19:12.802645+00:00",
+      "lastSuccessAt": "2026-11-17T06:16:52.146144+00:00",
       "entries": [
         {
           "title": "Solypsis :: Invisible Ticks (Component)",
@@ -233,9 +233,9 @@
       "url": "https://acloserlisten.com/",
       "feed": "https://acloserlisten.com/feed/",
       "focus": "实验 / Ambient / Drone / 田野录音",
-      "checkedAt": "2026-11-17T03:19:12.802645+00:00",
+      "checkedAt": "2026-11-17T06:16:52.146144+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-17T03:19:12.802645+00:00",
+      "lastSuccessAt": "2026-11-17T06:16:52.146144+00:00",
       "entries": [
         {
           "title": "xicada ~ Interastral Communications",
@@ -332,9 +332,9 @@
       "url": "https://headphonecommute.com/",
       "feed": "https://headphonecommute.com/feed/",
       "focus": "Ambient / 电声 / 艺术家访谈",
-      "checkedAt": "2026-11-17T03:19:12.802645+00:00",
+      "checkedAt": "2026-11-17T06:16:52.146144+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-17T03:19:12.802645+00:00",
+      "lastSuccessAt": "2026-11-17T06:16:52.146144+00:00",
       "entries": [
         {
           "title": "Featured Artist: Arovane",
@@ -396,10 +396,20 @@
       "url": "https://thequietus.com/reviews/",
       "feed": "https://thequietus.com/feed/",
       "focus": "独立地下 / Experimental / Electronic",
-      "checkedAt": "2026-11-17T03:19:12.802645+00:00",
+      "checkedAt": "2026-11-17T06:16:52.146144+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-17T03:19:12.802645+00:00",
+      "lastSuccessAt": "2026-11-17T06:16:52.146144+00:00",
       "entries": [
+        {
+          "title": "Iceboy Violet – How to Glitch Under The Map",
+          "url": "https://thequietus.com/quietus-reviews/iceboy-violet-how-to-glitch-under-the-map-review/",
+          "publishedAt": "2026-11-17T06:00:00+00:00",
+          "categories": [
+            "Reviews"
+          ],
+          "status": "discovery-only",
+          "score": null
+        },
         {
           "title": "The Body & Cel Genesis – Whole Wide World",
           "url": "https://thequietus.com/quietus-reviews/the-body-cel-genesis-whole-wide-world-review/",
@@ -439,16 +449,6 @@
           ],
           "status": "discovery-only",
           "score": null
-        },
-        {
-          "title": "Coil – Gold is the Metal (with the Broadest Shoulders)",
-          "url": "https://thequietus.com/quietus-reviews/coil/",
-          "publishedAt": "2026-11-11T08:30:00+00:00",
-          "categories": [
-            "Reviews"
-          ],
-          "status": "discovery-only",
-          "score": null
         }
       ]
     },
@@ -458,9 +458,9 @@
       "url": "https://inverted-audio.com/",
       "feed": "https://inverted-audio.com/feed/",
       "focus": "地下舞曲 / 厂牌 / 制作人",
-      "checkedAt": "2026-11-17T03:19:12.802645+00:00",
+      "checkedAt": "2026-11-17T06:16:52.146144+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-17T03:19:12.802645+00:00",
+      "lastSuccessAt": "2026-11-17T06:16:52.146144+00:00",
       "entries": [
         {
           "title": "Florian Kupfer launches Lifetrax imprint with reissue of his L.I.E.S. debut",

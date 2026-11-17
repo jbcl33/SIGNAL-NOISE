@@ -1,0 +1,23 @@
+{
+  "checkedDate": "2026-11-17",
+  "experimentSoftware": "KiCad 9.0.2",
+  "hardwareTested": false,
+  "circuitSimulated": false,
+  "kibotExecuted": false,
+  "sources": [
+    {
+      "url": "https://docs.kicad.org/9.0/en/cli/cli.html",
+      "evidence": "ERC JSON output and explicit exit-code-violations; verified flags using installed CLI help"
+    },
+    {
+      "url": "https://docs.kicad.org/9.0/en/eeschema/eeschema.html",
+      "evidence": "ERC uses electrical pin-type rules; limited to configured checks"
+    },
+    {
+      "url": "https://kibot.readthedocs.io/en/latest/usage.html",
+      "evidence": "Configuration/output workflow and preflight skip options; documentation read only"
+    }
+  ],
+  "localEvidence": "experiment/results/summary.json",
+  "accessNote": "KiCad official documentation and KiBot usage read through web research tool; direct urllib request to KiCad docs returned HTTP 403, recorded and not bypassed. Command behavior was verified locally with installed KiCad 9.0.2."
+}

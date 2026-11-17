@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/workspace/work/signal-noise/static/lab/2026-11-17/experiment/bad.kicad_sch</source>
+    <date>2026-11-17T14:19:23+0800</date>
+    <tool>Eeschema 9.0.2+dfsg-1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>SIGNAL / NOISE - ERC bad</title>
+        <company/>
+        <rev>001</rev>
+        <date>2026-11-17</date>
+        <source>bad.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="U1">
+      <value>Driver</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SignalNoise" part="Driver" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="bad.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d6dbee2e-2581-546c-b643-272bac3a99e0</tstamps>
+    </comp>
+    <comp ref="U2">
+      <value>Driver</value>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SignalNoise" part="Driver" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="bad.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5a402ba6-30a9-5ddd-b7a8-e9ab1efc9e98</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="SignalNoise" part="Driver">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">Driver</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="IO" type="output"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="SignalNoise">
+      <uri>/workspace/work/signal-noise/static/lab/2026-11-17/experiment/SignalNoise.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/TEST" class="Default">
+      <node ref="U1" pin="1" pinfunction="IO" pintype="output"/>
+      <node ref="U2" pin="1" pinfunction="IO" pintype="output"/>
+    </net>
+  </nets>
+</export>

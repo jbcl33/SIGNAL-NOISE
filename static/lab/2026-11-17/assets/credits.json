@@ -1,0 +1,29 @@
+{
+  "createdDate": "2026-11-17",
+  "images": [
+    {
+      "file": "assets/gate.svg",
+      "creator": "SIGNAL / NOISE",
+      "source": "experiment/results/summary.json",
+      "description": "Original result diagram based on actual KiCad 9.0.2 runs"
+    },
+    {
+      "file": "assets/workflow.svg",
+      "creator": "SIGNAL / NOISE",
+      "source": "Editorial process proposal",
+      "description": "Original process diagram, not a model capability demonstration"
+    },
+    {
+      "file": "assets/good-schematic.svg",
+      "creator": "SIGNAL / NOISE",
+      "source": "experiment/results/svg/good.svg",
+      "description": "KiCad export of original teaching symbols, cropped viewBox only; not a production circuit"
+    },
+    {
+      "file": "assets/bad-schematic.svg",
+      "creator": "SIGNAL / NOISE",
+      "source": "experiment/results/svg/bad.svg",
+      "description": "KiCad export of original injected-fault example, cropped viewBox only"
+    }
+  ]
+}

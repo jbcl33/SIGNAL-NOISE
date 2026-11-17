@@ -18,6 +18,15 @@
       "path": "noon/2026-11-17/",
       "summary": "Glasgow接口脚位、sigrok SPI解码与Pico闪存读取核对：从引脚到有依据的字节，附三张电子唱片。",
       "musicCount": 3
+    },
+    {
+      "date": "2026-11-17",
+      "edition": "lab",
+      "issue": "001",
+      "title": "TOOL LAB · 工具实验室 001",
+      "path": "lab/2026-11-17/",
+      "summary": "KiCad9.0.2实跑：故障原理图为何仍返回0？核对ERC、JSON与失败退出码，附正常/故障样例及复现包。",
+      "musicCount": 0
     }
   ]
 }

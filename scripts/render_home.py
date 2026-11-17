@@ -8,7 +8,7 @@ def render_home(root, out, published):
     rows = []
     latest_index = 0
     for index, (key, zh) in enumerate([
-        ('morning', '晨刊'), ('noon', '午刊'), ('night', '晚刊'),
+        ('morning', '晨刊'), ('noon', '午刊'), ('night', '晚刊'), ('lab', '工具实验室'),
     ]):
         item = next((p for p in published if p['edition'] == key), None)
         if item and item['path'] == latest['path']:
@@ -16,16 +16,15 @@ def render_home(root, out, published):
         path = e(json.dumps(item['path'], ensure_ascii=False)) if item else 'NULL'
         rows.append('    { &quot;' + zh + '&quot;, ' + path + ' },' + (' <span class="comment">/* 待刊 */</span>' if not item else ''))
     links = []
-    for index, (key, zh) in enumerate([('morning', '晨刊'), ('noon', '午刊'), ('night', '晚刊')]):
+    for index, (key, zh) in enumerate([('morning', '晨刊'), ('noon', '午刊'), ('night', '晚刊'), ('lab', '工具实验室')]):
         item = next((p for p in published if p['edition'] == key), None)
         call = 'read_issue(&amp;issues[' + str(index) + ']);'
         if item:
             links.append('    <a href="' + e(item['path'], quote=True) + '" aria-label="阅读' + zh + '">' + call + '</a> <span class="comment">// ' + zh + ' ↗</span>')
         else:
             links.append('    <span class="comment">// ' + call + ' ' + zh + '待刊</span>')
-    # A lab publication can be the latest even though it is outside the three editions.
-    latest_pointer = '&issues[' + str(latest_index) + ']' if latest['edition'] in ('morning', 'noon', 'night') else '&latest_issue'
-    extra = '' if latest['edition'] in ('morning', 'noon', 'night') else 'const Issue latest_issue = { "工具实验室", ' + json.dumps(latest['path'], ensure_ascii=False) + ' };\n'
+    latest_pointer = '&issues[' + str(latest_index) + ']'
+    extra = ''
     values = {
         'LATEST_ISSUE': latest['issue'], 'LATEST_DATE': latest['date'],
         'LATEST_PATH': latest['path'], 'LATEST_TITLE': latest['title'],
