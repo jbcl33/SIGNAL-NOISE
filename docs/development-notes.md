@@ -1,3 +1,7 @@
+# 当前执行入口
+
+先读 [当前编辑执行约定](editorial-brief.md) 与 [完整任务提示词](automation-prompts.json)。本次已将仍有效的要求合并，以下保留历史，旧方案不得覆盖最新明确要求。
+
 > 当前首页改用CMD/C语言索引，覆盖下方历史视觉要求：黑底灰白字、字符方框，Issue结构体描述刊别和URL，NULL表示未发布，变量显示实际发布数和更新日期，read_issue/open_archive函数名作为原生导航链接。无浏览器脚本，CSS继续内联。页面展示的C源码已做C11语法检查；这是网站导航的C语言表达，未声称在浏览器运行C编译器或链接成可执行程序。不要恢复小票、PCB或动画。
 
 > 首页当前视觉更新：采用热敏小票风格——浅灰桌面、窄幅白纸、等宽字体、编号分刊清单、虚线、最近更新、真实发布数量与底部撕纸边。底部条码只是aria-hidden装饰，不是可扫描的内容编码。不添加价格、付款等虚构交易信息。保留无JavaScript、内联CSS、真实发布清单驱动的导航；继续禁止恢复PCB或动画。此要求覆盖下方历史视觉描述。
@@ -41,7 +45,7 @@ python -m http.server 8000 --directory _site
 
 ## 制作与手机通知
 
-见 [OPERATIONS.md](OPERATIONS.md)。`data/publications.json` 登记独立分刊，构建后首页生成阅读入口，并输出线上 `publications.json` 供通知任务核实本期是否可读。制作和提醒是独立任务，首次定时生产尚需实际运行验证。
+见 [OPERATIONS.md](../OPERATIONS.md)。`data/publications.json` 登记独立分刊，构建后首页生成阅读入口，并输出线上 `publications.json` 供通知任务核实本期是否可读。制作和提醒是独立任务，首次定时生产尚需实际运行验证。
 
 2026-11-17 最新修订：独立晨刊使用完整杂志刊封面；音乐改为六张乐评电子精选，用户分/媒体分、原始分制、样本数、核查日期与来源在 `static/morning/001/music-selection.json` 记录。RYM 实时评分无法读取，本期未虚构 RYM 评分，展示核实的 AOTY 分数并保留确认的 RYM 专辑入口。其余栏目保留。
 

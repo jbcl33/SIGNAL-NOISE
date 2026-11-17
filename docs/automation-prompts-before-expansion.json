@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "capturedOn": "2026-11-17",
+  "note": "本次补全前可访问的简化版本，非更早不可访问任务的原文。",
+  "tasks": [
+    {
+      "title": "SIGNAL / NOISE 制作发布",
+      "prompt": "为GitHub仓库jbcl33/SIGNAL-NOISE收集、编辑、制作并发布《SIGNAL / NOISE》中文极客杂志。以Asia/Shanghai确定日期和本次计划时段：07时制作晨刊morning，11时制作午刊noon，14时制作工具实验室lab，16时制作晚刊night。使用当前附带的Codex工作环境；先找到仓库并git pull，阅读OPERATIONS.md、docs/development-notes.md、data/publications.json、data/editorial-policy.json及最新期刊，遵守用户最新要求和去重规则。首页当前为黑底灰白字的CMD/C语言索引，保留现有首页与导航，不重新设计首页、不恢复PCB/小票/星云或立方体，不恢复根目录README。以硬件、源码、逆向、开源制作和数字文化为主，电子音乐为精简辅栏；音乐晨刊3张、午刊3张、晚刊1张、实验室0张，使用真实Bandcamp发行链接和封面，并有发行页介绍依据，不捏造评分、不以旧发行充当天新闻。严谨有趣、具体有出处；原始项目、原文、图片署名和日期要核实。制作可独立阅读的移动端HTML分刊，维护data/publications.json及相应音乐数据；只登记真正已完成且可访问的分刊。两层目录返回首页用../../index.html。按项目要求运行检查和构建，提交并推送代码，等待GitHub Pages部署成功，再核实线上新页面和发布清单commit。相同日期分刊已成功发布则不重复新增；如有并发工作先检查仓库和运行状态，避免覆盖未提交修改。权限、环境、来源核查或部署失败时如实报告卡点，不声称已上线或自动写稿流程已成功验证。用户与朋友每天阅读，持续按读者反馈提高编辑质量。不要发送其他外部邮件或消息，不声称与手机ChatGPT直接通信；阅读通知任务会自行核实网站。",
+      "schedule": "BEGIN:VEVENT\nDTSTART:20261117T111500\nRRULE:FREQ=DAILY;BYHOUR=7,11,14,16;BYMINUTE=15;BYSECOND=0\nEND:VEVENT",
+      "default_timezone": "Asia/Shanghai"
+    },
+    {
+      "title": "SIGNAL / NOISE · 工具实验室",
+      "prompt": "发送《SIGNAL / NOISE》工具实验室阅读通知。以Asia/Shanghai确定当天日期，读取 https://jbcl33.github.io/SIGNAL-NOISE/publications.json ，查找date为当天且edition为lab的记录。只使用该站点根路径下记录的path，打开页面确认可访问后，简短通知标题、1–3句亮点和阅读链接。如记录缺失、读取失败或页面不可访问，明确说明“本期工具实验室尚未确认上线”，附首页 https://jbcl33.github.io/SIGNAL-NOISE/ ，禁止把旧刊当今日。收集、制作、提交和部署由Codex制作发布任务负责；本任务只核实通知，不写稿、不修改仓库、不声称与Codex直接互发消息。实际推送由应用和系统权限决定，不宣称已送达手机。",
+      "schedule": "BEGIN:VEVENT\nDTSTART:20261117T153000\nRRULE:FREQ=DAILY\nEND:VEVENT",
+      "default_timezone": "Asia/Shanghai"
+    },
+    {
+      "title": "SIGNAL / NOISE · 午刊",
+      "prompt": "发送《SIGNAL / NOISE》午刊阅读通知。以Asia/Shanghai确定当天日期，读取 https://jbcl33.github.io/SIGNAL-NOISE/publications.json ，查找date为当天且edition为noon的记录。只使用该站点根路径下记录的path，打开页面确认可访问后，简短通知标题、1–3句亮点和阅读链接。如记录缺失、读取失败或页面不可访问，明确说明“本期午刊尚未确认上线”，附首页 https://jbcl33.github.io/SIGNAL-NOISE/ ，禁止把旧刊当今日。收集、制作、提交和部署由Codex制作发布任务负责；本任务只核实通知，不写稿、不修改仓库、不声称与Codex直接互发消息。实际推送由应用和系统权限决定，不宣称已送达手机。",
+      "schedule": "BEGIN:VEVENT\nDTSTART:20261117T121500\nRRULE:FREQ=DAILY\nEND:VEVENT",
+      "default_timezone": "Asia/Shanghai"
+    },
+    {
+      "title": "SIGNAL / NOISE · 晚刊与反馈",
+      "prompt": "处理《SIGNAL / NOISE》晚刊阅读通知或晚间反馈，先以Asia/Shanghai确定当前时段。17时段：读取 https://jbcl33.github.io/SIGNAL-NOISE/publications.json ，查找date为当天、edition为night的记录；仅拼接该站点根路径下的path，实际打开确认可访问后，通知标题、1–3句亮点及阅读链接。无当天记录、数据无法读取或页面不可访问则明确说明“本期晚刊尚未确认上线”，附首页 https://jbcl33.github.io/SIGNAL-NOISE/ ，不以旧刊充今日。21时段：邀请读者用简短模板反馈今天期刊：整体1–5分、最喜欢的条目、希望改进之处、明日想深挖的方向；允许跳过，不假设已阅读。内容收集、制作、Git提交和部署由Codex制作发布任务承担；本任务只核实通知和收集反馈，不修改仓库、不另行写稿、不声称与Codex互发消息。实际推送取决于应用和系统权限，不声称已送达手机。",
+      "schedule": "BEGIN:VEVENT\nDTSTART:20261117T173000\nRRULE:FREQ=DAILY;BYHOUR=17,21;BYMINUTE=30;BYSECOND=0\nEND:VEVENT",
+      "default_timezone": "Asia/Shanghai"
+    },
+    {
+      "title": "SIGNAL / NOISE · 晨刊",
+      "prompt": "发送《SIGNAL / NOISE》晨刊阅读通知。使用 Asia/Shanghai 的当天日期，读取 https://jbcl33.github.io/SIGNAL-NOISE/publications.json ，查找 date 为当天、edition 为 morning 的记录。只把该站点根路径下记录的 path 拼成在线链接，并实际打开页面确认可访问后，简短通知标题、1–3句内容亮点和阅读链接。若无当天记录、数据无法读取或页面不可访问，明确告诉用户“本期晨刊尚未确认上线”，附首页 https://jbcl33.github.io/SIGNAL-NOISE/ ，不要把旧刊当今日。内容收集、HTML制作、Git提交和部署由 Codex 的制作发布任务承担；你只核实并提醒，不另行写稿、不生成替代杂志、不修改仓库、不声称与 Codex 直接互发消息。不要宣称通知已送达手机，实际推送取决于应用与系统权限。",
+      "schedule": "BEGIN:VEVENT\nDTSTART:20261118T084500\nRRULE:FREQ=DAILY\nEND:VEVENT",
+      "default_timezone": "Asia/Shanghai"
+    }
+  ]
+}
