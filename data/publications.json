@@ -9,6 +9,15 @@
       "path": "morning/001/",
       "summary": "硬件简报、软件 USB 中断时序、芯片显微逆向与微型 MIDI 制作，附三张电子唱片。",
       "musicCount": 3
+    },
+    {
+      "date": "2026-11-17",
+      "edition": "noon",
+      "issue": "001",
+      "title": "OPEN CIRCUIT · 午刊 001",
+      "path": "noon/2026-11-17/",
+      "summary": "Glasgow接口脚位、sigrok SPI解码与Pico闪存读取核对：从引脚到有依据的字节，附三张电子唱片。",
+      "musicCount": 3
     }
   ]
 }

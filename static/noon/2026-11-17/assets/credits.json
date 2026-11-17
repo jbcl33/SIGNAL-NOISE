@@ -1,0 +1,55 @@
+{
+  "checkedDate": "2026-11-17",
+  "images": [
+    {
+      "file": "assets/glasgow-pcba.webp",
+      "source": "https://glasgow-embedded.org/en/intro.html",
+      "imageUrl": "https://glasgow-embedded.org/en/_images/glasgow-pcba.webp",
+      "creator": "Glasgow Interface Explorer contributors",
+      "type": "Official bare board photograph; no revision asserted from image alone",
+      "license": "0BSD / project license; license copy included"
+    },
+    {
+      "file": "assets/glasgow-revc3.png",
+      "source": "https://github.com/GlasgowEmbedded/glasgow/blob/aa07daf9e809e6432291d757efe3f007c436b233/docs/manual/src/revisions/_images/revC3-3drender-front.png",
+      "creator": "Glasgow Interface Explorer contributors",
+      "type": "revC3 3D render, not a photograph",
+      "license": "0BSD / project license; license copy included"
+    },
+    {
+      "file": "assets/record-arthur.jpg",
+      "source": "https://arthurhnatek.bandcamp.com/album/undertow-ep",
+      "creator": "Arthur Hnatek / respective label and artwork rights holders",
+      "license": "All rights reserved; low-resolution cover displayed for editorial identification with original release link",
+      "type": "Original album cover, unchanged"
+    },
+    {
+      "file": "assets/record-fax.jpg",
+      "source": "https://highpointlowlife.bandcamp.com/album/afar",
+      "creator": "FAX / respective label and artwork rights holders",
+      "license": "All rights reserved; low-resolution cover displayed for editorial identification with original release link",
+      "type": "Original album cover, unchanged"
+    },
+    {
+      "file": "assets/record-solypsis.jpg",
+      "source": "https://componentrecordings.bandcamp.com/album/invisible-ticks",
+      "creator": "Solypsis / respective label and artwork rights holders",
+      "license": "All rights reserved; low-resolution cover displayed for editorial identification with original release link",
+      "type": "Original album cover, unchanged"
+    },
+    {
+      "file": "assets/spi-mode0.svg",
+      "source": "SIGNAL / NOISE editorial drawing for this issue",
+      "creator": "SIGNAL / NOISE",
+      "license": "Original explanatory diagram",
+      "type": "Synthetic educational illustration, not captured data"
+    },
+    {
+      "file": "assets/read-chain.svg",
+      "source": "SIGNAL / NOISE editorial drawing for this issue",
+      "creator": "SIGNAL / NOISE",
+      "license": "Original explanatory diagram",
+      "type": "Synthetic educational illustration, not captured data"
+    }
+  ]
+}

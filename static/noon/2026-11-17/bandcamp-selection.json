@@ -1,0 +1,45 @@
+{
+  "checkedDate": "2026-11-17",
+  "note": "Release dates and album metadata checked on original Bandcamp pages. No listening experience or ratings asserted. No repeat of the morning selection.",
+  "albums": [
+    {
+      "artist": "Arthur Hnatek",
+      "title": "Undertow EP",
+      "date": "2026-10-30",
+      "url": "https://arthurhnatek.bandcamp.com/album/undertow-ep",
+      "image": "assets/record-arthur.jpg",
+      "genre": "Drums / Electronic",
+      "aboutSummary": "发行介绍将无预设的鼓组即兴作为原料，再以共振器、声码器和频谱处理重构；四首作品关注的是鼓录音怎样长出电子语言。",
+      "discoveredFrom": "https://igloomag.com/reviews/arthur-hnatek-undertow-hessle-audio",
+      "bandcampId": 754916145,
+      "hasAbout": true,
+      "checkedDate": "2026-11-17"
+    },
+    {
+      "artist": "FAX",
+      "title": "Afar",
+      "date": "2026-10-16",
+      "url": "https://highpointlowlife.bandcamp.com/album/afar",
+      "image": "assets/record-fax.jpg",
+      "genre": "Dub / Glitch / Bass",
+      "aboutSummary": "Rubén A. Tamayo 首次在 Highpoint Lowlife 发行，五首作品以 dub 与故障电子为线索；母带由 Trash Panda QC 完成。",
+      "discoveredFrom": "https://igloomag.com/reviews/fax-afar-highpoint-lowlife",
+      "bandcampId": 203358754,
+      "hasAbout": true,
+      "checkedDate": "2026-11-17"
+    },
+    {
+      "artist": "Solypsis",
+      "title": "Invisible Ticks",
+      "date": "2026-10-21",
+      "url": "https://componentrecordings.bandcamp.com/album/invisible-ticks",
+      "image": "assets/record-solypsis.jpg",
+      "genre": "Industrial / IDM",
+      "aboutSummary": "十三首作品由 Component 发行。发行页未提供 About；Igloo 的 Pietro Da Sacco 将其置于破碎节奏、工业噪声与 IDM 的交界。",
+      "discoveredFrom": "https://igloomag.com/reviews/solypsis-invisible-ticks-component",
+      "bandcampId": 1262571761,
+      "hasAbout": false,
+      "checkedDate": "2026-11-17"
+    }
+  ]
+}

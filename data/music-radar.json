@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "collectedAt": "2026-11-16T19:20:49.185897+00:00",
+  "collectedAt": "2026-11-17T03:19:12.802645+00:00",
   "note": "RSS titles/dates/categories only; discovery candidates are not scored recommendations. Failed feeds retain visibly dated previous entries.",
   "sources": [
     {
@@ -9,9 +9,9 @@
       "url": "https://pitchfork.com/",
       "feed": "https://pitchfork.com/feed/feed-album-reviews/rss",
       "focus": "专业乐评 / Experimental / Electronic",
-      "checkedAt": "2026-11-16T19:20:49.185897+00:00",
+      "checkedAt": "2026-11-17T03:19:12.802645+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-16T19:20:49.185897+00:00",
+      "lastSuccessAt": "2026-11-17T03:19:12.802645+00:00",
       "entries": [
         {
           "title": "Trouble Mountain",
@@ -71,9 +71,9 @@
       "url": "https://theneedledrop.com/",
       "feed": "https://theneedledrop.com/rss/",
       "focus": "视频乐评 / 个人评分",
-      "checkedAt": "2026-11-16T19:20:49.185897+00:00",
+      "checkedAt": "2026-11-17T03:19:12.802645+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-16T19:20:49.185897+00:00",
+      "lastSuccessAt": "2026-11-17T03:19:12.802645+00:00",
       "entries": [
         {
           "title": "Twisted Teens - The Holy Cross Tigers",
@@ -98,9 +98,9 @@
       "url": "https://igloomag.com/",
       "feed": "https://igloomag.com/feed",
       "focus": "IDM / Glitch / Braindance / 地下电子",
-      "checkedAt": "2026-11-16T19:20:49.185897+00:00",
+      "checkedAt": "2026-11-17T03:19:12.802645+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-16T19:20:49.185897+00:00",
+      "lastSuccessAt": "2026-11-17T03:19:12.802645+00:00",
       "entries": [
         {
           "title": "Solypsis :: Invisible Ticks (Component)",
@@ -233,10 +233,24 @@
       "url": "https://acloserlisten.com/",
       "feed": "https://acloserlisten.com/feed/",
       "focus": "实验 / Ambient / Drone / 田野录音",
-      "checkedAt": "2026-11-16T19:20:49.185897+00:00",
+      "checkedAt": "2026-11-17T03:19:12.802645+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-16T19:20:49.185897+00:00",
+      "lastSuccessAt": "2026-11-17T03:19:12.802645+00:00",
       "entries": [
+        {
+          "title": "xicada ~ Interastral Communications",
+          "url": "https://acloserlisten.com/2026/11/17/xicada-interastral-communications/",
+          "publishedAt": "2026-11-17T00:01:10+00:00",
+          "categories": [
+            "Electronic",
+            "Interastral Communications",
+            "Richard Allen",
+            "Sounds of Paimon",
+            "xicada"
+          ],
+          "status": "discovery-only",
+          "score": null
+        },
         {
           "title": "Lucy Claire ~ With Child, Without",
           "url": "https://acloserlisten.com/2026/11/16/lucy-claire-with-child-without/",
@@ -309,18 +323,6 @@
           ],
           "status": "discovery-only",
           "score": null
-        },
-        {
-          "title": "Ralph Chbeir ~ Brief Encounters / Familiar Grounds",
-          "url": "https://acloserlisten.com/2026/11/12/ralph-chbeir-brief-encounters/",
-          "publishedAt": "2026-11-12T00:01:03+00:00",
-          "categories": [
-            "Ambient",
-            "gianmarco del re",
-            "Ralph Chbeir"
-          ],
-          "status": "discovery-only",
-          "score": null
         }
       ]
     },
@@ -330,9 +332,9 @@
       "url": "https://headphonecommute.com/",
       "feed": "https://headphonecommute.com/feed/",
       "focus": "Ambient / 电声 / 艺术家访谈",
-      "checkedAt": "2026-11-16T19:20:49.185897+00:00",
+      "checkedAt": "2026-11-17T03:19:12.802645+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-16T19:20:49.185897+00:00",
+      "lastSuccessAt": "2026-11-17T03:19:12.802645+00:00",
       "entries": [
         {
           "title": "Featured Artist: Arovane",
@@ -394,9 +396,9 @@
       "url": "https://thequietus.com/reviews/",
       "feed": "https://thequietus.com/feed/",
       "focus": "独立地下 / Experimental / Electronic",
-      "checkedAt": "2026-11-16T19:20:49.185897+00:00",
+      "checkedAt": "2026-11-17T03:19:12.802645+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-16T19:20:49.185897+00:00",
+      "lastSuccessAt": "2026-11-17T03:19:12.802645+00:00",
       "entries": [
         {
           "title": "The Body & Cel Genesis – Whole Wide World",
@@ -456,9 +458,9 @@
       "url": "https://inverted-audio.com/",
       "feed": "https://inverted-audio.com/feed/",
       "focus": "地下舞曲 / 厂牌 / 制作人",
-      "checkedAt": "2026-11-16T19:20:49.185897+00:00",
+      "checkedAt": "2026-11-17T03:19:12.802645+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-16T19:20:49.185897+00:00",
+      "lastSuccessAt": "2026-11-17T03:19:12.802645+00:00",
       "entries": [
         {
           "title": "Florian Kupfer launches Lifetrax imprint with reissue of his L.I.E.S. debut",

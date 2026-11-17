@@ -1,0 +1,81 @@
+{
+  "checkedAt": "2026-11-17T03:25:03.842566+00:00",
+  "edition": "noon",
+  "date": "2026-11-17",
+  "hardwareTested": false,
+  "sources": [
+    {
+      "title": "Glasgow introduction",
+      "url": "https://glasgow-embedded.org/en/intro.html",
+      "evidence": "Applet architecture; current warning about removed internal analyzer"
+    },
+    {
+      "title": "Glasgow revC3",
+      "url": "https://glasgow-embedded.org/en/revisions/revC3.html",
+      "evidence": "Independent VIO rails and version-specific hardware"
+    },
+    {
+      "title": "SPI controller",
+      "url": "https://glasgow-embedded.org/en/applets/interface/spi_controller.html",
+      "evidence": "Default CS=A0/SCK=A1/COPI=A2/CIPO=A3"
+    },
+    {
+      "title": "SPI flashrom bridge",
+      "url": "https://glasgow-embedded.org/en/applets/bridge/flashrom.html",
+      "evidence": "Default CS=A5/SCK=A1/COPI=A2/CIPO=A4; serprog socket bridge"
+    },
+    {
+      "title": "PulseView",
+      "url": "https://sigrok.org/wiki/PulseView",
+      "evidence": "Qt frontend role"
+    },
+    {
+      "title": "Decoder API",
+      "url": "https://sigrok.org/wiki/Protocol_decoder_API",
+      "evidence": "Stacked decoders; distinct outputs"
+    },
+    {
+      "title": "SPI decoder",
+      "url": "https://github.com/sigrokproject/libsigrokdecode/blob/71f451443029322d57376214c330b518efd84f88/decoders/spi/pd.py",
+      "evidence": "Clock-edge and CS handling; data outputs; fixed source revision"
+    },
+    {
+      "title": "Pico README",
+      "url": "https://github.com/stacksmashing/pico-serprog/tree/7f4c4b7c948ee774bdb7e5b2040d67154c8916f8",
+      "evidence": "Pin mapping and read command; snapshot commit dated 2023-10-17"
+    },
+    {
+      "title": "Pico main.c",
+      "url": "https://github.com/stacksmashing/pico-serprog/blob/7f4c4b7c948ee774bdb7e5b2040d67154c8916f8/main.c",
+      "evidence": "PIO1, CPOL/CPHA=0, frequency conversion"
+    }
+  ],
+  "music": [
+    {
+      "url": "https://arthurhnatek.bandcamp.com/album/undertow-ep",
+      "review": "https://igloomag.com/reviews/arthur-hnatek-undertow-hessle-audio",
+      "releaseDate": "2026-10-30",
+      "hasAbout": true,
+      "score": null
+    },
+    {
+      "url": "https://highpointlowlife.bandcamp.com/album/afar",
+      "review": "https://igloomag.com/reviews/fax-afar-highpoint-lowlife",
+      "releaseDate": "2026-10-16",
+      "hasAbout": true,
+      "score": null
+    },
+    {
+      "url": "https://componentrecordings.bandcamp.com/album/invisible-ticks",
+      "review": "https://igloomag.com/reviews/solypsis-invisible-ticks-component",
+      "releaseDate": "2026-10-21",
+      "hasAbout": false,
+      "score": null
+    }
+  ],
+  "musicReviewAccess": {
+    "method": "Web research tool opened the three original Igloo review URLs and returned their contents on 2026-11-17. Direct urllib verification returned HTTP 403; recorded, not bypassed.",
+    "reviewPublicationDate": "2026-11-15",
+    "scoresUsed": false
+  }
+}

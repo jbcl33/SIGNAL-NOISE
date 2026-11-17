@@ -78,6 +78,45 @@
       "kind": "乐评",
       "note": "给工业、噪声与独立场景留位置，避免整份选刊只剩社区热门电子。",
       "checkedDate": "2026-11-17"
+    },
+    {
+      "source": "igloo",
+      "title": "Arthur Hnatek — Undertow EP",
+      "url": "https://igloomag.com/reviews/arthur-hnatek-undertow-hessle-audio",
+      "date": "2026-11-15",
+      "kind": "乐评",
+      "author": "Will Dawkins",
+      "note": "评论既谈打击乐构造，也质疑部分段落变化不足；不截取单向赞语，不虚构评分。",
+      "score": null,
+      "checkedDate": "2026-11-17",
+      "evidence": "Original article read with web research tool; direct urllib check HTTP 403, not bypassed.",
+      "selectedFor": "noon/2026-11-17/"
+    },
+    {
+      "source": "igloo",
+      "title": "FAX — Afar",
+      "url": "https://igloomag.com/reviews/fax-afar-highpoint-lowlife",
+      "date": "2026-11-15",
+      "kind": "乐评",
+      "author": "Justin Patrick Moore",
+      "note": "核查为Afar乐评；本期短介绍以Bandcamp的作者、五曲配置与制作资料为依据。",
+      "score": null,
+      "checkedDate": "2026-11-17",
+      "evidence": "Original article read with web research tool; direct urllib check HTTP 403, not bypassed.",
+      "selectedFor": "noon/2026-11-17/"
+    },
+    {
+      "source": "igloo",
+      "title": "Solypsis — Invisible Ticks",
+      "url": "https://igloomag.com/reviews/solypsis-invisible-ticks-component",
+      "date": "2026-11-15",
+      "kind": "乐评",
+      "author": "Pietro Da Sacco",
+      "note": "原始发行页没有About；按曲目资料与具名评论区分事实和评价，不虚构发行介绍。",
+      "score": null,
+      "checkedDate": "2026-11-17",
+      "evidence": "Original article read with web research tool; direct urllib check HTTP 403, not bypassed.",
+      "selectedFor": "noon/2026-11-17/"
     }
   ]
 }
