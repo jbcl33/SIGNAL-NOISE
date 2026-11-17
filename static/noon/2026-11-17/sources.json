@@ -48,6 +48,41 @@
       "title": "Pico main.c",
       "url": "https://github.com/stacksmashing/pico-serprog/blob/7f4c4b7c948ee774bdb7e5b2040d67154c8916f8/main.c",
       "evidence": "PIO1, CPOL/CPHA=0, frequency conversion"
+    },
+    {
+      "title": "InteractiveHtmlBom",
+      "url": "https://github.com/openscopeproject/InteractiveHtmlBom",
+      "evidence": "BOM/board cross highlighting; standalone offline HTML"
+    },
+    {
+      "title": "IBOM demo",
+      "url": "https://openscopeproject.org/InteractiveHtmlBomDemo/html/pic_programmer.html",
+      "evidence": "Official demo fetched and rendered locally for screenshot; not generated from a user board"
+    },
+    {
+      "title": "PicoBoot",
+      "url": "https://github.com/webhdx/PicoBoot",
+      "evidence": "IPL replacement with Pico; README note about pre-v0.4 wiring/video mismatch"
+    },
+    {
+      "title": "Audacity labels",
+      "url": "https://manual.audacityteam.org/man/label_tracks.html",
+      "evidence": "Point/region labels, no audio in label tracks, multiple-file export relation"
+    },
+    {
+      "title": "HP34401a OLED",
+      "url": "https://github.com/openscopeproject/HP34401a-OLED-HW",
+      "evidence": "Hardware project files, separate firmware link, KiCad5 standard libs"
+    },
+    {
+      "title": "Sol LeWitt",
+      "url": "https://www.moma.org/collection/works/81533",
+      "evidence": "Serial Project I ABCD 1966; modular rules and minimalist/conceptual context"
+    },
+    {
+      "title": "MoMA repetition",
+      "url": "https://www.moma.org/collection/terms/minimalism/serial-forms-and-repetition",
+      "evidence": "Further institutional reading; no unlicensed artwork image substituted"
     }
   ],
   "music": [
@@ -77,5 +112,6 @@
     "method": "Web research tool opened the three original Igloo review URLs and returned their contents on 2026-11-17. Direct urllib verification returned HTTP 403; recorded, not bypassed.",
     "reviewPublicationDate": "2026-11-15",
     "scoresUsed": false
-  }
+  },
+  "revision": "2026-11-17 reader-feedback revision: four project/tool discoveries and one culture note; same issue and URL."
 }

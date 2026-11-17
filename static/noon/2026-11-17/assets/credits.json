@@ -50,6 +50,13 @@
       "creator": "SIGNAL / NOISE",
       "license": "Original explanatory diagram",
       "type": "Synthetic educational illustration, not captured data"
+    },
+    {
+      "file": "assets/ibom-demo.png",
+      "source": "https://openscopeproject.org/InteractiveHtmlBomDemo/html/pic_programmer.html",
+      "creator": "InteractiveHtmlBom / Open Scope Project; Pic Programmer sample design rights remain with its authors",
+      "type": "Actual browser screenshot of official self-contained demo rendered locally, not our board",
+      "license": "Editorial software screenshot; plugin source MIT; example board copyright retained"
     }
   ]
 }

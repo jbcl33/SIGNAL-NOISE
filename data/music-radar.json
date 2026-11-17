@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "collectedAt": "2026-11-17T06:16:52.146144+00:00",
+  "collectedAt": "2026-11-17T08:14:31.985718+00:00",
   "note": "RSS titles/dates/categories only; discovery candidates are not scored recommendations. Failed feeds retain visibly dated previous entries.",
   "sources": [
     {
@@ -9,9 +9,9 @@
       "url": "https://pitchfork.com/",
       "feed": "https://pitchfork.com/feed/feed-album-reviews/rss",
       "focus": "专业乐评 / Experimental / Electronic",
-      "checkedAt": "2026-11-17T06:16:52.146144+00:00",
+      "checkedAt": "2026-11-17T08:14:31.985718+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-17T06:16:52.146144+00:00",
+      "lastSuccessAt": "2026-11-17T08:14:31.985718+00:00",
       "entries": [
         {
           "title": "Legendary Love",
@@ -71,9 +71,9 @@
       "url": "https://theneedledrop.com/",
       "feed": "https://theneedledrop.com/rss/",
       "focus": "视频乐评 / 个人评分",
-      "checkedAt": "2026-11-17T06:16:52.146144+00:00",
+      "checkedAt": "2026-11-17T08:14:31.985718+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-17T06:16:52.146144+00:00",
+      "lastSuccessAt": "2026-11-17T08:14:31.985718+00:00",
       "entries": [
         {
           "title": "Twisted Teens - The Holy Cross Tigers",
@@ -98,9 +98,9 @@
       "url": "https://igloomag.com/",
       "feed": "https://igloomag.com/feed",
       "focus": "IDM / Glitch / Braindance / 地下电子",
-      "checkedAt": "2026-11-17T06:16:52.146144+00:00",
+      "checkedAt": "2026-11-17T08:14:31.985718+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-17T06:16:52.146144+00:00",
+      "lastSuccessAt": "2026-11-17T08:14:31.985718+00:00",
       "entries": [
         {
           "title": "Solypsis :: Invisible Ticks (Component)",
@@ -233,9 +233,9 @@
       "url": "https://acloserlisten.com/",
       "feed": "https://acloserlisten.com/feed/",
       "focus": "实验 / Ambient / Drone / 田野录音",
-      "checkedAt": "2026-11-17T06:16:52.146144+00:00",
+      "checkedAt": "2026-11-17T08:14:31.985718+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-17T06:16:52.146144+00:00",
+      "lastSuccessAt": "2026-11-17T08:14:31.985718+00:00",
       "entries": [
         {
           "title": "xicada ~ Interastral Communications",
@@ -332,9 +332,9 @@
       "url": "https://headphonecommute.com/",
       "feed": "https://headphonecommute.com/feed/",
       "focus": "Ambient / 电声 / 艺术家访谈",
-      "checkedAt": "2026-11-17T06:16:52.146144+00:00",
+      "checkedAt": "2026-11-17T08:14:31.985718+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-17T06:16:52.146144+00:00",
+      "lastSuccessAt": "2026-11-17T08:14:31.985718+00:00",
       "entries": [
         {
           "title": "Featured Artist: Arovane",
@@ -396,10 +396,20 @@
       "url": "https://thequietus.com/reviews/",
       "feed": "https://thequietus.com/feed/",
       "focus": "独立地下 / Experimental / Electronic",
-      "checkedAt": "2026-11-17T06:16:52.146144+00:00",
+      "checkedAt": "2026-11-17T08:14:31.985718+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-17T06:16:52.146144+00:00",
+      "lastSuccessAt": "2026-11-17T08:14:31.985718+00:00",
       "entries": [
+        {
+          "title": "Feedbacker: Rock Music for November by JR Moores",
+          "url": "https://thequietus.com/quietus-reviews/rock/roger-taylor-kid-rock-rangers-dabda-new-rock-music-review-november-2026/",
+          "publishedAt": "2026-11-17T08:00:00+00:00",
+          "categories": [
+            "Rock"
+          ],
+          "status": "discovery-only",
+          "score": null
+        },
         {
           "title": "Iceboy Violet – How to Glitch Under The Map",
           "url": "https://thequietus.com/quietus-reviews/iceboy-violet-how-to-glitch-under-the-map-review/",
@@ -439,16 +449,6 @@
           ],
           "status": "discovery-only",
           "score": null
-        },
-        {
-          "title": "Paint it Black: Saints in The Wethouse by Blackhaine",
-          "url": "https://thequietus.com/quietus-reviews/album-of-the-week/blackhaine-saints-in-the-wethouse-review/",
-          "publishedAt": "2026-11-12T06:00:00+00:00",
-          "categories": [
-            "Album of the Week"
-          ],
-          "status": "discovery-only",
-          "score": null
         }
       ]
     },
@@ -458,9 +458,9 @@
       "url": "https://inverted-audio.com/",
       "feed": "https://inverted-audio.com/feed/",
       "focus": "地下舞曲 / 厂牌 / 制作人",
-      "checkedAt": "2026-11-17T06:16:52.146144+00:00",
+      "checkedAt": "2026-11-17T08:14:31.985718+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-17T06:16:52.146144+00:00",
+      "lastSuccessAt": "2026-11-17T08:14:31.985718+00:00",
       "entries": [
         {
           "title": "Florian Kupfer launches Lifetrax imprint with reissue of his L.I.E.S. debut",
