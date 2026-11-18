@@ -1,0 +1,430 @@
+{
+  "checkedAt": "2026-11-18T03:31:19.310216+00:00",
+  "date": "2026-11-18",
+  "issue": "002",
+  "edition": "noon",
+  "timeZone": "Asia/Shanghai",
+  "hardwareTested": false,
+  "deduplicatedAgainst": [
+    "morning/2026-11-18/",
+    "night/2026-11-17/",
+    "lab/2026-11-17/",
+    "noon/2026-11-17/",
+    "morning/001/"
+  ],
+  "sources": [
+    {
+      "id": "imhex",
+      "title": "ImHex：把自己的 WAV 文件拆成可读字段",
+      "section": "briefs",
+      "sources": [
+        {
+          "title": "ImHex v1.38.1 README",
+          "url": "https://github.com/WerWolv/ImHex/blob/76cf8771158012095d3b3ed58cc93c27ccfac7df/README.md",
+          "commit": "76cf8771158012095d3b3ed58cc93c27ccfac7df",
+          "date": null,
+          "evidence": "Pattern Language 用 C 风格定义结构，解析和高亮二进制内容。"
+        },
+        {
+          "title": "ImHex Patterns 的 WAV 结构",
+          "url": "https://github.com/WerWolv/ImHex-Patterns/blob/d2d3e7cc9aac64804d5e232591645f844748a989/patterns/wav.hexpat",
+          "commit": "d2d3e7cc9aac64804d5e232591645f844748a989",
+          "date": null,
+          "evidence": "RIFF/WAVE、fmt 块及 samplesPerSec、channels、bitsPerSample 字段。"
+        },
+        {
+          "title": "ImHex v1.38.1 发布",
+          "url": "https://github.com/WerWolv/ImHex/releases/tag/v1.38.1",
+          "commit": "76cf8771158012095d3b3ed58cc93c27ccfac7df",
+          "date": "2025-12-21T18:57:18Z",
+          "evidence": "UTC 2025-12-21T18:57:18Z，北京时间 12-22。"
+        }
+      ],
+      "type": "工具选读",
+      "category": "二进制格式 / 采样文件",
+      "author": "WerWolv 与贡献者",
+      "date": "2025-12-22"
+    },
+    {
+      "id": "openfpgaloader",
+      "title": "openFPGALoader：让第一版逻辑先跑一遍",
+      "section": "briefs",
+      "sources": [
+        {
+          "title": "openFPGALoader v1.2.0 入门文档",
+          "url": "https://github.com/trabucayre/openFPGALoader/blob/befbab4f646207dbaf1daf8b144dd980ad283dd5/doc/guide/first-steps.rst",
+          "commit": "befbab4f646207dbaf1daf8b144dd980ad283dd5",
+          "date": null,
+          "evidence": "板名选项、SRAM 失电清除、Flash 持久化与适用条件。"
+        },
+        {
+          "title": "板型兼容表",
+          "url": "https://trabucayre.github.io/openFPGALoader/compatibility/board.html",
+          "commit": null,
+          "date": null,
+          "evidence": "按板型公开已支持的配置方式。"
+        },
+        {
+          "title": "openFPGALoader v1.2.0 发布",
+          "url": "https://github.com/trabucayre/openFPGALoader/releases/tag/v1.2.0",
+          "commit": "befbab4f646207dbaf1daf8b144dd980ad283dd5",
+          "date": "2026-10-18T09:13:22Z",
+          "evidence": "2026-10-18T09:13:22Z。"
+        }
+      ],
+      "type": "工具选读",
+      "category": "FPGA / 工程加载",
+      "author": "Gwenhael Goavec-Merou 与贡献者",
+      "date": "2026-10-18"
+    },
+    {
+      "id": "kikit",
+      "title": "KiKit：把拼板尺寸和连接桥存成配置",
+      "section": "briefs",
+      "sources": [
+        {
+          "title": "KiKit 作者项目 README",
+          "url": "https://github.com/yaqwsx/KiKit/blob/d1957c535781371db5a2f507f8154d460095f9f1/README.md",
+          "commit": "d1957c535781371db5a2f507f8154d460095f9f1",
+          "date": null,
+          "evidence": "规则拼板、分板孔/V-CUT、可重复组成的面板制造数据。"
+        },
+        {
+          "title": "拼板例子",
+          "url": "https://github.com/yaqwsx/KiKit/blob/d1957c535781371db5a2f507f8154d460095f9f1/docs/panelization/examples.md",
+          "commit": "d1957c535781371db5a2f507f8154d460095f9f1",
+          "date": null,
+          "evidence": "面板预设、行列布置和工艺边等用于实际设计的范例。"
+        },
+        {
+          "title": "连接桥绘制原理",
+          "url": "https://github.com/yaqwsx/KiKit/blob/d1957c535781371db5a2f507f8154d460095f9f1/docs/panelization/tabs.md",
+          "commit": "d1957c535781371db5a2f507f8154d460095f9f1",
+          "date": null,
+          "evidence": "连接桥的起点、方向、相邻板和临时工艺边的关系。"
+        },
+        {
+          "title": "KiKit v1.8.1 发布",
+          "url": "https://github.com/yaqwsx/KiKit/releases/tag/v1.8.1",
+          "commit": "d1957c535781371db5a2f507f8154d460095f9f1",
+          "date": "2026-08-05T19:06:09Z",
+          "evidence": "UTC 2026-08-05T19:06:09Z，北京时间 08-06。"
+        }
+      ],
+      "type": "工具选读",
+      "category": "PCB / 拼板",
+      "author": "Jan Mrázek",
+      "date": "2026-08-06"
+    },
+    {
+      "id": "openboardview",
+      "title": "OpenBoardView：顺着网络找板上的测点",
+      "section": "briefs",
+      "sources": [
+        {
+          "title": "OpenBoardView v10.0.0 项目文档",
+          "url": "https://github.com/OpenBoardView/OpenBoardView/blob/61ae70c2a15cd219ab74e3f8ddd0389ae370658a/README.md",
+          "commit": "61ae70c2a15cd219ab74e3f8ddd0389ae370658a",
+          "date": null,
+          "evidence": "板位图 .brd、正反面显示、元件搜索、网络列表、同网高亮。"
+        },
+        {
+          "title": "项目同网高亮示意",
+          "url": "https://github.com/OpenBoardView/OpenBoardView/blob/61ae70c2a15cd219ab74e3f8ddd0389ae370658a/asset/screenshot-halo.png",
+          "commit": "61ae70c2a15cd219ab74e3f8ddd0389ae370658a",
+          "date": null,
+          "evidence": "作者所列共同网络焊盘高亮功能示意。"
+        },
+        {
+          "title": "OpenBoardView 10.0.0 发布",
+          "url": "https://github.com/OpenBoardView/OpenBoardView/releases/tag/10.0.0",
+          "commit": "61ae70c2a15cd219ab74e3f8ddd0389ae370658a",
+          "date": "2026-05-22T23:46:39Z",
+          "evidence": "UTC 2026-05-22T23:46:39Z，北京时间 05-23。"
+        }
+      ],
+      "type": "工具选读",
+      "category": "维修 / Boardview",
+      "author": "OpenBoardView 项目维护者",
+      "date": "2026-05-23"
+    },
+    {
+      "id": "drpd",
+      "title": "Dr. PD：在同一条时间轴看协商和供电",
+      "section": "deep-dive",
+      "sources": [
+        {
+          "title": "Dr. PD 固定项目文档",
+          "url": "https://github.com/T76-org/drpd/blob/3b1aa0db994dd59714f73d9b445a211d3d459db2/README.md",
+          "commit": "3b1aa0db994dd59714f73d9b445a211d3d459db2",
+          "date": "2026-11-11",
+          "evidence": "观测/受电端模式、电压电流与报文关联，R2608-A 为 README 所列现行硬件。"
+        },
+        {
+          "title": "R2608-A 模拟监测原理",
+          "url": "https://github.com/T76-org/drpd/blob/3b1aa0db994dd59714f73d9b445a211d3d459db2/docs/docs/internals/operating-principles/analog-monitor.mdx",
+          "commit": "3b1aa0db994dd59714f73d9b445a211d3d459db2",
+          "date": null,
+          "evidence": "R202 为 5 mΩ、INA240A2 放大 50 倍、1.65 V 零点、开尔文连接；电压分压、缓冲与校准表。"
+        },
+        {
+          "title": "USB 端口与 CC / VBUS 分路",
+          "url": "https://github.com/T76-org/drpd/blob/3b1aa0db994dd59714f73d9b445a211d3d459db2/docs/docs/internals/operating-principles/usb-ports.mdx",
+          "commit": "3b1aa0db994dd59714f73d9b445a211d3d459db2",
+          "date": null,
+          "evidence": "端口 CC 路由与方向识别、边沿捕获、双向 MOSFET 电源路径。"
+        },
+        {
+          "title": "R2608-A 六页原始原理图",
+          "url": "https://github.com/T76-org/drpd/blob/3b1aa0db994dd59714f73d9b445a211d3d459db2/hardware/R2608-A/pdf/Dr.%20PD%20R2608-A.pdf",
+          "commit": "3b1aa0db994dd59714f73d9b445a211d3d459db2",
+          "date": null,
+          "evidence": "第 3 页为 Analog Monitor，第 2/5 页接续 USB 端口与数字接口。"
+        },
+        {
+          "title": "仪器数据表",
+          "url": "https://github.com/T76-org/drpd/blob/3b1aa0db994dd59714f73d9b445a211d3d459db2/media/datasheet.md",
+          "commit": "3b1aa0db994dd59714f73d9b445a211d3d459db2",
+          "date": null,
+          "evidence": "RP2354 跑固件 PD 控制、可编程受电端、记录 VBUS。"
+        },
+        {
+          "title": "作者记录的正常供电协商样例",
+          "url": "https://github.com/T76-org/drpd/blob/3b1aa0db994dd59714f73d9b445a211d3d459db2/docs/docs/exploration-guide/bench-experiments.mdx",
+          "commit": "3b1aa0db994dd59714f73d9b445a211d3d459db2",
+          "date": null,
+          "evidence": "查看 Source Capabilities、Request、Accept、PS RDY 和相同时间的电压变化。"
+        },
+        {
+          "title": "分辨日志与测量证据",
+          "url": "https://t76.org/drpd/docs/exploration-guide/measurement-and-safety",
+          "commit": null,
+          "date": null,
+          "evidence": "作者说明将报文、VBUS 电量与独立仪器读数作为不同证据，匹配同一段数据。"
+        },
+        {
+          "title": "v1.0.0-beta.1 固件发布",
+          "url": "https://github.com/T76-org/drpd/releases/tag/v1.0.0-beta.1",
+          "commit": "78e3c8d2c196bc9b2f530abf66126fccf206c627",
+          "date": "2026-10-08T13:07:21Z",
+          "evidence": "预发行标记 2026-10-08T13:07:21Z。"
+        },
+        {
+          "title": "官方面板图入仓记录",
+          "url": "https://github.com/T76-org/drpd/commit/fb270e31099fc5c5f91e4a2974b3e8398fa19307",
+          "commit": "fb270e31099fc5c5f91e4a2974b3e8398fa19307",
+          "date": "2026-08-05",
+          "evidence": "Marco Tabini 2026-08-05 入仓 media/front.png 与 back.jpg，后者面板可读 Rev 2605-A。"
+        }
+      ],
+      "type": "项目选读 / 2026 设计",
+      "category": "USB-C PD / 模拟测量",
+      "author": "Marco Tabini / T76",
+      "date": "2026-10-08",
+      "versionNote": "v1.0.0-beta.1 源站 UTC 2026-10-08 13:07，为预发行固件。本文电路采用 2026-11-11 固定仓库快照中标为现行硬件的 R2608-A。封面为项目 2026-08-05 入仓的官方前面板图，配对后面板标 Rev 2605-A。"
+    },
+    {
+      "id": "gb-interceptor",
+      "title": "GB Interceptor：从卡带总线重建掌机画面",
+      "section": "deep-dive",
+      "sources": [
+        {
+          "title": "Sebastian Staacks 2022 年制作记录和实拍",
+          "url": "https://there.oughta.be/a/game-boy-capture-cartridge",
+          "commit": null,
+          "date": "2022-12-20",
+          "evidence": "解释比赛动机、下插原机上接卡带的结构、5 V/3.3 V 接口、CPU/PPU 分工、不可见的连线数据及早期 NV12。"
+        },
+        {
+          "title": "REV2 原理图源文件",
+          "url": "https://github.com/Staacks/gbinterceptor/blob/164127fe03bcd3b7238259187197dde7a315ec89/pcb/kicad/gb-stream-cart.kicad_sch",
+          "commit": "164127fe03bcd3b7238259187197dde7a315ec89",
+          "date": "2022-11-17",
+          "evidence": "图框标 REV2、2022-11-17，包含两侧卡带接口、SN74LVC4245A 电平转换和 RP2040。"
+        },
+        {
+          "title": "卡带总线 PIO 源码",
+          "url": "https://github.com/Staacks/gbinterceptor/blob/164127fe03bcd3b7238259187197dde7a315ec89/firmware/memory-bus.pio",
+          "commit": "164127fe03bcd3b7238259187197dde7a315ec89",
+          "date": null,
+          "evidence": "下降沿采集、输入移位寄存器、FIFO、32 位地址数据控制字段分配。"
+        },
+        {
+          "title": "固件主循环与双核分工",
+          "url": "https://github.com/Staacks/gbinterceptor/blob/164127fe03bcd3b7238259187197dde7a315ec89/firmware/main.c",
+          "commit": "164127fe03bcd3b7238259187197dde7a315ec89",
+          "date": null,
+          "evidence": "启动 core1 处理总线，主循环调用 PPU 并上传 JPEG 帧。"
+        },
+        {
+          "title": "UVC 描述符",
+          "url": "https://github.com/Staacks/gbinterceptor/blob/164127fe03bcd3b7238259187197dde7a315ec89/firmware/usb_descriptors.c",
+          "commit": "164127fe03bcd3b7238259187197dde7a315ec89",
+          "date": null,
+          "evidence": "视频接口与端点，JPEG 帧上传见 main.c。"
+        },
+        {
+          "title": "37C3 作者演讲与摘要",
+          "url": "https://media.ccc.de/v/37c3-11928-reconstructing_game_footage_from_a_game_boy_s_memory_bus",
+          "commit": null,
+          "date": "2023-12-29",
+          "evidence": "Sebastian Staacks 论述从内存总线恢复画面、PPU 与 MJPEG，摘要列边界条件。"
+        },
+        {
+          "title": "项目说明和兼容性清单入口",
+          "url": "https://github.com/Staacks/gbinterceptor/blob/164127fe03bcd3b7238259187197dde7a315ec89/README.md",
+          "commit": "164127fe03bcd3b7238259187197dde7a315ec89",
+          "date": null,
+          "evidence": "硬件、游戏、主机软件三种兼容表入口以及装板、连接、使用说明。"
+        },
+        {
+          "title": "v1.2.2 固件发布记录",
+          "url": "https://github.com/Staacks/gbinterceptor/releases/tag/v1.2.2",
+          "commit": "164127fe03bcd3b7238259187197dde7a315ec89",
+          "date": "2026-06-06T23:20:34Z",
+          "evidence": "2026-06-06T23:20:34Z，修正一个游戏开场文字偏移。"
+        }
+      ],
+      "type": "项目选读 / 2022 制作记录",
+      "category": "复古掌机 / 图像重建",
+      "author": "Sebastian Staacks",
+      "date": "2022-12-20",
+      "versionNote": "作者原创制作文 2022-12-20，原理图 REV2 标 2022-11-17。固件 v1.2.2 源站 UTC 2026-06-06 23:20，北京时间 06-07。作者早期博客描述的是 NV12，当前固件输出 MJPEG。"
+    },
+    {
+      "id": "i2c-repeated-start",
+      "title": "读寄存器时，两个 START 之间发生了什么",
+      "section": "knowledge",
+      "sources": [
+        {
+          "title": "NXP UM10204 Rev.7.0 / §3.1.10，组合格式",
+          "url": "https://www.nxp.com/docs/en/user-guide/UM10204.pdf#page=13"
+        }
+      ],
+      "checkedDate": "2026-11-18"
+    },
+    {
+      "id": "probe-loading",
+      "title": "探头倍率，和输入负载一起看",
+      "section": "knowledge",
+      "sources": [
+        {
+          "title": "Tektronix ABCs of Probes / Attenuation Factor、Probe Loading",
+          "url": "https://download.tek.com/document/02_ABCs-of-Probes-Primer.pdf#page=53"
+        }
+      ],
+      "checkedDate": "2026-11-18"
+    },
+    {
+      "id": "aceto-vcf-plugin",
+      "title": "一组排针，两种滤波电路",
+      "section": "independent-web",
+      "sources": [
+        {
+          "label": "Jordan Aceto 的 VCF Plug-in Boards 原文",
+          "url": "https://github.com/JordanAceto/VCF_plug_in_boards"
+        },
+        {
+          "label": "2022-08-19 后期 MS-20 修订",
+          "url": "https://github.com/JordanAceto/VCF_plug_in_boards/commit/896cf35817b3e2ad0e3124ef7860ce5c9766bb8c"
+        },
+        {
+          "label": "ARP 4072 原理图与小板设计",
+          "url": "https://github.com/JordanAceto/VCF_plug_in_boards/tree/896cf35817b3e2ad0e3124ef7860ce5c9766bb8c/arp_4072_LPF_plug_in_board"
+        },
+        {
+          "label": "后期 MS-20 原理图与小板设计",
+          "url": "https://github.com/JordanAceto/VCF_plug_in_boards/tree/896cf35817b3e2ad0e3124ef7860ce5c9766bb8c/late_MS20_VCF_plug_in_board"
+        }
+      ],
+      "author": "Jordan Aceto",
+      "sourceFacts": [
+        "README 记载共用机械与电气接口、±12 V 电源及音频进出，截止频率和反馈的控制电压均为 0–2.048 V，选这个范围方便由 MCP4822 直接驱动，板载微调电位器可校准。",
+        "仓库分别公开 ARP 4072 和后期 MS-20 的 KiCad 原理图、PCB 与制作文件。README 标记两者均由作者搭建测试。",
+        "2022-08-19 是后期 MS-20 板的可追溯设计修订日期。仓库创建于 2020-08-01，正文作为旧项目回看。",
+        "源文件按版本保存，仓库的 LICENSE 为 CC BY 4.0。"
+      ],
+      "repositoryCreated": "2020-08-01",
+      "documentedRevisionDate": "2022-08-19"
+    },
+    {
+      "id": "gego-drawing-without-paper",
+      "title": "Gego 把第二道线留给墙面",
+      "section": "culture",
+      "sources": [
+        {
+          "label": "大都会艺术博物馆馆藏《无纸绘画 86/18》",
+          "url": "https://www.metmuseum.org/art/collection/search/841074"
+        },
+        {
+          "label": "古根海姆毕尔巴鄂博物馆《无纸绘画》系列",
+          "url": "https://www.guggenheim-bilbao.eus/en/exhibition/dibujos-sin-papel-ca-1976-88"
+        }
+      ],
+      "artist": "Gego（Gertrud Goldschmidt）",
+      "workYear": 1986,
+      "sourceFacts": [
+        "大都会艺术博物馆藏品条目明确列出作者、名称、1986 年、涂漆铁杆、铝和尼龙，尺寸 104.1 × 53.3 × 2.9 厘米，藏品编号 2020.65。",
+        "大都会艺术博物馆馆藏说明把该作的结构形容为模块式，并明确说作品在邻近墙面投下细微影子。",
+        "大都会艺术博物馆和古根海姆毕尔巴鄂博物馆都将《无纸绘画》系列与 Gego 对线在三维空间中的研究联系起来。",
+        "照明改变影子位置是从材料和展陈关系得出的阅读提示，未声称馆方举行变光展演。"
+      ],
+      "imageReference": {
+        "mode": "text-card",
+        "sourcePage": "https://www.metmuseum.org/art/collection/search/841074",
+        "caption": "Gego，《无纸绘画 86/18》（1986），大都会艺术博物馆藏。",
+        "credit": "Gift of Lilly Scarpetta, in celebration of the Museum's 150th Anniversary, 2020",
+        "access": "馆藏页 HTTP 200，原页可浏览图像。",
+        "rights": "馆藏页明确提示图像不可放大、全屏或下载。正文链接原页。"
+      }
+    }
+  ],
+  "music": [
+    {
+      "artist": "Tangent",
+      "title": "Disclosure",
+      "url": "https://tangentnl.bandcamp.com/album/disclosure",
+      "releaseDate": "2026-10-16",
+      "evidence": "发行页说明二人暂停项目三年，回归时加入模块合成器。Bandcamp 页列七首，注明二人同作声音、音乐和母带，2026 年 10 月 16 日发行，Robbert Kok 作封面，Mike Cadoo 排版。",
+      "trackCount": 7,
+      "discovery": {
+        "publication": "Igloo Magazine",
+        "type": "专辑乐评",
+        "url": "https://igloomag.com/reviews/tangent-disclosure-n5md",
+        "author": "Mirco Salvadori",
+        "date": "2026-11-06",
+        "access": "直接 HTTP 请求返回 406。公开网页浏览工具可读取同一原站乐评，已核实栏目、作者、日期与原文内容。"
+      }
+    },
+    {
+      "artist": "heavensouls",
+      "title": "\"cantu\" of the sower",
+      "url": "https://officialauthks.bandcamp.com/album/cantu-of-the-sower",
+      "releaseDate": "2026-10-07",
+      "evidence": "Bandcamp 页列六首及制作、混音、吉他、萨克斯和人声署名，第五曲标题注明 w/ stickerbush。Pitchfork 原始乐评从电子拼贴与自由爵士编排切入。发行页给出 10 月 7 日。发行说明列整体作品版权与许可，未单列具体封面作者。",
+      "trackCount": 6,
+      "discovery": {
+        "publication": "Pitchfork",
+        "type": "专辑乐评",
+        "url": "https://pitchfork.com/reviews/albums/heavensouls-cantu-of-the-sower-ep/",
+        "author": "Kieran Press-Reynolds",
+        "date": "2026-10-26"
+      }
+    },
+    {
+      "artist": "Ziúr",
+      "title": "De Brujas y Fantasmas (Original Soundtrack for Kianí del Valle Solo Dance Performance)",
+      "url": "https://ziurinhell.bandcamp.com/album/de-brujas-y-fantasmas-original-soundtrack-for-kian-del-valle-solo-dance-performance",
+      "releaseDate": "2026-11-06",
+      "evidence": "Bandcamp 页的 About 写明独舞重释了 Mary Wigman 1926 年的编舞，发行署名注明第 5 曲 Hueso De Humo 由舞者献声。页面列六首，标 11 月 6 日发行。Kuboraum Editions 的 RAUM011 条目列厂牌为艺术指导及 Cecilia Troiani 为平面设计。",
+      "trackCount": 6,
+      "discovery": {
+        "publication": "A Closer Listen",
+        "type": "专辑乐评",
+        "url": "https://acloserlisten.com/2026/10/31/ziur-de-brujas-y-fantasmas/",
+        "author": "Richard Allen",
+        "date": "2026-10-31"
+      }
+    }
+  ]
+}

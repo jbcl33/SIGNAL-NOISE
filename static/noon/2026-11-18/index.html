@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SIGNAL / NOISE | OPEN CIRCUIT 2026.11.18</title>
+<meta name="description" content="SIGNAL / NOISE 午刊 002，2026 年 11 月 18 日。深读 Dr. PD 与 GB Interceptor，附开源工具、协议与测量笔记、可插拔滤波小板、Gego 和三张唱片。">
+<style>
+:root {
+  --ink: #111;
+  --muted: #555;
+  --line: #ccc;
+  --green: #c6ff00;
+  --mono: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+  --sans: Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-padding-top: 20px; }
+body { margin: 0; background: #fff; color: var(--ink); font-family: var(--sans); }
+a { color: inherit; text-underline-offset: 4px; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible, summary:focus-visible { outline: 3px solid var(--ink); outline-offset: 4px; }
+summary { cursor: pointer; }
+img { display: block; max-width: 100%; height: auto; }
+figure { margin: 0; min-width: 0; }
+figcaption { margin-top: 8px; color: var(--muted); font-size: 11px; line-height: 1.65; }
+code { font-family: var(--mono); font-size: .92em; }
+mark { padding: .2em .35em; background: var(--green); color: var(--ink); }
+.skip { position: absolute; top: -100px; left: 16px; z-index: 10; padding: 12px; background: #fff; }
+.skip:focus { top: 8px; }
+.tiny, .tag, .kicker { font-family: var(--mono); }
+.tiny { color: var(--muted); font-size: 11px; line-height: 1.6; }
+
+.mast {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px 18px;
+  padding: 13px clamp(18px, 4vw, 56px);
+  border-bottom: 2px solid var(--ink);
+}
+.brand { font-size: 22px; font-weight: 900; letter-spacing: -.065em; text-decoration: none; }
+.mast-right { display: flex; align-items: center; gap: 8px 17px; font: 11px/1.5 var(--mono); }
+.mast-right a { padding-block: 6px; }
+.cover {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 1200px;
+  margin: 24px auto 0;
+  border: 1px solid var(--ink);
+}
+.cover-art {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  align-items: center;
+  gap: 10px;
+  min-height: 480px;
+  padding: 22px;
+  background: #101010;
+  color: #ddd;
+}
+.cover-art img { width: 100%; max-height: 410px; object-fit: contain; filter: grayscale(1) contrast(1.12); }
+.cover-art figcaption { margin: 0; color: #ddd; }
+.cover-art a:focus-visible, .culture-label a:focus-visible { outline-color: var(--green); }
+.cover-tag { justify-self: start; background: var(--green); padding: 9px 13px; color: var(--ink); font: 12px/1.5 var(--mono); }
+.cover-type { display: flex; flex-direction: column; justify-content: space-between; gap: 12px; min-width: 0; padding: 30px; }
+.cover h1 { margin: 14px 0 22px; font-size: clamp(54px, 6.7vw, 94px); font-weight: 900; line-height: .87; letter-spacing: -.081em; }
+.cover h1 span { display: block; }
+.cover h2 { margin: 12px 0; font-size: clamp(27px, 3.5vw, 42px); line-height: 1.15; letter-spacing: -.05em; overflow-wrap: anywhere; }
+.cover-type p { margin: 8px 0; font-size: 13px; line-height: 1.7; }
+.cover-type .tiny { font-size: 11px; }
+.cover-bottom { display: flex; justify-content: space-between; gap: 12px; padding-top: 12px; border-top: 1px solid var(--ink); font: 11px/1.5 var(--mono); }
+.strip { max-width: 1200px; margin: auto; padding: 11px 22px; background: #111; color: #fff; font: 11px/1.6 var(--mono); }
+
+.layout { display: grid; grid-template-columns: 157px minmax(0, 840px); align-items: start; gap: 41px; max-width: 1120px; margin: auto; padding: 0 24px; }
+.side { position: sticky; top: 25px; margin-top: 40px; }
+.side h2 { margin: 0 0 5px; font: 700 11px/1.5 var(--mono); }
+.side p, .side a { font: 12px/1.5 var(--mono); }
+.side a { display: block; padding: 9px 0; border-bottom: 1px solid var(--line); text-decoration: none; }
+.side a:hover { background: var(--green); text-decoration: underline; }
+.mobile-nav { display: none; }
+.content { min-width: 0; }
+.opener { padding: 39px 0 24px; border-bottom: 2px solid; overflow-wrap: anywhere; }
+.opener h2 { margin: 15px 0 7px; font-size: clamp(27px, 4vw, 39px); line-height: 1.16; letter-spacing: -.045em; }
+.opener p { max-width: 65ch; margin: 7px 0 0; font-size: 15px; line-height: 1.85; }
+.section { padding: 36px 0; border-bottom: 1px solid var(--line); overflow-wrap: anywhere; }
+.section .kicker { color: var(--muted); font-size: 11px; letter-spacing: .035em; }
+.section h2 { margin: 7px 0 20px; font-size: clamp(28px, 4.5vw, 47px); line-height: 1.12; letter-spacing: -.045em; }
+.section h3 { margin: 8px 0; font-size: 23px; line-height: 1.26; letter-spacing: -.025em; }
+.section p { margin: 9px 0; font-size: 14px; line-height: 1.85; }
+.tag { font-size: 11px; line-height: 1.65; }
+.section .lead { max-width: 67ch; font-size: 17px; line-height: 1.75; }
+.discovery-grid, .two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 25px; align-items: start; }
+.discovery, .box { min-width: 0; padding-top: 12px; border-top: 2px solid var(--ink); }
+.discovery p, .box p, .culture-note p { font-size: 13px; }
+.discovery img { max-height: 215px; }
+.feature { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 22px; align-items: start; margin-top: 17px; }
+.feature-copy h3 { margin: 12px 0 4px; font-size: 16px; }
+.feature-copy h3:first-child { margin-top: 0; }
+.full-photo { margin: 0 0 15px; padding: 9px; border: 1px solid var(--line); }
+.full-photo img { width: 100%; max-height: 405px; object-fit: contain; background: #f7f7f7; }
+.full-photo figcaption { padding-top: 6px; border-top: 1px solid var(--line); }
+.references { display: flex; flex-wrap: wrap; gap: 5px 13px; margin: 11px 0 0; color: var(--muted); font: 11px/1.65 var(--mono); }
+.culture-note { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.5fr); gap: 20px 24px; }
+.culture-label { display: flex; flex-direction: column; justify-content: center; gap: 7px; padding: 17px 19px; background: #111; color: #fff; }
+.culture-label .tiny { color: #ccc; }
+.culture-label strong { font-size: 22px; line-height: 1.2; }
+.culture-label a { font-size: 12px; }
+.culture-label span:last-child { font-size: 13px; }
+
+.record { display: grid; grid-template-columns: 100px minmax(0, 1fr); gap: 14px 20px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.record:first-of-type { padding-top: 1px; }
+.record:last-of-type { border-bottom: 0; }
+.record figure { align-self: start; }
+.record img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+.record figcaption { margin: 5px 0 0; font-size: 10px; }
+.record h3 { margin: 4px 0; font-size: 20px; }
+.record p { margin: 4px 0; font-size: 13px; line-height: 1.7; }
+.record .tiny { margin: 0; font-size: 11px; }
+.record .artist { font-weight: 700; }
+.record .references { margin-top: 6px; }
+.listen { grid-column: 2; font: 11px/1.65 var(--mono); }
+.listen summary { min-height: 30px; padding-top: 5px; }
+.listen iframe { display: block; width: 100%; max-width: 460px; height: 120px; border: 0; margin: 6px 0 0; }
+.foot { max-width: 1120px; margin: auto; padding: 25px 24px 44px; color: var(--muted); font: 11px/1.7 var(--mono); }
+.foot p { margin: 0 0 6px; }
+.foot .references { margin: 0; }
+
+@media (max-width: 850px) {
+  .layout { display: block; max-width: 800px; }
+  .side { display: none; }
+  .mobile-nav { display: block; max-width: 800px; margin: auto; padding: 12px 24px; border-bottom: 1px solid var(--line); font: 12px/1.6 var(--mono); }
+  .mobile-nav summary { min-height: 32px; padding-top: 7px; font-weight: 700; }
+  .mobile-nav a { display: block; min-height: 35px; padding: 7px 0 7px 15px; }
+  .cover { margin: 0; border-inline: 0; }
+  .cover-art { min-height: 0; padding: 16px; }
+  .cover-art img { max-height: 330px; }
+  .cover-type { padding: 20px; }
+  .cover h1 { font-size: clamp(47px, 8vw, 69px); }
+}
+
+@media (max-width: 560px) {
+  .mast { padding: 9px 16px; }
+  .brand { font-size: 19px; }
+  .mast-right { gap: 5px 12px; font-size: 10px; }
+  .mast-right > span { display: none; }
+  .cover { grid-template-columns: minmax(0, 1fr); }
+  .cover-art { gap: 7px; padding: 13px 16px; }
+  .cover-art img { max-height: 220px; }
+  .cover-art figcaption { font-size: 10px; }
+  .cover-tag { padding: 5px 8px; font-size: 10px; }
+  .cover-type { gap: 9px; padding: 15px 18px; }
+  .cover h1 { font-size: clamp(57px, 13.4vw, 75px); margin: 12px 0 15px; }
+  .cover h2 { margin: 10px 0; font-size: 27px; }
+  .cover-bottom, .strip { font-size: 10px; }
+  .strip, .layout, .mobile-nav, .foot { padding-inline: 16px; }
+  .opener { padding-top: 26px; }
+  .section { padding-block: 27px; }
+  .discovery-grid, .two, .feature, .culture-note { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .discovery p, .box p, .culture-note p { font-size: 14px; }
+  .section .lead { font-size: 16px; }
+  .record { grid-template-columns: 78px minmax(0, 1fr); gap: 11px 13px; }
+  .record p { font-size: 12px; }
+  .record h3 { font-size: 18px; }
+  .listen { grid-column: 1/-1; }
+}
+
+@media (max-height: 490px) and (orientation: landscape) {
+  .cover-art img { max-height: 255px; }
+  .side { position: static; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">跳至正文</a>
+<header class="mast">
+<a class="brand" href="#cover">SIGNAL / NOISE</a>
+<nav class="mast-right" aria-label="站点导航">
+<span>OPEN CIRCUIT / 002</span>
+<a href="../../index.html">← 杂志首页</a>
+<a href="../../archive.html">归档</a>
+</nav>
+</header>
+<section class="cover" id="cover" aria-labelledby="issue-title">
+<figure class="cover-art">
+<span class="cover-tag">OPEN CIRCUIT · 午刊 002</span>
+<img src="assets/drpd-official-front.png" width="1448" height="1086" alt="T76 的 Dr. PD 桌面仪器官方前面板图，左侧两个 USB-C 接口，中部 VBUS 接线柱，右侧 CC OUT" decoding="async" fetchpriority="high">
+<figcaption>Dr. PD 官方前面板图（灰度）· 同组后面板标注 Rev 2605-A · T76 / MTA, Inc. · <a href="https://github.com/T76-org/drpd/blob/3b1aa0db994dd59714f73d9b445a211d3d459db2/media/front.png" target="_blank" rel="noopener">配图出处 ↗</a> · <a href="assets/drpd-agpl-3.0.txt">AGPL-3.0-or-later</a> · <a href="assets/drpd-license-notice.txt">项目版权声明</a></figcaption>
+</figure>
+<div class="cover-type">
+<div>
+<p class="tiny"><time datetime="2026-11-18">2026.11.18 / WED</time><br>HARDWARE · SOURCE · CULTURE</p>
+<h1>SIGNAL<span>/ NOISE</span></h1>
+<h2 id="issue-title">USB-C 供电协商<br><mark>Game Boy 画面采集</mark></h2>
+<p>Dr. PD 与 GB Interceptor<br>
+四件开源工具 · 协议与测量笔记 · 文化小栏</p>
+</div>
+<div class="cover-bottom"><span>VOL. 002 / NOON</span><span>OPEN CIRCUIT</span></div>
+</div>
+</section>
+<p class="strip">USB POWER DELIVERY / CARTRIDGE BUS / PCB / MEASUREMENT</p>
+<details class="mobile-nav">
+<summary>本期目录 / CONTENTS</summary>
+<nav aria-label="本期目录"><a href="#cover">封面</a>
+<a href="#discoveries">项目与工具</a>
+<a href="#drpd">Dr. PD</a>
+<a href="#gb-interceptor">GB Interceptor</a>
+<a href="#notes">知识笔记</a>
+<a href="#aceto-vcf-plugin">一组排针，两种滤波电路</a>
+<a href="#gego-drawing-without-paper">文化小栏</a>
+<a href="#records">唱片</a></nav>
+</details>
+<div class="layout">
+<aside class="side">
+<h2><mark>目录 / CONTENTS</mark></h2>
+<nav aria-label="本期目录"><a href="#cover">封面</a>
+<a href="#discoveries">项目与工具</a>
+<a href="#drpd">Dr. PD</a>
+<a href="#gb-interceptor">GB Interceptor</a>
+<a href="#notes">知识笔记</a>
+<a href="#aceto-vcf-plugin">一组排针，两种滤波电路</a>
+<a href="#gego-drawing-without-paper">文化小栏</a>
+<a href="#records">唱片</a></nav>
+<p class="tiny">2026.11.18<br>午刊 002</p>
+</aside>
+<main class="content" id="main" tabindex="-1">
+<div class="opener">
+<span class="tag"><mark>开篇 / OPENING</mark></span>
+<h2>USB-C 上的协商，卡带总线上的画面</h2>
+<p>Dr. PD 将 USB-C 的供电消息与电压、电流放到一起读。GB Interceptor 从卡带总线取得数据，在外接板上重建 Game Boy 画面。另有四件开源工具、两则协议与测量笔记，以及 Jordan Aceto 的可插拔滤波小板。</p>
+</div>
+<section class="section" id="discoveries" aria-labelledby="discoveries-heading">
+<span class="kicker">FIELD NOTES / 项目与工具</span>
+<h2 id="discoveries-heading">四件开源工具</h2>
+<div class="discovery-grid">
+<article class="discovery" id="imhex">
+<span class="tag"><mark>工具选读</mark> 二进制格式 / 采样文件</span>
+<h3>ImHex：把自己的 WAV 文件拆成可读字段</h3>
+<p>录音导出来以后，文件头里的采样率、声道数和位深各占哪些字节？ImHex 的 Pattern Language 可以把结构定义叠到十六进制视图上，跳到字段时同时定位原始偏移。项目的 <code>wav.hexpat</code> 已写出 RIFF/WAVE 和 <code>fmt</code> 块。可以把同一段声音导出为两个采样率，分别打开，先核对 <code>samplesPerSec</code>，再看音频数据块的长度变化。这个对照也适合检查自己写的 WAV 导出代码。</p>
+
+<div class="references">
+<a href="https://github.com/WerWolv/ImHex/blob/76cf8771158012095d3b3ed58cc93c27ccfac7df/README.md" target="_blank" rel="noopener">ImHex v1.38.1 README</a>
+<a href="https://github.com/WerWolv/ImHex-Patterns/blob/d2d3e7cc9aac64804d5e232591645f844748a989/patterns/wav.hexpat" target="_blank" rel="noopener">ImHex Patterns 的 WAV 结构</a>
+</div>
+</article>
+<article class="discovery" id="openfpgaloader">
+<span class="tag"><mark>工具选读</mark> FPGA / 工程加载</span>
+<h3>openFPGALoader：让第一版逻辑先跑一遍</h3>
+<p>手头已有 FPGA 工具链生成的位流时，openFPGALoader 可以把它加载到兼容的开发板。官方入门文档把两种落点说得很清楚。装入 SRAM 可以先试一版设计，断电后这次加载会消失。写板载 Flash 适合让支持该方式的板在下次上电时重新加载。第一次可以按板型表核对下载器与板子的搭配，再选一个点灯位流试 SRAM，确认脚位和时钟后再决定要不要写入 Flash。</p>
+
+<div class="references">
+<a href="https://github.com/trabucayre/openFPGALoader/blob/befbab4f646207dbaf1daf8b144dd980ad283dd5/doc/guide/first-steps.rst" target="_blank" rel="noopener">openFPGALoader v1.2.0 入门文档</a>
+<a href="https://trabucayre.github.io/openFPGALoader/compatibility/board.html" target="_blank" rel="noopener">板型兼容表</a>
+</div>
+</article>
+<article class="discovery" id="kikit">
+<span class="tag"><mark>工具选读</mark> PCB / 拼板</span>
+<h3>KiKit：把拼板尺寸和连接桥存成配置</h3>
+<p>同一张小板要做成几联板时，KiKit 可以从 KiCad 的单板文件生成拼板，把行列间距、连接桥、板边与分板方式保存为配置。尤其适合板子经常改版，需要跟着重出制造文件的人。先用文档的规则网格例子，确认接插件有足够外伸空间，再按厂家的铣槽和 V 槽条件选分板方式。如果手工指定连接桥，可以查它从板边伸出的起点和方向，看看组板后是否真的接到相邻板或工艺边。</p>
+
+<div class="references">
+<a href="https://github.com/yaqwsx/KiKit/blob/d1957c535781371db5a2f507f8154d460095f9f1/README.md" target="_blank" rel="noopener">KiKit 作者项目 README</a>
+<a href="https://github.com/yaqwsx/KiKit/blob/d1957c535781371db5a2f507f8154d460095f9f1/docs/panelization/examples.md" target="_blank" rel="noopener">拼板例子</a>
+</div>
+</article>
+<article class="discovery" id="openboardview">
+<span class="tag"><mark>工具选读</mark> 维修 / Boardview</span>
+<h3>OpenBoardView：顺着网络找板上的测点</h3>
+<p>有了和手头硬件同版本的板位图，OpenBoardView 能把元件编号、引脚和同网连接放到可翻面的板图上。可以先搜一个容易认出的接插件，用同网高亮找它连着的测试点，再把照片上的顶面或底面对上。README 自带示例图，能看见同一网络的焊盘如何高亮。板位图用来定位电路，实际焊点是否导通仍可在断电后用表核对，也值得检查手头文件的板号是否相同。</p>
+
+<div class="references">
+<a href="https://github.com/OpenBoardView/OpenBoardView/blob/61ae70c2a15cd219ab74e3f8ddd0389ae370658a/README.md" target="_blank" rel="noopener">OpenBoardView v10.0.0 项目文档</a>
+<a href="https://github.com/OpenBoardView/OpenBoardView/blob/61ae70c2a15cd219ab74e3f8ddd0389ae370658a/asset/screenshot-halo.png" target="_blank" rel="noopener">项目同网高亮示意</a>
+</div>
+</article>
+</div>
+</section>
+<section class="section" id="drpd" aria-labelledby="drpd-heading">
+<span class="kicker">BUILD LOG / USB-C 供电</span>
+<h2 id="drpd-heading">Dr. PD：在同一条时间轴看协商和供电</h2>
+<article>
+<span class="tag"><mark>项目选读 / 2026 设计</mark> USB-C PD / 模拟测量</span>
+<p class="lead">USB-C 设备接上充电器后，最后稳定在多少伏只告诉你结果。要知道设备索取过哪一档，或电压在什么时候变化，就得同时看 CC 上的协商报文和 VBUS 上的实测曲线。Marco Tabini 团队的 Dr. PD 把两类数据记录在同一界面。串接时可观察供电端和受电端的交流，也可切到受电端模式，向充电器请求它所公告的供电档位。</p>
+<div class="feature">
+<div class="feature-copy"><h3>电压和电流各走哪条路</h3>
+<p>打开 R2608-A 的模拟监测原理图，先分别找电压与电流。VBUS 电压经电阻分压、缓冲后进 RP2354 的 ADC。电流走串联的 5 毫欧分流电阻，压差交给 INA240A2 放大。放大器的零电流输出以 1.65 V 为基准，电流方向变了，输出就会落在基准的另一侧。原理说明还标出从分流电阻到放大器的开尔文取样，以及用于修正测量误差的校准表。</p>
+<h3>把报文与电压变化对齐</h3>
+<p>报文走另一条路径。前端把两个 USB-C 口的 CC 线送到数字接口，捕获电平边沿，PD 协议由 RP2354 固件处理。把报告中的 <code>Source_Capabilities</code>、<code>Request</code> 与 <code>PS_RDY</code> 找出来，可分别读到供电端公告、受电端的请求与供电状态就绪。再对照 VBUS 曲线，看电压何时升降，以及它和协议阶段的先后。</p>
+<h3>对照硬件修订和固件版本</h3>
+<p>第一次读项目可以从正常的供电协商样例起步，认清电路图上 CC、VBUS 与测量参考点，再回到处理同一段事件的前端截图。官方后面板图上的修订号是 Rev 2605-A，技术段落采用仓库列出的 R2608-A 原理图。项目 10 月公开的 v1.0.0-beta.1 是固件预发行，和外壳上的硬件修订号分开看。</p></div>
+<div><figure class="full-photo">
+<img src="assets/drpd-back-r2605.jpg" width="1448" height="1086" alt="Dr. PD 的官方后面板图，右下标有 Rev 2605-A，另有 SYNC 和 HOST 接口" decoding="async" loading="lazy">
+<figcaption>Dr. PD 官方后面板图，标有 Rev 2605-A（2026） · T76 / MTA, Inc. · <a href="https://github.com/T76-org/drpd/blob/3b1aa0db994dd59714f73d9b445a211d3d459db2/media/back.jpg" target="_blank" rel="noopener">配图出处 ↗</a> · <a href="assets/drpd-back-r2605.jpg" target="_blank" rel="noopener">查看大图 ↗</a> · <a href="assets/drpd-agpl-3.0.txt">AGPL-3.0-or-later</a> · <a href="assets/drpd-license-notice.txt">项目版权声明</a></figcaption>
+</figure><figure class="full-photo">
+<img src="assets/drpd-r2608-analog-monitor.png" width="1892" height="1462" alt="Dr. PD R2608-A 模拟监测原理图，含 VBUS 分压、INA240A2 电流测量与通道复用器" decoding="async" loading="lazy">
+<figcaption>Dr. PD R2608-A 原理图第 3 页，模拟监测 · T76 / MTA, Inc. · <a href="https://github.com/T76-org/drpd/blob/3b1aa0db994dd59714f73d9b445a211d3d459db2/hardware/R2608-A/pdf/Dr.%20PD%20R2608-A.pdf" target="_blank" rel="noopener">配图出处 ↗</a> · <a href="assets/drpd-r2608-analog-monitor.png" target="_blank" rel="noopener">查看大图 ↗</a> · <a href="assets/drpd-r2608-original-schematic.pdf" target="_blank" rel="noopener">原始设计文件 ↗</a> · <a href="assets/drpd-agpl-3.0.txt">AGPL-3.0-or-later</a> · <a href="assets/drpd-license-notice.txt">项目版权声明</a></figcaption>
+</figure></div>
+</div>
+<div class="references">
+<a href="https://github.com/T76-org/drpd/blob/3b1aa0db994dd59714f73d9b445a211d3d459db2/README.md" target="_blank" rel="noopener">Dr. PD 固定项目文档</a>
+<a href="https://github.com/T76-org/drpd/blob/3b1aa0db994dd59714f73d9b445a211d3d459db2/docs/docs/internals/operating-principles/analog-monitor.mdx" target="_blank" rel="noopener">R2608-A 模拟监测原理</a>
+<a href="https://github.com/T76-org/drpd/blob/3b1aa0db994dd59714f73d9b445a211d3d459db2/docs/docs/internals/operating-principles/usb-ports.mdx" target="_blank" rel="noopener">USB 端口与 CC / VBUS 分路</a>
+<a href="https://github.com/T76-org/drpd/blob/3b1aa0db994dd59714f73d9b445a211d3d459db2/hardware/R2608-A/pdf/Dr.%20PD%20R2608-A.pdf" target="_blank" rel="noopener">R2608-A 六页原始原理图</a>
+<a href="https://github.com/T76-org/drpd/blob/3b1aa0db994dd59714f73d9b445a211d3d459db2/docs/docs/exploration-guide/bench-experiments.mdx" target="_blank" rel="noopener">作者记录的正常供电协商样例</a>
+<a href="https://github.com/T76-org/drpd/releases/tag/v1.0.0-beta.1" target="_blank" rel="noopener">v1.0.0-beta.1 固件发布</a>
+</div>
+</article>
+</section>
+<section class="section" id="gb-interceptor" aria-labelledby="gb-interceptor-heading">
+<span class="kicker">SOURCE WALK / 复古掌机</span>
+<h2 id="gb-interceptor-heading">GB Interceptor：从卡带总线重建掌机画面</h2>
+<article>
+<span class="tag"><mark>项目选读 / 2022 制作记录</mark> 复古掌机 / 图像重建</span>
+<p class="lead">为了让选手用熟悉的 Game Boy 参加线上比赛，Sebastian Staacks 做了一个插在掌机和卡带之间的适配器。游戏照常在原机运行，适配器另用 USB 给电脑送出画面。它利用卡带接口上的信号重建图像，所以主机可以保持原样。对做硬件的人，这个项目尤其有意思的一点是，图像输出来自对总线活动的解释。</p>
+<div class="feature">
+<div class="feature-copy"><h3>从卡带连接器读地址和数据</h3>
+<p>先看 REV2 图纸上的卡带连接器和 <code>SN74LVC4245A</code>。两侧卡带连接器把原有信号接通，收发器从 5 V 总线取一份信号给 3.3 V 的 RP2040。<code>memory-bus.pio</code> 等卡带时钟的下降沿，一次读取 GPIO 并把结果送进 FIFO。固件里一份 32 位记录便有地址、数据和控制信号，处理端据此区分一条指令和它执行中发生的其他总线访问。</p>
+<h3>两颗核心怎样重建画面</h3>
+<p>难点是视频 RAM 在掌机内部。固件的一颗核心跟随卡带取指、重建图形内存，另一颗模拟图形单元 PPU 并处理 USB 传输。CPU 已决定的分支可以直接沿后续取指追踪。隐藏的数据直接写进图形内存时，画面就可能和原机有差异。作者记录过双机联机时，第二台收到的方块堆从连线进入，卡带接口观察不到这些数据。</p>
+<h3>回看 USB 输出和兼容性</h3>
+<p>2022 年文章里的 USB 输出是 NV12，2023 年技术演讲和 v1.2.2 源码已能看到 MJPEG。打算制作时，可先看主机、游戏和录像软件的兼容表，再按 Wiki 选 PCB 与卡槽。面对一段异常录像，可以先确认总线解释是否仍和原机同步，再追是图形重建还是电脑接收这一段出了问题。</p></div>
+<div><figure class="full-photo">
+<img src="assets/gbinterceptor-rev2-schematic.png" width="2249" height="1591" alt="GB Interceptor REV2 原理图，左边是 USB 和卡带连接器，中间为 RP2040，右侧为 SN74LVC4245A 电平转换" decoding="async" loading="lazy">
+<figcaption>GB Interceptor REV2 原理图（2022-11-17） · Sebastian Staacks · <a href="https://github.com/Staacks/gbinterceptor/blob/164127fe03bcd3b7238259187197dde7a315ec89/pcb/kicad/gb-stream-cart.kicad_sch" target="_blank" rel="noopener">配图出处 ↗</a> · <a href="assets/gbinterceptor-rev2-schematic.png" target="_blank" rel="noopener">查看大图 ↗</a> · <a href="assets/gbinterceptor-rev2-source.kicad_sch" target="_blank" rel="noopener">原始设计文件 ↗</a> · <a href="assets/gbinterceptor-pcb-license.txt">CC BY 4.0</a></figcaption>
+</figure></div>
+</div>
+<div class="references">
+<a href="https://there.oughta.be/a/game-boy-capture-cartridge" target="_blank" rel="noopener">Sebastian Staacks 2022 年制作记录和实拍</a>
+<a href="https://github.com/Staacks/gbinterceptor/blob/164127fe03bcd3b7238259187197dde7a315ec89/pcb/kicad/gb-stream-cart.kicad_sch" target="_blank" rel="noopener">REV2 原理图源文件</a>
+<a href="https://github.com/Staacks/gbinterceptor/blob/164127fe03bcd3b7238259187197dde7a315ec89/firmware/memory-bus.pio" target="_blank" rel="noopener">卡带总线 PIO 源码</a>
+<a href="https://github.com/Staacks/gbinterceptor/blob/164127fe03bcd3b7238259187197dde7a315ec89/firmware/main.c" target="_blank" rel="noopener">固件主循环与双核分工</a>
+<a href="https://github.com/Staacks/gbinterceptor/blob/164127fe03bcd3b7238259187197dde7a315ec89/firmware/usb_descriptors.c" target="_blank" rel="noopener">UVC 描述符</a>
+<a href="https://github.com/Staacks/gbinterceptor/blob/164127fe03bcd3b7238259187197dde7a315ec89/README.md" target="_blank" rel="noopener">项目说明和兼容性清单入口</a>
+<a href="https://github.com/Staacks/gbinterceptor/releases/tag/v1.2.2" target="_blank" rel="noopener">v1.2.2 固件发布记录</a>
+</div>
+</article>
+</section>
+<section class="section" id="notes" aria-labelledby="notes-heading">
+<span class="kicker">BENCH NOTES / 协议与测量</span>
+<h2 id="notes-heading">知识笔记</h2>
+<div class="two">
+<article class="box" id="i2c-repeated-start">
+<span class="tag"><mark>协议笔记</mark></span>
+<h3>读寄存器时，两个 START 之间发生了什么</h3>
+<p>一些 I²C 器件采用组合事务：控制器先写入内部寄存器位置，再发重复 START，重新给出目标地址并把方向位改成读，随后取回数据。中间没有 STOP，总线不会按一次完整结束来释放。它和“先结束写入，再单独开始读取”是两种时序，不能仅凭 API 名里都有 read 就认为等价。</p>
+<p>对照目标器件的数据手册，再看驱动是否把两段消息作为同一组事务提交。寄存器指针怎样递增、是否要求重复 START，由具体器件决定。</p>
+
+<div class="references">
+<a href="https://www.nxp.com/docs/en/user-guide/UM10204.pdf#page=13" target="_blank" rel="noopener">NXP UM10204 Rev.7.0 / §3.1.10，组合格式</a>
+</div>
+</article>
+<article class="box" id="probe-loading">
+<span class="tag"><mark>测量笔记</mark></span>
+<h3>探头倍率，和输入负载一起看</h3>
+<p>10× 被动电压探头把送到示波器输入端的幅度衰减到探头尖端的十分之一。仪器通道倍率设置匹配后，读数才按尖端电压换算。倍率之外还要看输入阻抗：探头尖端的电容会参与被测节点的响应，尤其是高阻节点和快速边沿。一般的 1× 被动探头比 10× 型有更大的尖端电容，接上探头后，波形本身也可能改变。</p>
+<p>记录探头型号、衰减档位、通道设置和连接方式。比较两张波形前，先确认测量条件是否一致，不只对比屏幕上的峰值。</p>
+<figure class="full-photo">
+<img src="assets/probe-load.svg" width="800" height="330" alt="原创等效输入负载示意：探头尖端节点到参考点之间的输入电阻与电容并联，不是完整补偿电路" decoding="async" loading="lazy">
+<figcaption>探头等效输入负载 · SIGNAL / NOISE 原创示意 · <a href="https://download.tek.com/document/02_ABCs-of-Probes-Primer.pdf#page=53" target="_blank" rel="noopener">资料依据 ↗</a> · <a href="assets/probe-load.svg" target="_blank" rel="noopener">查看大图 ↗</a></figcaption>
+</figure>
+<div class="references">
+<a href="https://download.tek.com/document/02_ABCs-of-Probes-Primer.pdf#page=53" target="_blank" rel="noopener">Tektronix ABCs of Probes / Attenuation Factor、Probe Loading</a>
+</div>
+</article>
+</div>
+</section>
+<section class="section" id="aceto-vcf-plugin" aria-labelledby="aceto-vcf-plugin-heading">
+<span class="kicker">PERSONAL WEB / 作者制作</span>
+<h2 id="aceto-vcf-plugin-heading">一组排针，两种滤波电路</h2>
+<article>
+<span class="tag"><mark>制作记录回看</mark> Jordan Aceto · 2022-08-19 修订</span>
+<p>Jordan Aceto 把模块合成器的滤波核心做成可插拔的小板，母板统一提供 ±12 V 电源、音频输入输出和控制电压。换上 ARP 4072 或后期 MS‑20 滤波板，外部接线可以沿用。他把截止频率和反馈的控制范围都设为 0–2.048 V，方便用一颗双通道 MCP4822 数模转换器驱动，两项控制各自在板上微调。翻开两种小板的 KiCad 原理图，可以从同一组排针出发，看看控制电压进入不同滤波电路后各自走向哪里。</p>
+<div class="two"><figure class="full-photo">
+<img src="assets/vcf-standard-pinout.png" width="459" height="211" alt="Jordan Aceto 的滤波小板共用排针分配图" decoding="async" loading="lazy">
+<figcaption>VCF 小板共用排针分配图（2022 年修订快照） · Jordan Aceto · <a href="https://github.com/JordanAceto/VCF_plug_in_boards/blob/896cf35817b3e2ad0e3124ef7860ce5c9766bb8c/assets/standard_pinout.png" target="_blank" rel="noopener">配图出处 ↗</a> · <a href="assets/vcf-standard-pinout.png" target="_blank" rel="noopener">查看大图 ↗</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></figcaption>
+</figure><figure class="full-photo">
+<img src="assets/vcf-arp-4072-front.png" width="875" height="757" alt="作者的 ARP 4072 低通滤波小板正面 PCB 渲染图" decoding="async" loading="lazy">
+<figcaption>ARP 4072 低通滤波小板正面 PCB 渲染（2022 年修订快照） · Jordan Aceto · <a href="https://github.com/JordanAceto/VCF_plug_in_boards/blob/896cf35817b3e2ad0e3124ef7860ce5c9766bb8c/arp_4072_LPF_plug_in_board/pics/pcb_front.png" target="_blank" rel="noopener">配图出处 ↗</a> · <a href="assets/vcf-arp-4072-front.png" target="_blank" rel="noopener">查看大图 ↗</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></figcaption>
+</figure></div>
+<div class="references">
+<a href="https://github.com/JordanAceto/VCF_plug_in_boards" target="_blank" rel="noopener">Jordan Aceto 的 VCF Plug-in Boards 原文</a>
+<a href="https://github.com/JordanAceto/VCF_plug_in_boards/tree/896cf35817b3e2ad0e3124ef7860ce5c9766bb8c/arp_4072_LPF_plug_in_board" target="_blank" rel="noopener">ARP 4072 原理图与小板设计</a>
+<a href="https://github.com/JordanAceto/VCF_plug_in_boards/tree/896cf35817b3e2ad0e3124ef7860ce5c9766bb8c/late_MS20_VCF_plug_in_board" target="_blank" rel="noopener">后期 MS-20 原理图与小板设计</a>
+</div>
+</article>
+</section>
+<section class="section" id="gego-drawing-without-paper" aria-labelledby="gego-drawing-without-paper-heading">
+<span class="kicker">CULTURE NOTE / 文化小栏</span>
+<h2 id="gego-drawing-without-paper-heading">Gego 把第二道线留给墙面</h2>
+<article class="culture-note">
+<div class="culture-label">
+<span class="tiny">1986 · THE MET</span>
+<strong>《无纸绘画 86/18》</strong>
+<span>Gego（Gertrud Goldschmidt）</span>
+<a href="https://www.metmuseum.org/art/collection/search/841074" target="_blank" rel="noopener">查看馆藏照片与作品资料 ↗</a>
+</div>
+<div>
+<p>1986 年，Gego（Gertrud Goldschmidt）用涂漆铁杆、铝和尼龙做了《无纸绘画 86/18》。作品高约 104 厘米，厚约 2.9 厘米。杆件彼此接合，组成中间留空的几何单元。大都会艺术博物馆的馆藏说明特别提到，杆件会在邻近的墙面上投下细细的影子。实物的线和墙上的线错开，构图便多出一层交叠的轮廓。</p>
+<p>Gego 早年的 Reticulárea 是用金属线交织而成的大型网状装置。《无纸绘画》系列把她对线与空间的研究带到墙边。照明的方向一变，杆件的接点仍留在原地，投在墙上的线却会挪动。打开馆藏照，可以沿一根铁杆走到下一个接点，再想象光从斜上方照来时，影子会落在墙上什么地方。几厘米的厚度，也就成了构图的一部分。</p>
+<div class="references">
+<a href="https://www.guggenheim-bilbao.eus/en/exhibition/dibujos-sin-papel-ca-1976-88" target="_blank" rel="noopener">古根海姆毕尔巴鄂博物馆《无纸绘画》系列</a>
+</div>
+</div>
+</article>
+</section>
+<section class="section" id="records" aria-labelledby="records-heading">
+
+<h2 id="records-heading">唱片 / RECORDS</h2>
+<article class="record">
+<figure>
+<a href="https://tangentnl.bandcamp.com/album/disclosure" target="_blank" rel="noopener"><img src="assets/record-tangent.jpg" width="700" height="700" alt="《Disclosure》封面，灰褐色纹理盘旋成暗色洞口，右侧是橙红色的 Tangent 字样" decoding="async" loading="lazy"></a>
+<figcaption>Robbert Kok（封面）/ Mike Cadoo（版面）/ © Tangent，℗ n5MD（发行页署名）</figcaption>
+</figure>
+<div>
+<p class="tiny"><time datetime="2026-10-16">2026-10-16</time> · 10月回听 · IDM / Modular synthesis</p>
+<h3>Disclosure</h3>
+<p class="artist">Tangent</p>
+<p>荷兰双人组三年后重启合作，在 IDM 节拍与合成器铺底间加入模块合成器。七首曲目的声音制作、作曲和母带均由两人负责。</p>
+<div class="references">
+<a href="https://tangentnl.bandcamp.com/album/disclosure" target="_blank" rel="noopener">Bandcamp 发行页 ↗</a>
+<a href="https://igloomag.com/reviews/tangent-disclosure-n5md" target="_blank" rel="noopener">Igloo Magazine 专辑乐评 ↗</a>
+</div>
+</div>
+<details class="listen">
+<summary>展开 Bandcamp 试听</summary>
+<iframe loading="lazy" title="Tangent — Disclosure Bandcamp 试听" src="https://bandcamp.com/EmbeddedPlayer/album=2012747801/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/artwork=small/transparent=true/"></iframe>
+</details>
+</article>
+<article class="record">
+<figure>
+<a href="https://officialauthks.bandcamp.com/album/cantu-of-the-sower" target="_blank" rel="noopener"><img src="assets/record-heavensouls.jpg" width="700" height="700" alt="《&quot;cantu&quot; of the sower》封面，灰紫色暗处的面部轮廓被圆形强光和反射遮挡" decoding="async" loading="lazy"></a>
+<figcaption>heavensouls / caperflower，授权 NTS Recordings（Bandcamp 发行说明）</figcaption>
+</figure>
+<div>
+<p class="tiny"><time datetime="2026-10-07">2026-10-07</time> · 10月回听 · Glitch / Experimental electronic</p>
+<h3>&quot;cantu&quot; of the sower</h3>
+<p class="artist">heavensouls</p>
+<p>heavensouls 负责这张六曲电子拼贴的主要制作和混音。Alyssa Mandel 演奏萨克斯，stickerbush 在第五首献声。</p>
+<div class="references">
+<a href="https://officialauthks.bandcamp.com/album/cantu-of-the-sower" target="_blank" rel="noopener">Bandcamp 发行页 ↗</a>
+<a href="https://pitchfork.com/reviews/albums/heavensouls-cantu-of-the-sower-ep/" target="_blank" rel="noopener">Pitchfork 专辑乐评 ↗</a>
+</div>
+</div>
+<details class="listen">
+<summary>展开 Bandcamp 试听</summary>
+<iframe loading="lazy" title="heavensouls — &quot;cantu&quot; of the sower Bandcamp 试听" src="https://bandcamp.com/EmbeddedPlayer/album=2776417967/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/artwork=small/transparent=true/"></iframe>
+</details>
+</article>
+<article class="record">
+<figure>
+<a href="https://ziurinhell.bandcamp.com/album/de-brujas-y-fantasmas-original-soundtrack-for-kian-del-valle-solo-dance-performance" target="_blank" rel="noopener"><img src="assets/record-ziur.jpg" width="700" height="700" alt="《De Brujas y Fantasmas》封面，雾色背景里俯身的侧影上覆着红色手写标题" decoding="async" loading="lazy"></a>
+<figcaption><a href="https://www.kuboraum.com/editions/" target="_blank" rel="noopener">Kuboraum Editions（发行与艺术指导）/ Cecilia Troiani（平面设计）</a></figcaption>
+</figure>
+<div>
+<p class="tiny"><time datetime="2026-11-06">2026-11-06</time> · 11月回听 · Experimental electronic / Dance score</p>
+<h3>De Brujas y Fantasmas</h3>
+<p class="artist">Ziúr</p>
+<p>为 Kianí del Valle 的独舞写下六首电子配乐。编舞重释玛丽·魏格曼 1926 年的《女巫之舞》，舞者在〈Hueso De Humo〉献声。</p>
+<div class="references">
+<a href="https://ziurinhell.bandcamp.com/album/de-brujas-y-fantasmas-original-soundtrack-for-kian-del-valle-solo-dance-performance" target="_blank" rel="noopener">Bandcamp 发行页 ↗</a>
+<a href="https://acloserlisten.com/2026/10/31/ziur-de-brujas-y-fantasmas/" target="_blank" rel="noopener">A Closer Listen 专辑乐评 ↗</a>
+</div>
+</div>
+<details class="listen">
+<summary>展开 Bandcamp 试听</summary>
+<iframe loading="lazy" title="Ziúr — De Brujas y Fantasmas (Original Soundtrack for Kianí del Valle Solo Dance Performance) Bandcamp 试听" src="https://bandcamp.com/EmbeddedPlayer/album=2006140983/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/artwork=small/transparent=true/"></iframe>
+</details>
+</article>
+</section>
+</main>
+</div>
+<footer class="foot">
+<p>SIGNAL / NOISE · OPEN CIRCUIT · 午刊 002 · <time datetime="2026-11-18">2026-11-18</time></p>
+<nav class="references" aria-label="刊末链接">
+<a href="../../index.html">← 杂志首页</a>
+<a href="../../archive.html">归档</a>
+<a href="sources.json">核查资料</a>
+<a href="assets/credits.json">配图署名</a>
+</nav>
+</footer>
+</body>
+</html>

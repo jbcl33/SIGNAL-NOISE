@@ -1,0 +1,53 @@
+{
+  "checkedDate": "2026-11-18",
+  "albums": [
+    {
+      "artist": "Tangent",
+      "title": "Disclosure",
+      "date": "2026-10-16",
+      "label": "n5MD",
+      "url": "https://tangentnl.bandcamp.com/album/disclosure",
+      "image": "assets/record-tangent.jpg",
+      "imageSource": "https://f4.bcbits.com/img/a1934645762_5.jpg",
+      "imageCredit": "Robbert Kok（封面）/ Mike Cadoo（版面）/ © Tangent，℗ n5MD（发行页署名）",
+      "albumId": 2012747801,
+      "embedUrl": "https://bandcamp.com/EmbeddedPlayer/album=2012747801/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/artwork=small/transparent=true/",
+      "genre": "IDM / Modular synthesis",
+      "aboutSummary": "荷兰双人组三年后重启合作，在 IDM 节拍与合成器铺底间加入模块合成器。七首曲目的声音制作、作曲和母带均由两人负责。",
+      "discoveredFrom": "https://igloomag.com/reviews/tangent-disclosure-n5md",
+      "checkedDate": "2026-11-18"
+    },
+    {
+      "artist": "heavensouls",
+      "title": "\"cantu\" of the sower",
+      "date": "2026-10-07",
+      "label": "NTS Recordings",
+      "url": "https://officialauthks.bandcamp.com/album/cantu-of-the-sower",
+      "image": "assets/record-heavensouls.jpg",
+      "imageSource": "https://f4.bcbits.com/img/a3344365033_5.jpg",
+      "imageCredit": "heavensouls / caperflower，授权 NTS Recordings（Bandcamp 发行说明）",
+      "albumId": 2776417967,
+      "embedUrl": "https://bandcamp.com/EmbeddedPlayer/album=2776417967/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/artwork=small/transparent=true/",
+      "genre": "Glitch / Experimental electronic",
+      "aboutSummary": "heavensouls 负责这张六曲电子拼贴的主要制作和混音。Alyssa Mandel 演奏萨克斯，stickerbush 在第五首献声。",
+      "discoveredFrom": "https://pitchfork.com/reviews/albums/heavensouls-cantu-of-the-sower-ep/",
+      "checkedDate": "2026-11-18"
+    },
+    {
+      "artist": "Ziúr",
+      "title": "De Brujas y Fantasmas (Original Soundtrack for Kianí del Valle Solo Dance Performance)",
+      "date": "2026-11-06",
+      "label": "Kuboraum Editions",
+      "url": "https://ziurinhell.bandcamp.com/album/de-brujas-y-fantasmas-original-soundtrack-for-kian-del-valle-solo-dance-performance",
+      "image": "assets/record-ziur.jpg",
+      "imageSource": "https://f4.bcbits.com/img/a1783377870_5.jpg",
+      "imageCredit": "Kuboraum Editions（发行与艺术指导）/ Cecilia Troiani（平面设计）",
+      "albumId": 2006140983,
+      "embedUrl": "https://bandcamp.com/EmbeddedPlayer/album=2006140983/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/artwork=small/transparent=true/",
+      "genre": "Experimental electronic / Dance score",
+      "aboutSummary": "为 Kianí del Valle 的独舞写下六首电子配乐。编舞重释玛丽·魏格曼 1926 年的《女巫之舞》，舞者在〈Hueso De Humo〉献声。",
+      "discoveredFrom": "https://acloserlisten.com/2026/10/31/ziur-de-brujas-y-fantasmas/",
+      "checkedDate": "2026-11-18"
+    }
+  ]
+}

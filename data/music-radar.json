@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "collectedAt": "2026-11-17T23:17:22.110078+00:00",
+  "collectedAt": "2026-11-18T03:20:31.776667+00:00",
   "note": "RSS titles/dates/categories only; discovery candidates are not scored recommendations. Failed feeds retain visibly dated previous entries.",
   "sources": [
     {
@@ -9,9 +9,9 @@
       "url": "https://pitchfork.com/",
       "feed": "https://pitchfork.com/feed/feed-album-reviews/rss",
       "focus": "专业乐评 / Experimental / Electronic",
-      "checkedAt": "2026-11-17T23:17:22.110078+00:00",
+      "checkedAt": "2026-11-18T03:20:31.776667+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-17T23:17:22.110078+00:00",
+      "lastSuccessAt": "2026-11-18T03:20:31.776667+00:00",
       "entries": [
         {
           "title": "Legendary Love",
@@ -71,9 +71,9 @@
       "url": "https://theneedledrop.com/",
       "feed": "https://theneedledrop.com/rss/",
       "focus": "视频乐评 / 个人评分",
-      "checkedAt": "2026-11-17T23:17:22.110078+00:00",
+      "checkedAt": "2026-11-18T03:20:31.776667+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-17T23:17:22.110078+00:00",
+      "lastSuccessAt": "2026-11-18T03:20:31.776667+00:00",
       "entries": [
         {
           "title": "2hollis - Pirouette",
@@ -98,9 +98,9 @@
       "url": "https://igloomag.com/",
       "feed": "https://igloomag.com/feed",
       "focus": "IDM / Glitch / Braindance / 地下电子",
-      "checkedAt": "2026-11-17T23:17:22.110078+00:00",
+      "checkedAt": "2026-11-18T03:20:31.776667+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-17T23:17:22.110078+00:00",
+      "lastSuccessAt": "2026-11-18T03:20:31.776667+00:00",
       "entries": [
         {
           "title": "Solypsis :: Invisible Ticks (Component)",
@@ -233,10 +233,25 @@
       "url": "https://acloserlisten.com/",
       "feed": "https://acloserlisten.com/feed/",
       "focus": "实验 / Ambient / Drone / 田野录音",
-      "checkedAt": "2026-11-17T23:17:22.110078+00:00",
+      "checkedAt": "2026-11-18T03:20:31.776667+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-17T23:17:22.110078+00:00",
+      "lastSuccessAt": "2026-11-18T03:20:31.776667+00:00",
       "entries": [
+        {
+          "title": "Erland Cooper ~ Dawn Chorus",
+          "url": "https://acloserlisten.com/2026/11/18/erland-cooper-dawn-chorus/",
+          "publishedAt": "2026-11-18T00:01:56+00:00",
+          "categories": [
+            "Modern Composition",
+            "Dawn Chorus",
+            "Decca",
+            "Erland Cooper",
+            "Mercury KX",
+            "Richard Allen"
+          ],
+          "status": "discovery-only",
+          "score": null
+        },
         {
           "title": "xicada ~ Interastral Communications",
           "url": "https://acloserlisten.com/2026/11/17/xicada-interastral-communications/",
@@ -311,18 +326,6 @@
           ],
           "status": "discovery-only",
           "score": null
-        },
-        {
-          "title": "SLIKBACK X KMRU ~ ENEO",
-          "url": "https://acloserlisten.com/2026/11/13/slikback-x-kmru-eneo/",
-          "publishedAt": "2026-11-13T00:01:32+00:00",
-          "categories": [
-            "Electronic",
-            "kmru",
-            "Slikback"
-          ],
-          "status": "discovery-only",
-          "score": null
         }
       ]
     },
@@ -332,9 +335,9 @@
       "url": "https://headphonecommute.com/",
       "feed": "https://headphonecommute.com/feed/",
       "focus": "Ambient / 电声 / 艺术家访谈",
-      "checkedAt": "2026-11-17T23:17:22.110078+00:00",
+      "checkedAt": "2026-11-18T03:20:31.776667+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-17T23:17:22.110078+00:00",
+      "lastSuccessAt": "2026-11-18T03:20:31.776667+00:00",
       "entries": [
         {
           "title": "Featured Artist: Arovane",
@@ -396,9 +399,9 @@
       "url": "https://thequietus.com/reviews/",
       "feed": "https://thequietus.com/feed/",
       "focus": "独立地下 / Experimental / Electronic",
-      "checkedAt": "2026-11-17T23:17:22.110078+00:00",
+      "checkedAt": "2026-11-18T03:20:31.776667+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-17T23:17:22.110078+00:00",
+      "lastSuccessAt": "2026-11-18T03:20:31.776667+00:00",
       "entries": [
         {
           "title": "Feedbacker: Rock Music for November by JR Moores",
@@ -458,9 +461,9 @@
       "url": "https://inverted-audio.com/",
       "feed": "https://inverted-audio.com/feed/",
       "focus": "地下舞曲 / 厂牌 / 制作人",
-      "checkedAt": "2026-11-17T23:17:22.110078+00:00",
+      "checkedAt": "2026-11-18T03:20:31.776667+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-17T23:17:22.110078+00:00",
+      "lastSuccessAt": "2026-11-18T03:20:31.776667+00:00",
       "entries": [
         {
           "title": "Florian Kupfer launches Lifetrax imprint with reissue of his L.I.E.S. debut",

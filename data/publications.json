@@ -45,6 +45,15 @@
       "path": "morning/2026-11-18/",
       "summary": "PicoGUS复古PC声卡、SmartKnob力反馈旋钮，四条工程工具发现、PIO与钻孔笔记、PicoDMG制作经验及Lygia Clark文化短栏，附三张唱片。",
       "musicCount": 3
+    },
+    {
+      "date": "2026-11-18",
+      "edition": "noon",
+      "issue": "002",
+      "title": "OPEN CIRCUIT · 午刊 002",
+      "path": "noon/2026-11-18/",
+      "summary": "GB Interceptor的卡带总线与画面重建、Dr. PD的供电协商和测量电路，附四条工程工具、I²C/探头笔记、VCF制作回看与Gego文化短栏，三张唱片。",
+      "musicCount": 3
     }
   ]
 }
