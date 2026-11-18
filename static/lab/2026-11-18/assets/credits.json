@@ -1,0 +1,110 @@
+[
+  {
+    "file": "minidexed-project.jpg",
+    "source": "https://github.com/probonopd/MiniDexed/blob/52156b77a4dc94c1e85112fb200fed0e43e3b501/README.md",
+    "image": "https://user-images.githubusercontent.com/2480569/161813414-bb156a1c-efec-44c0-802a-8926412a08e0.jpg",
+    "credit": "MiniDexed 项目贡献者；README 未单独标摄影作者",
+    "license": "GPL-3.0（项目仓库声明）",
+    "noticeFile": "minidexed-gpl-3.0.txt",
+    "kind": "project_readme_photograph",
+    "alt": "MiniDexed 项目原图：键盘上的黑色合成器，液晶显示 Voice 与 MARIMBA 音色名",
+    "width": 1024,
+    "height": 489,
+    "changes": "原图文件未改动；MiniDexed 封面通过 CSS 灰度显示。"
+  },
+  {
+    "file": "DPCMParameters.png",
+    "source": "https://github.com/BleuBleu/FamiStudio/blob/ca4b039d977e6c90dd63ab4233ac9f0b25b7304c/Docs/docs/dpcm.md",
+    "image": "https://raw.githubusercontent.com/BleuBleu/FamiStudio/ca4b039d977e6c90dd63ab4233ac9f0b25b7304c/Docs/docs/images/DPCMParameters.png",
+    "credit": "BleuBleu / Mathieu Gauthier 与 FamiStudio 贡献者",
+    "license": "MIT",
+    "noticeFile": "famistudio-mit.txt",
+    "kind": "official_documentation_interface",
+    "alt": "FamiStudio 官方文档中的 DPCM 参数列表，分别列出 Preview Rate 和 Sample Rate",
+    "width": 301,
+    "height": 211,
+    "changes": "原图文件未改动。"
+  },
+  {
+    "file": "EditWaveform.png",
+    "source": "https://github.com/BleuBleu/FamiStudio/blob/ca4b039d977e6c90dd63ab4233ac9f0b25b7304c/Docs/docs/dpcm.md",
+    "image": "https://raw.githubusercontent.com/BleuBleu/FamiStudio/ca4b039d977e6c90dd63ab4233ac9f0b25b7304c/Docs/docs/images/EditWaveform.png",
+    "credit": "BleuBleu / Mathieu Gauthier 与 FamiStudio 贡献者",
+    "license": "MIT",
+    "noticeFile": "famistudio-mit.txt",
+    "kind": "official_documentation_interface",
+    "alt": "FamiStudio 官方文档的 DPCM 编辑界面，灰色原始波形与彩色处理后波形叠放",
+    "width": 975,
+    "height": 551,
+    "changes": "原图文件未改动。"
+  },
+  {
+    "file": "ExportWav.png",
+    "source": "https://github.com/BleuBleu/FamiStudio/blob/ca4b039d977e6c90dd63ab4233ac9f0b25b7304c/Docs/docs/export.md",
+    "image": "https://raw.githubusercontent.com/BleuBleu/FamiStudio/ca4b039d977e6c90dd63ab4233ac9f0b25b7304c/Docs/docs/images/ExportWav.png",
+    "credit": "BleuBleu / Mathieu Gauthier 与 FamiStudio 贡献者",
+    "license": "MIT",
+    "noticeFile": "famistudio-mit.txt",
+    "kind": "official_documentation_interface",
+    "alt": "FamiStudio 官方文档的音频导出窗口，包括时长、分声道文件和声像设置",
+    "width": 640,
+    "height": 584,
+    "changes": "原图文件未改动。"
+  },
+  {
+    "file": "librepcb-add-component.png",
+    "source": "https://librepcb.org/features/library-concept/",
+    "image": "https://librepcb.org/features/library-concept/add-component-dialog.png",
+    "credit": "LibrePCB 贡献者",
+    "license": "CC BY 3.0 or later",
+    "noticeFile": "image-notices.txt",
+    "kind": "official_documentation_interface",
+    "alt": "LibrePCB 官方库概念页的添加元件窗口，展示分类树与元件选择",
+    "width": 800,
+    "height": 417,
+    "changes": "原图文件未改动。"
+  },
+  {
+    "file": "kdenlive-proxy.webp",
+    "source": "https://docs.kdenlive.org/en/project_and_asset_management/project_settings/proxy_settings.html",
+    "image": "https://docs.kdenlive.org/en/_images/project_settings_proxy.webp",
+    "credit": "Kdenlive 文档贡献者",
+    "license": "CC BY-SA 4.0",
+    "noticeFile": "image-notices.txt",
+    "kind": "official_documentation_interface",
+    "alt": "Kdenlive 官方手册的项目代理设置窗口，含代理开关、生成尺寸阈值与编码配置",
+    "width": 572,
+    "height": 794,
+    "changes": "原图文件未改动。"
+  },
+  {
+    "file": "minidexed-paths.svg",
+    "source": "https://github.com/probonopd/MiniDexed/blob/52156b77a4dc94c1e85112fb200fed0e43e3b501/README.md",
+    "credit": "SIGNAL / NOISE 原创结构示意",
+    "license": "CC BY 4.0",
+    "kind": "editorial_diagram_not_measurement",
+    "alt": "MiniDexed 三条数据路径：SD 卡音色参数与 MIDI 控制进入合成引擎，PCM 音频经 I²S 到 DAC",
+    "width": 800,
+    "height": 440
+  },
+  {
+    "file": "i2s-word-offset.svg",
+    "source": "https://www.nxp.com/docs/en/user-manual/UM11732.pdf",
+    "credit": "SIGNAL / NOISE 原创结构示意",
+    "license": "CC BY 4.0",
+    "kind": "editorial_diagram_not_measurement",
+    "alt": "I²S 位单元示意，WS 改变后一个位时钟周期，新字 MSB 才开始",
+    "width": 800,
+    "height": 300
+  },
+  {
+    "file": "midi-audio-paths.svg",
+    "source": "https://midi.org/summary-of-midi-1-0-messages",
+    "credit": "SIGNAL / NOISE 原创结构示意",
+    "license": "CC BY 4.0",
+    "kind": "editorial_diagram_not_measurement",
+    "alt": "MIDI 音符事件进入合成引擎后才生成 PCM 样本，DX7 syx 音色参数从另一条路径进入引擎",
+    "width": 800,
+    "height": 310
+  }
+]

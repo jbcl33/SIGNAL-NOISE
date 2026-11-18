@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="300" viewBox="0 0 800 300"><rect width="100%" height="100%" fill="#111"/><g font-family="Consolas,monospace" fill="#fff"><text x="30" y="38" font-size="17">I²S / WORD SELECT ANNOUNCES THE NEXT WORD</text>
+<text x="30" y="104" font-size="18">WS</text><path d="M115 87H260V122H750" fill="none" stroke="white" stroke-width="2"/>
+<path d="M260 65V233 M370 65V233" stroke="#777" stroke-dasharray="5 5"/><path d="M260 62H370" stroke="#c6ff00" stroke-width="2"/><text x="275" y="53" font-size="14" fill="#c6ff00">1 × T_BCLK</text>
+<text x="30" y="190" font-size="18">SD</text><g fill="none" stroke="white"><path d="M115 157H260V210H115Z M260 157H370V210H260Z M370 157H480V210H370Z M480 157H590V210H480Z M590 157H750V210H590Z"/></g>
+<rect x="371" y="158" width="108" height="51" fill="#c6ff00"/><text x="383" y="190" font-size="18" fill="#111">MSB</text><text x="130" y="190" font-size="13">PREVIOUS WORD</text><text x="277" y="190" font-size="12">PREV / PAD</text><text x="499" y="190" font-size="15">BIT n-2</text><text x="620" y="190" font-size="18">…</text>
+<text x="30" y="267" font-size="12" fill="#bbb">BIT-CELL DIAGRAM / NOT ELECTRICAL EDGE TIMING / NOT A CAPTURE</text></g></svg>

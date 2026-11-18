@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "collectedAt": "2026-11-18T03:20:31.776667+00:00",
+  "collectedAt": "2026-11-18T06:14:38.038507+00:00",
   "note": "RSS titles/dates/categories only; discovery candidates are not scored recommendations. Failed feeds retain visibly dated previous entries.",
   "sources": [
     {
@@ -9,54 +9,54 @@
       "url": "https://pitchfork.com/",
       "feed": "https://pitchfork.com/feed/feed-album-reviews/rss",
       "focus": "专业乐评 / Experimental / Electronic",
-      "checkedAt": "2026-11-18T03:20:31.776667+00:00",
+      "checkedAt": "2026-11-18T06:14:38.038507+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-18T03:20:31.776667+00:00",
+      "lastSuccessAt": "2026-11-18T06:14:38.038507+00:00",
       "entries": [
+        {
+          "title": "U, Me & My Ego (Deluxe)",
+          "url": "https://pitchfork.com/reviews/albums/chxrry-u-me-and-my-ego-deluxe/",
+          "publishedAt": "2026-11-18T05:03:00+00:00",
+          "categories": [
+            "Reviews / Albums"
+          ],
+          "status": "discovery-only",
+          "score": null
+        },
+        {
+          "title": "An Exchange of Information",
+          "url": "https://pitchfork.com/reviews/albums/oso-oso-an-exchange-of-information/",
+          "publishedAt": "2026-11-18T05:02:00+00:00",
+          "categories": [
+            "Reviews / Albums"
+          ],
+          "status": "discovery-only",
+          "score": null
+        },
+        {
+          "title": "Beginningless",
+          "url": "https://pitchfork.com/reviews/anna-butterss-john-raymond-ben-lumsdaine-beginningless/",
+          "publishedAt": "2026-11-18T05:01:00+00:00",
+          "categories": [
+            "Reviews / Albums"
+          ],
+          "status": "discovery-only",
+          "score": null
+        },
+        {
+          "title": "40 Acres",
+          "url": "https://pitchfork.com/reviews/albums/camden-malik-40-acres/",
+          "publishedAt": "2026-11-18T05:00:00+00:00",
+          "categories": [
+            "Reviews / Albums"
+          ],
+          "status": "discovery-only",
+          "score": null
+        },
         {
           "title": "Legendary Love",
           "url": "https://pitchfork.com/reviews/albums/snoh-aalegra-legendary-love/",
           "publishedAt": "2026-11-17T05:03:00+00:00",
-          "categories": [
-            "Reviews / Albums"
-          ],
-          "status": "discovery-only",
-          "score": null
-        },
-        {
-          "title": "No Skill Comedy Mind Reading",
-          "url": "https://pitchfork.com/reviews/albums/aaron-dilloway-no-skill-comedy-mind-reading/",
-          "publishedAt": "2026-11-17T05:02:00+00:00",
-          "categories": [
-            "Reviews / Albums"
-          ],
-          "status": "discovery-only",
-          "score": null
-        },
-        {
-          "title": "history is not woven by innocent hands",
-          "url": "https://pitchfork.com/reviews/albums/cute-history-is-not-woven-by-innocent-hands/",
-          "publishedAt": "2026-11-17T05:01:00+00:00",
-          "categories": [
-            "Reviews / Albums"
-          ],
-          "status": "discovery-only",
-          "score": null
-        },
-        {
-          "title": "file_1",
-          "url": "https://pitchfork.com/reviews/albums/nori-file-1/",
-          "publishedAt": "2026-11-17T05:00:00+00:00",
-          "categories": [
-            "Reviews / Albums"
-          ],
-          "status": "discovery-only",
-          "score": null
-        },
-        {
-          "title": "Trouble Mountain",
-          "url": "https://pitchfork.com/reviews/albums/aesop-rock-blockhead-trouble-mountain/",
-          "publishedAt": "2026-11-16T05:03:00+00:00",
           "categories": [
             "Reviews / Albums"
           ],
@@ -71,9 +71,9 @@
       "url": "https://theneedledrop.com/",
       "feed": "https://theneedledrop.com/rss/",
       "focus": "视频乐评 / 个人评分",
-      "checkedAt": "2026-11-18T03:20:31.776667+00:00",
+      "checkedAt": "2026-11-18T06:14:38.038507+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-18T03:20:31.776667+00:00",
+      "lastSuccessAt": "2026-11-18T06:14:38.038507+00:00",
       "entries": [
         {
           "title": "2hollis - Pirouette",
@@ -98,9 +98,9 @@
       "url": "https://igloomag.com/",
       "feed": "https://igloomag.com/feed",
       "focus": "IDM / Glitch / Braindance / 地下电子",
-      "checkedAt": "2026-11-18T03:20:31.776667+00:00",
+      "checkedAt": "2026-11-18T06:14:38.038507+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-18T03:20:31.776667+00:00",
+      "lastSuccessAt": "2026-11-18T06:14:38.038507+00:00",
       "entries": [
         {
           "title": "Solypsis :: Invisible Ticks (Component)",
@@ -233,9 +233,9 @@
       "url": "https://acloserlisten.com/",
       "feed": "https://acloserlisten.com/feed/",
       "focus": "实验 / Ambient / Drone / 田野录音",
-      "checkedAt": "2026-11-18T03:20:31.776667+00:00",
+      "checkedAt": "2026-11-18T06:14:38.038507+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-18T03:20:31.776667+00:00",
+      "lastSuccessAt": "2026-11-18T06:14:38.038507+00:00",
       "entries": [
         {
           "title": "Erland Cooper ~ Dawn Chorus",
@@ -335,9 +335,9 @@
       "url": "https://headphonecommute.com/",
       "feed": "https://headphonecommute.com/feed/",
       "focus": "Ambient / 电声 / 艺术家访谈",
-      "checkedAt": "2026-11-18T03:20:31.776667+00:00",
+      "checkedAt": "2026-11-18T06:14:38.038507+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-18T03:20:31.776667+00:00",
+      "lastSuccessAt": "2026-11-18T06:14:38.038507+00:00",
       "entries": [
         {
           "title": "Featured Artist: Arovane",
@@ -399,10 +399,20 @@
       "url": "https://thequietus.com/reviews/",
       "feed": "https://thequietus.com/feed/",
       "focus": "独立地下 / Experimental / Electronic",
-      "checkedAt": "2026-11-18T03:20:31.776667+00:00",
+      "checkedAt": "2026-11-18T06:14:38.038507+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-18T03:20:31.776667+00:00",
+      "lastSuccessAt": "2026-11-18T06:14:38.038507+00:00",
       "entries": [
+        {
+          "title": "Anthony Child – Beginning of the Shadow",
+          "url": "https://thequietus.com/quietus-reviews/anthony-child-beginning-of-the-shadow-review/",
+          "publishedAt": "2026-11-18T06:00:00+00:00",
+          "categories": [
+            "Reviews"
+          ],
+          "status": "discovery-only",
+          "score": null
+        },
         {
           "title": "Feedbacker: Rock Music for November by JR Moores",
           "url": "https://thequietus.com/quietus-reviews/rock/roger-taylor-kid-rock-rangers-dabda-new-rock-music-review-november-2026/",
@@ -442,16 +452,6 @@
           ],
           "status": "discovery-only",
           "score": null
-        },
-        {
-          "title": "Spydergum – Spydergum",
-          "url": "https://thequietus.com/quietus-reviews/spydergum-spydergum-review/",
-          "publishedAt": "2026-11-12T09:48:16+00:00",
-          "categories": [
-            "Reviews"
-          ],
-          "status": "discovery-only",
-          "score": null
         }
       ]
     },
@@ -461,9 +461,9 @@
       "url": "https://inverted-audio.com/",
       "feed": "https://inverted-audio.com/feed/",
       "focus": "地下舞曲 / 厂牌 / 制作人",
-      "checkedAt": "2026-11-18T03:20:31.776667+00:00",
+      "checkedAt": "2026-11-18T06:14:38.038507+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-18T03:20:31.776667+00:00",
+      "lastSuccessAt": "2026-11-18T06:14:38.038507+00:00",
       "entries": [
         {
           "title": "Florian Kupfer launches Lifetrax imprint with reissue of his L.I.E.S. debut",

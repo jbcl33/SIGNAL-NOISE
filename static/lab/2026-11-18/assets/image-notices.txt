@@ -1,0 +1,5 @@
+FamiStudio documentation interface images: Copyright (c) 2019 BleuBleu. See famistudio-mit.txt for the exact original notice and MIT terms. Original bytes unchanged.
+MiniDexed README photograph: MiniDexed project contributors; photographer not separately identified in the README. Source repository declares GPL-3.0; original bytes unchanged. Cover displayed in grayscale through CSS. See minidexed-gpl-3.0.txt and linked source.
+LibrePCB website illustration: LibrePCB contributors, CC BY 3.0 or later, https://creativecommons.org/licenses/by/3.0/ ; original bytes unchanged.
+Kdenlive manual interface image: Kdenlive documentation contributors, CC BY-SA 4.0, https://creativecommons.org/licenses/by-sa/4.0/ ; original bytes unchanged.
+Original editorial SVG diagrams: SIGNAL / NOISE, 2026, CC BY 4.0, https://creativecommons.org/licenses/by/4.0/ . Structural explanations, not hardware captures or reproductions of artwork.

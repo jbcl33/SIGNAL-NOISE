@@ -54,6 +54,15 @@
       "path": "noon/2026-11-18/",
       "summary": "GB Interceptor的卡带总线与画面重建、Dr. PD的供电协商和测量电路，附四条工程工具、I²C/探头笔记、VCF制作回看与Gego文化短栏，三张唱片。",
       "musicCount": 3
+    },
+    {
+      "date": "2026-11-18",
+      "edition": "lab",
+      "issue": "002",
+      "title": "TOOL LAB · 工具实验室 002",
+      "path": "lab/2026-11-18/",
+      "summary": "MiniDexed 裸机音源与 FamiStudio 采样编辑，四款制作工具、I²S/MIDI 接口笔记、USBSID-Pico 制作记录与 Bridget Riley 文化短栏。",
+      "musicCount": 0
     }
   ]
 }
