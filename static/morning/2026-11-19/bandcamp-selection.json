@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-19",
+  "edition": "morning",
+  "issue": "003",
+  "albums": [
+    {
+      "artist": "VOLNA",
+      "title": "THRESHOLD",
+      "label": "VOLNA / 自行发行",
+      "url": "https://volnaau.bandcamp.com/album/threshold",
+      "releaseDate": "2026-11-10",
+      "status": "released",
+      "originalReleaseYear": null,
+      "bandcampAlbumId": 3894173448,
+      "cover": "assets/volna-cover.jpg",
+      "trackCount": 9,
+      "previewCount": 9,
+      "discoverySource": "https://igloomag.com/reviews/volna-threshold",
+      "discoveryType": "review",
+      "description": "九首曲目录于 2025 年 7 月至 2026 年 9 月，每首都是现场即兴与声音实验。Andrey Fedoseev 以吉他纹理与循环展开首张实验环境专辑，母带由 Taylor Deupree 完成。",
+      "listened": false,
+      "checkedAt": "2026-11-18T23:33:35.365920+00:00"
+    },
+    {
+      "artist": "Benoît Pioulard",
+      "title": "Stanza IV",
+      "label": "Disques d’Honoré / BHP-10",
+      "url": "https://pioulard.bandcamp.com/album/stanza-iv",
+      "releaseDate": "2025-07-11",
+      "status": "catalogue_revisit",
+      "originalReleaseYear": null,
+      "bandcampAlbumId": 4227298231,
+      "cover": "assets/pioulard-cover.jpg",
+      "trackCount": 10,
+      "previewCount": 10,
+      "discoverySource": "https://headphonecommute.com/2026/09/10/benoit-pioulard-stanza-iv/",
+      "discoveryType": "public_notice",
+      "description": "录于 2024 年 8 月，材料包括吉他、Moog、磁带、微型卡带与田野录音。Stanza 系列从日常等长即兴出发；本作由 Rafael Anton Irisarri 完成母带，延续声音日记的制作方法。",
+      "listened": false,
+      "checkedAt": "2026-11-18T23:33:35.365943+00:00"
+    },
+    {
+      "artist": "Coil",
+      "title": "Gold Is The Metal (With The Broadest Shoulders)",
+      "label": "Mute / The Grey Area",
+      "url": "https://muterecords.bandcamp.com/album/gold-is-the-metal-with-the-broadest-shoulders",
+      "releaseDate": "2026-10-30",
+      "status": "reissue",
+      "originalReleaseYear": 1987,
+      "bandcampAlbumId": 3555842827,
+      "cover": "assets/coil-cover.jpg",
+      "trackCount": 16,
+      "previewCount": 16,
+      "discoverySource": "https://igloomag.com/reviews/coil-gold-is-the-metal-with-the-broadest-shoulders",
+      "discoveryType": "review",
+      "description": "1987 年作品的重制再版，由原成员 Stephen Thrower 参与指导。发行页提到实地录音与故障 Fairlight 采样器留下的材料；新版恢复原图像，并附新的内页说明。",
+      "listened": false,
+      "checkedAt": "2026-11-18T23:33:35.365957+00:00"
+    }
+  ]
+}

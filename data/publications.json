@@ -72,6 +72,15 @@
       "path": "night/2026-11-18/",
       "summary": "Turing Machine 移位寄存器与 norns 采样系统，四款声音软件、电平和循环笔记、POLY555 制作及白南准影像艺术短栏，附 xicada 预售唱片。",
       "musicCount": 1
+    },
+    {
+      "date": "2026-11-19",
+      "edition": "morning",
+      "issue": "003",
+      "title": "MORNING FREQUENCY · 晨刊 003",
+      "path": "morning/2026-11-19/",
+      "summary": "Bus Pirate 5 接口电路与 GBS-Control 改装，三款工程软件、上拉和 Net tie 笔记、PicoCart64 制作约束及 Agnes Martin 文化短栏，附三张唱片。",
+      "musicCount": 3
     }
   ]
 }

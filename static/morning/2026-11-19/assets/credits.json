@@ -1,0 +1,123 @@
+[
+  {
+    "file": "buspirate-rev10.jpg",
+    "source": "https://github.com/DangerousPrototypes/BusPirate5-hardware",
+    "image": "https://raw.githubusercontent.com/DangerousPrototypes/BusPirate5-hardware/main/img/bp5rev10-cover-angle.jpg",
+    "credit": "Ian Lesnet / Where Labs LLC",
+    "license": "MIT",
+    "kind": "official_project_photograph",
+    "width": 1024,
+    "height": 801,
+    "alt": "Bus Pirate 5 Rev10 官方项目照片，透明外壳内的彩色屏幕显示各 IO 的电压，四周有指示灯",
+    "noticeFile": "image-notices.txt",
+    "changes": "原图字节未变；封面以 CSS 灰度显示。"
+  },
+  {
+    "file": "buspirate-terminal.png",
+    "source": "https://github.com/DangerousPrototypes/BusPirate5-hardware",
+    "image": "https://raw.githubusercontent.com/DangerousPrototypes/BusPirate5-hardware/main/img/teraterm-done.png",
+    "credit": "Ian Lesnet / Where Labs LLC",
+    "license": "MIT",
+    "kind": "official_interface_image",
+    "width": 817,
+    "height": 484,
+    "alt": "Bus Pirate 项目 README 中的 VT100 终端示例，含命令响应与底部引脚状态栏",
+    "noticeFile": "image-notices.txt",
+    "changes": "原图字节未变。"
+  },
+  {
+    "file": "buspirate-io-schematic.png",
+    "source": "https://github.com/DangerousPrototypes/BusPirate5-hardware/tree/main/bus_pirate_pcb/5-REV10A",
+    "image": null,
+    "credit": "Ian Lesnet / Where Labs LLC",
+    "license": "MIT",
+    "kind": "official_schematic_render",
+    "width": 1800,
+    "height": 1273,
+    "alt": "Bus Pirate Rev10A 官方原理图第五页，八组 LVC1T45 类电平转换器分别连接固定3.3V域、VREF_VOUT域和方向控制线",
+    "noticeFile": "image-notices.txt",
+    "changes": "原始 PDF 第5页栅格化，原 PDF 同目录保留。"
+  },
+  {
+    "file": "serialplot.png",
+    "source": "https://github.com/hyOzd/serialplot",
+    "image": "https://raw.githubusercontent.com/hyOzd/serialplot/master/misc/screenshot.png",
+    "credit": "hyOzd 与 SerialPlot 贡献者",
+    "license": "GPL-3.0",
+    "kind": "official_interface_image",
+    "width": 882,
+    "height": 849,
+    "alt": "SerialPlot 官方项目界面，多通道曲线与串口配置区同时显示",
+    "noticeFile": "image-notices.txt",
+    "changes": "原图字节未变。"
+  },
+  {
+    "file": "volna-cover.jpg",
+    "source": "https://volnaau.bandcamp.com/album/threshold",
+    "image": "https://f4.bcbits.com/img/a0767127407_5.jpg",
+    "credit": "VOLNA / Andrey Fedoseev 发行页；未单列封面设计作者",
+    "license": "版权保留；不声明开放许可",
+    "kind": "album_artwork",
+    "width": 700,
+    "height": 700,
+    "alt": "VOLNA《THRESHOLD》发行页原封面",
+    "noticeFile": "image-notices.txt",
+    "changes": "原图字节未变。"
+  },
+  {
+    "file": "pioulard-cover.jpg",
+    "source": "https://pioulard.bandcamp.com/album/stanza-iv",
+    "image": "https://f4.bcbits.com/img/a3816177301_5.jpg",
+    "credit": "Benoît Pioulard：Polaroid 照片；Molly Smith：布局与艺术指导",
+    "license": "版权保留；不声明开放许可",
+    "kind": "album_artwork",
+    "width": 700,
+    "height": 700,
+    "alt": "Benoît Pioulard《Stanza IV》发行页原封面",
+    "noticeFile": "image-notices.txt",
+    "changes": "原图字节未变。"
+  },
+  {
+    "file": "coil-cover.jpg",
+    "source": "https://muterecords.bandcamp.com/album/gold-is-the-metal-with-the-broadest-shoulders",
+    "image": "https://f4.bcbits.com/img/a3780158264_5.jpg",
+    "credit": "Coil / Mute；发行页署名 Peter Christopherson 原始图像与摄影",
+    "license": "版权保留；不声明开放许可",
+    "kind": "album_artwork",
+    "width": 700,
+    "height": 700,
+    "alt": "Coil《Gold Is The Metal (With The Broadest Shoulders)》发行页原封面",
+    "noticeFile": "image-notices.txt",
+    "changes": "原图字节未变。"
+  },
+  {
+    "file": "gbs-control-paths.svg",
+    "source": "https://ramapcsx2.github.io/gbs-control/Wiki/Build-the-Hardware.html",
+    "credit": "SIGNAL / NOISE 原创解释图",
+    "license": "CC BY 4.0",
+    "kind": "editorial_diagram_not_measurement",
+    "width": 800,
+    "height": 370,
+    "alt": "GBS-Control 原创结构示意：视频经过 TVIA5725 缩放板，ESP8266 经 I²C 控制并读取时序信号，两条路径分开"
+  },
+  {
+    "file": "i2c-rise.svg",
+    "source": "https://www.ti.com/lit/an/slva689/slva689.pdf",
+    "credit": "SIGNAL / NOISE 原创解释图",
+    "license": "CC BY 4.0",
+    "kind": "editorial_diagram_not_measurement",
+    "width": 800,
+    "height": 340,
+    "alt": "理想RC充电模型：4.7千欧上拉时，100pF与200pF总线电容分别对应约398ns和796ns上升时间"
+  },
+  {
+    "file": "net-tie-and-zero-ohm.svg",
+    "source": "https://docs.kicad.org/9.0/en/pcbnew/pcbnew.html",
+    "credit": "SIGNAL / NOISE 原创解释图",
+    "license": "CC BY 4.0",
+    "kind": "editorial_diagram_not_measurement",
+    "width": 800,
+    "height": 300,
+    "alt": "Net tie 通过封装内铜连接两个网络；0欧姆元件则跨接两个分开的焊盘，图中标出两种连接方式"
+  }
+]

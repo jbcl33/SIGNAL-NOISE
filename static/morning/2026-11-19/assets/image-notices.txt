@@ -1,0 +1,8 @@
+Bus Pirate Rev10 project photograph, terminal example and schematic: Copyright (c) 2023 Ian Lesnet, Where Labs LLC. MIT, see buspirate-mit.txt and original project. Original images unchanged; cover CSS grayscale. Official PDF page 5 rendered to PNG without modifying circuits; original PDF retained.
+SerialPlot project screenshot: SerialPlot / hyOzd and contributors. Project GPL-3.0, see serialplot-gpl-3.0.txt. Original screenshot bytes unchanged.
+GBS-Control: original diagram is editorial, not a project photograph. The author's Imgur wiring image returned HTTP 429; linked original documentation retained. No unrelated photo used as a substitute. gbs-gpl-3.0.txt records the software repository license, not a new assertion that all externally hosted photos have an open license.
+VOLNA THRESHOLD artwork: original release page image; no separate designer credit available. Rights retained by the respective holders.
+Benoît Pioulard Stanza IV artwork: release credits list Polaroid photography by the artist, layout and art direction Molly Smith. Original release page image, rights retained by the respective holders.
+Coil Gold Is The Metal artwork: Mute release page; original artwork and photography credited to Peter Christopherson. Rights retained by the respective holders. All three covers are small editorial album illustrations; no open license asserted.
+Original SVG explanations: SIGNAL / NOISE, 2026, CC BY 4.0, https://creativecommons.org/licenses/by/4.0/ . Conceptual diagrams and ideal calculations, not hardware measurements or copies of artwork.
+Agnes Martin artwork is not cached or reproduced; institution record linked. © Estate of Agnes Martin / Artists Rights Society, New York, as stated by MoMA.

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "collectedAt": "2026-11-18T08:18:26.932864+00:00",
+  "collectedAt": "2026-11-18T23:14:31.505040+00:00",
   "note": "RSS titles/dates/categories only; discovery candidates are not scored recommendations. Failed feeds retain visibly dated previous entries.",
   "sources": [
     {
@@ -9,9 +9,9 @@
       "url": "https://pitchfork.com/",
       "feed": "https://pitchfork.com/feed/feed-album-reviews/rss",
       "focus": "专业乐评 / Experimental / Electronic",
-      "checkedAt": "2026-11-18T08:18:26.932864+00:00",
+      "checkedAt": "2026-11-18T23:14:31.505040+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-18T08:18:26.932864+00:00",
+      "lastSuccessAt": "2026-11-18T23:14:31.505040+00:00",
       "entries": [
         {
           "title": "U, Me & My Ego (Deluxe)",
@@ -71,26 +71,10 @@
       "url": "https://theneedledrop.com/",
       "feed": "https://theneedledrop.com/rss/",
       "focus": "视频乐评 / 个人评分",
-      "checkedAt": "2026-11-18T08:18:26.932864+00:00",
+      "checkedAt": "2026-11-18T23:14:31.505040+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-18T08:18:26.932864+00:00",
-      "entries": [
-        {
-          "title": "2hollis - Pirouette",
-          "url": "https://theneedledrop.com/album-reviews/2hollis-pirouette-album-review-6bwzuyeo_fs/",
-          "publishedAt": "2026-11-17T12:50:24+00:00",
-          "categories": [
-            "Album Reviews",
-            "Edited by Isaiah",
-            "2hollis",
-            "7/10",
-            "digicore",
-            "electropop"
-          ],
-          "status": "discovery-only",
-          "score": null
-        }
-      ]
+      "lastSuccessAt": "2026-11-18T23:14:31.505040+00:00",
+      "entries": []
     },
     {
       "id": "igloo",
@@ -98,9 +82,9 @@
       "url": "https://igloomag.com/",
       "feed": "https://igloomag.com/feed",
       "focus": "IDM / Glitch / Braindance / 地下电子",
-      "checkedAt": "2026-11-18T08:18:26.932864+00:00",
+      "checkedAt": "2026-11-18T23:14:31.505040+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-18T08:18:26.932864+00:00",
+      "lastSuccessAt": "2026-11-18T23:14:31.505040+00:00",
       "entries": [
         {
           "title": "Solypsis :: Invisible Ticks (Component)",
@@ -233,9 +217,9 @@
       "url": "https://acloserlisten.com/",
       "feed": "https://acloserlisten.com/feed/",
       "focus": "实验 / Ambient / Drone / 田野录音",
-      "checkedAt": "2026-11-18T08:18:26.932864+00:00",
+      "checkedAt": "2026-11-18T23:14:31.505040+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-18T08:18:26.932864+00:00",
+      "lastSuccessAt": "2026-11-18T23:14:31.505040+00:00",
       "entries": [
         {
           "title": "Erland Cooper ~ Dawn Chorus",
@@ -335,9 +319,9 @@
       "url": "https://headphonecommute.com/",
       "feed": "https://headphonecommute.com/feed/",
       "focus": "Ambient / 电声 / 艺术家访谈",
-      "checkedAt": "2026-11-18T08:18:26.932864+00:00",
+      "checkedAt": "2026-11-18T23:14:31.505040+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-18T08:18:26.932864+00:00",
+      "lastSuccessAt": "2026-11-18T23:14:31.505040+00:00",
       "entries": [
         {
           "title": "Featured Artist: Arovane",
@@ -399,9 +383,9 @@
       "url": "https://thequietus.com/reviews/",
       "feed": "https://thequietus.com/feed/",
       "focus": "独立地下 / Experimental / Electronic",
-      "checkedAt": "2026-11-18T08:18:26.932864+00:00",
+      "checkedAt": "2026-11-18T23:14:31.505040+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-18T08:18:26.932864+00:00",
+      "lastSuccessAt": "2026-11-18T23:14:31.505040+00:00",
       "entries": [
         {
           "title": "Anthony Child – Beginning of the Shadow",
@@ -461,9 +445,9 @@
       "url": "https://inverted-audio.com/",
       "feed": "https://inverted-audio.com/feed/",
       "focus": "地下舞曲 / 厂牌 / 制作人",
-      "checkedAt": "2026-11-18T08:18:26.932864+00:00",
+      "checkedAt": "2026-11-18T23:14:31.505040+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-18T08:18:26.932864+00:00",
+      "lastSuccessAt": "2026-11-18T23:14:31.505040+00:00",
       "entries": [
         {
           "title": "Florian Kupfer launches Lifetrax imprint with reissue of his L.I.E.S. debut",

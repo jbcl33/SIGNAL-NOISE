@@ -1,0 +1,252 @@
+{
+  "checkedAt": "2026-11-18T23:33:35.367214+00:00",
+  "date": "2026-11-19",
+  "edition": "morning",
+  "issue": "003",
+  "timeZone": "Asia/Shanghai",
+  "technicalAndCultureCount": 9,
+  "musicCount": 3,
+  "hardwareTested": false,
+  "softwareRunClaimed": false,
+  "musicListened": false,
+  "deduplicatedAgainst": [
+    "morning/001/",
+    "noon/2026-11-17/",
+    "lab/2026-11-17/",
+    "night/2026-11-17/",
+    "morning/2026-11-18/",
+    "noon/2026-11-18/",
+    "lab/2026-11-18/",
+    "night/2026-11-18/"
+  ],
+  "sources": [
+    {
+      "id": "buspirate",
+      "title": "Bus Pirate 5 Rev10A：协议与接口电路",
+      "author": "Ian Lesnet / Where Labs LLC / Dangerous Prototypes",
+      "type": "硬件资料选读",
+      "sources": [
+        {
+          "title": "作者项目文件",
+          "url": "https://github.com/DangerousPrototypes/BusPirate5-hardware/blob/main/readme.md",
+          "evidence": "RP2040、协议终端、八个 IO 与电源功能。README 的另一 IO 下限未替代当前 Rev10 规格页。",
+          "blobSha": "65224ca72d18b78ad18c1c5f333845ddf26086e3"
+        },
+        {
+          "title": "Rev10 规格",
+          "url": "https://docs.buspirate.com/docs/hardware/bp5rev10/introduction/",
+          "evidence": "IO 1.65–5 V 与可编程电源 1–5 V 分清。"
+        },
+        {
+          "title": "作者项目文件",
+          "url": "https://github.com/DangerousPrototypes/BusPirate5-hardware/blob/main/bus_pirate_pcb/5-REV10A/bpu-iobufffer.kicad_sch",
+          "evidence": "方向控制 LVC1T45 类收发器；固定 3.3 V 域与 VREF_VOUT。",
+          "blobSha": "f5d0ebb08d6973d0855a6c4882900a36bdf79df2"
+        },
+        {
+          "title": "Rev10A PDF",
+          "url": "https://hardware.buspirate.com/assets/files/buspirate-5-rev10a-schematic-ac6cc9481b368220138b40c4ad9b62aa.pdf",
+          "evidence": "六页原始图纸，第 5 页为 IO buffer，PDF 生成日期 2024-02-22。"
+        }
+      ]
+    },
+    {
+      "id": "gbs",
+      "title": "GBS-Control：视频与控制路径",
+      "author": "ramapcsx2 与项目贡献者",
+      "type": "项目改装资料选读",
+      "sources": [
+        {
+          "title": "作者项目文件",
+          "url": "https://github.com/ramapcsx2/gbs-control/blob/master/README.md",
+          "evidence": "Trueview5725 系列缩放板、ESP8266 控制与功能声明；不复述为本刊延迟实测。",
+          "blobSha": "5a276115febb70c5901d3b8127506702de4a9d78"
+        },
+        {
+          "title": "硬件接管指南",
+          "url": "https://ramapcsx2.github.io/gbs-control/Wiki/Build-the-Hardware.html",
+          "evidence": "停用原控制器、I²C 与独立 DebugPin 时序观测；不同板型标名有别。"
+        },
+        {
+          "title": "软件设置",
+          "url": "https://ramapcsx2.github.io/gbs-control/Wiki/Software-Setup.html",
+          "evidence": "ESP8266 编程与浏览器界面。"
+        }
+      ]
+    },
+    {
+      "id": "serialplot",
+      "title": "SerialPlot：串口多通道数据",
+      "author": "hyOzd 与贡献者",
+      "type": "工具分享",
+      "sources": [
+        {
+          "title": "作者项目文件",
+          "url": "https://github.com/hyOzd/serialplot/blob/master/README.md",
+          "evidence": "ASCII CSV、若干二进制数据类型、自定义帧、同步多通道与 CSV 快照。",
+          "blobSha": "df962e57bbb095634b64299894c895eb8d2c1cd6"
+        }
+      ]
+    },
+    {
+      "id": "kidiff",
+      "title": "KiDiff：PCB 与原理图差异",
+      "author": "INTI-CMNB / KiDiff 贡献者",
+      "type": "工具分享",
+      "sources": [
+        {
+          "title": "作者项目文件",
+          "url": "https://github.com/INTI-CMNB/KiDiff/blob/master/README.md",
+          "evidence": "逐层绘制比较 PCB，原理图导出依赖 KiAuto；PDF 图像差异不等于电气规则验证。",
+          "blobSha": "37e0f6d02093ef1879bcb588153c8c46738c5a48"
+        }
+      ]
+    },
+    {
+      "id": "partdb",
+      "title": "Part-DB：元件与库存",
+      "author": "Part-DB 贡献者",
+      "type": "工具分享",
+      "sources": [
+        {
+          "title": "作者项目文件",
+          "url": "https://github.com/Part-DB/Part-DB-server/blob/master/README.md",
+          "evidence": "元件类别、封装、制造商、储存位置、文件附件、BOM 与条码功能。",
+          "blobSha": "34fec9029619aea8d2afd292e7765e146c476674"
+        }
+      ]
+    },
+    {
+      "id": "pullups",
+      "title": "I²C 上拉与上升时间",
+      "author": "Rajan Arora / Texas Instruments；编辑计算",
+      "type": "知识笔记与解析示意",
+      "sources": [
+        {
+          "title": "SLVA689A",
+          "url": "https://www.ti.com/lit/an/slva689/slva689.pdf",
+          "evidence": "0.3–0.7 倍电压区间，tr=0.8473RpCb；上拉最大值由时序决定，最小值受灌电流约束；Standard/Fast 上升时间上限 1000/300ns。",
+          "version": "Rev. A, October 2026"
+        }
+      ]
+    },
+    {
+      "id": "net-ties",
+      "title": "Net tie 与 0Ω 的连接位置",
+      "author": "KiCad 文档团队；编辑对照解释",
+      "type": "PCB 知识笔记",
+      "sources": [
+        {
+          "title": "KiCad 9.0 PCB Editor",
+          "url": "https://docs.kicad.org/9.0/en/pcbnew/pcbnew.html",
+          "evidence": "Creating net ties：不同网络各有焊盘，以连续铜连接；组内焊盘编号 1,2，允许指定短接。网页工具已读到原章，命令行取正文曾 403。",
+          "version": "9.0"
+        }
+      ]
+    },
+    {
+      "id": "picocart",
+      "title": "PicoCart64 v1 lite：板厚与存储",
+      "author": "kbeckmann",
+      "type": "制作资料选读",
+      "sources": [
+        {
+          "title": "作者项目文件",
+          "url": "https://github.com/kbeckmann/PicoCart64/blob/main/README.md",
+          "evidence": "v1 lite 板厚 1.2mm、卡边加工、Pico 板载 2MB Flash 限制和替代板跳线；v2 开发中，不混用功能。",
+          "blobSha": "7c1295ba95cc4c46aadad95f205257041cf33f94"
+        }
+      ]
+    },
+    {
+      "id": "culture",
+      "title": "Agnes Martin / On a Clear Day",
+      "author": "Agnes Martin；MoMA 馆藏资料",
+      "type": "文化短栏",
+      "sources": [
+        {
+          "title": "MoMA 176.1973.1–30",
+          "url": "https://www.moma.org/collection/works/63682",
+          "evidence": "1973，30 张丝网版画组套，纸张各约 30.8×30.5cm，Parasol Press 出版，Edition Domberger 印制。馆藏图未缓存，未声称查看原作细节。",
+          "date": "1973"
+        }
+      ]
+    },
+    {
+      "id": "records-volna",
+      "title": "VOLNA / THRESHOLD",
+      "type": "唱片选读",
+      "sources": [
+        {
+          "title": "Bandcamp 发行页",
+          "url": "https://volnaau.bandcamp.com/album/threshold",
+          "evidence": "About / Credits 与发布日期、原生 album id。",
+          "date": "2026-11-10"
+        },
+        {
+          "title": "发现来源",
+          "url": "https://igloomag.com/reviews/volna-threshold",
+          "evidence": "公开乐评。",
+          "kind": "review"
+        }
+      ]
+    },
+    {
+      "id": "records-pioulard",
+      "title": "Benoît Pioulard / Stanza IV",
+      "type": "旧作回听",
+      "sources": [
+        {
+          "title": "Bandcamp 发行页",
+          "url": "https://pioulard.bandcamp.com/album/stanza-iv",
+          "evidence": "About / Credits 与发布日期、原生 album id。",
+          "date": "2025-07-11"
+        },
+        {
+          "title": "发现来源",
+          "url": "https://headphonecommute.com/2026/09/10/benoit-pioulard-stanza-iv/",
+          "evidence": "公开导读，非付费全文核查。",
+          "kind": "public_notice"
+        }
+      ]
+    },
+    {
+      "id": "records-coil",
+      "title": "Coil / Gold Is The Metal (With The Broadest Shoulders)",
+      "type": "再版唱片",
+      "sources": [
+        {
+          "title": "Bandcamp 发行页",
+          "url": "https://muterecords.bandcamp.com/album/gold-is-the-metal-with-the-broadest-shoulders",
+          "evidence": "About / Credits 与发布日期、原生 album id。",
+          "date": "2026-10-30"
+        },
+        {
+          "title": "发现来源",
+          "url": "https://igloomag.com/reviews/coil-gold-is-the-metal-with-the-broadest-shoulders",
+          "evidence": "公开乐评。",
+          "kind": "review"
+        }
+      ]
+    }
+  ],
+  "imageFetchLimitations": [
+    {
+      "url": "https://i.imgur.com/TvSAQuX.png",
+      "status": 429,
+      "handling": "GBS 作者实拍不缓存，保留原文入口，功能图明确为原创示意。"
+    },
+    {
+      "url": "https://www.moma.org/collection/works/63682",
+      "imageDownloadStatus": 403,
+      "handling": "馆藏文字已核实；只提供原作入口，未生成替代作品。"
+    }
+  ],
+  "linkCheck": {
+    "checkedAt": "2026-11-18T23:35:04.167951+00:00",
+    "pageExternalUrls": 26,
+    "http200": 26,
+    "unverified": [],
+    "audioPlaybackVerified": false
+  }
+}
