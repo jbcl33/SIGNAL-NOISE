@@ -1,0 +1,250 @@
+{
+  "checkedAt": "2026-11-18T08:32:09.360060+00:00",
+  "date": "2026-11-18",
+  "edition": "night",
+  "issue": "002",
+  "timeZone": "Asia/Shanghai",
+  "hardwareTested": false,
+  "softwareRunClaimed": false,
+  "musicListened": false,
+  "technicalAndCultureCount": 10,
+  "musicCount": 1,
+  "deduplicatedAgainst": [
+    "morning/001/",
+    "noon/2026-11-17/",
+    "lab/2026-11-17/",
+    "night/2026-11-17/",
+    "morning/2026-11-18/",
+    "noon/2026-11-18/",
+    "lab/2026-11-18/"
+  ],
+  "sources": [
+    {
+      "id": "turing",
+      "title": "Turing Machine MkII：移位、反馈与控制电压",
+      "author": "Tom Whitwell / Music Thing Modular",
+      "type": "硬件图纸选读 / 2016 版本回看",
+      "sources": [
+        {
+          "title": "作者项目文件",
+          "url": "https://github.com/TomWhitwell/TuringMachine/blob/master/README.md",
+          "evidence": "2016 MkII 修订，噪声源、电平微调、循环长度与双板结构。",
+          "blobSha": "390686d7d3d7e98a7164393cb29ee475e70c57a6"
+        },
+        {
+          "title": "MkII 官方原理图",
+          "url": "https://github.com/TomWhitwell/TuringMachine/blob/master/Collateral/PDF%20Schematics/TuringMachine2_Schematic_May2016.pdf",
+          "evidence": "两页图纸，4015 寄存器与 4016 开关、八数据位 DAC、TL074、SCALE。"
+        },
+        {
+          "title": "作者机制说明",
+          "url": "https://www.musicthing.co.uk/Turing-Machine/",
+          "evidence": "16 位记忆、可锁定循环、改变后不能回到旧序列；网页工具可读，命令行下载返回 403。"
+        }
+      ]
+    },
+    {
+      "id": "norns",
+      "title": "norns：六个读写头、两个缓冲区",
+      "author": "monome 与贡献者；softcut / catfact",
+      "type": "项目与源码选读",
+      "sources": [
+        {
+          "title": "作者项目文件",
+          "url": "https://github.com/monome/norns/blob/main/readme.md",
+          "evidence": "控制 matron 与音频系统 crone；Lua 与 DSP。",
+          "blobSha": "1c16e2ce6a3b453dff2b85415435dd0ea6bc2cfc"
+        },
+        {
+          "title": "norns 概览",
+          "url": "https://monome.org/docs/norns/",
+          "evidence": "Lua 控件与 SuperCollider 引擎，项目硬件照片。"
+        },
+        {
+          "title": "softcut 学习资料",
+          "url": "https://monome.org/docs/norns/softcut/",
+          "evidence": "六 voice、两 mono buffer；48 kHz 素材；循环与读写坐标。"
+        },
+        {
+          "title": "作者项目文件",
+          "url": "https://github.com/monome/softcut-studies/blob/main/1-basics.lua",
+          "evidence": "file 从源第 0 秒读入 buffer 第 1 秒，loop 1 到 2 秒；正文仅摘三个调用，不作为完整程序。",
+          "blobSha": "9b2c4ce1b992e5b17c5a481cbb3cb5ec6e166d46"
+        }
+      ]
+    },
+    {
+      "id": "plugdata",
+      "title": "plugdata：工作站内的 Pure Data 补丁",
+      "author": "plugdata 贡献者",
+      "type": "软件分享",
+      "sources": [
+        {
+          "title": "作者项目文件",
+          "url": "https://github.com/plugdata-team/plugdata/blob/develop/README.md",
+          "evidence": "独立与插件方式；默认 ELSE 集合；源代码 GPL-3.0，完整 JUCE 应用 AGPL-3.0，组件分别许可。",
+          "blobSha": "0ceffdf64a2a6c9148d1daf3649124686fec9f56"
+        }
+      ]
+    },
+    {
+      "id": "vcv",
+      "title": "VCV Rack：信号角色与一采样延迟",
+      "author": "VCV",
+      "type": "软件与开发文档分享",
+      "sources": [
+        {
+          "title": "Getting Started",
+          "url": "https://vcvrack.com/manual/GettingStarted",
+          "evidence": "Audio、MIDI to CV 与不同信号角色。"
+        },
+        {
+          "title": "Voltage Standards",
+          "url": "https://vcvrack.com/manual/VoltageStandards",
+          "evidence": "Rack 连接线的单采样延迟与数字环境的时钟/复位问题。"
+        }
+      ]
+    },
+    {
+      "id": "orca",
+      "title": "Orca：字符网格中的音序",
+      "author": "Hundred Rabbits",
+      "type": "软件分享",
+      "sources": [
+        {
+          "title": "作者项目文件",
+          "url": "https://github.com/hundredrabbits/Orca/blob/main/README.md",
+          "evidence": "大小写运行条件与事件输出；浏览器版不支持 OSC / UDP。",
+          "blobSha": "8eabb6b81cc575025e94a61dec1fa59c24bf8898"
+        }
+      ]
+    },
+    {
+      "id": "openmpt",
+      "title": "OpenMPT：pattern 与采样素材",
+      "author": "OpenMPT 开发者与贡献者",
+      "type": "软件分享",
+      "sources": [
+        {
+          "title": "作者项目文件",
+          "url": "https://github.com/OpenMPT/openmpt/blob/master/README.md",
+          "evidence": "Windows / Wine tracker 与 BSD-3-Clause 项目。",
+          "blobSha": "3cc4f7c4308f21fd2fc4814f3012b39bbae9a42b"
+        },
+        {
+          "title": "Patterns",
+          "url": "https://wiki.openmpt.org/Manual:_Patterns",
+          "evidence": "音符、乐器、音量与效果列。"
+        },
+        {
+          "title": "Samples",
+          "url": "https://wiki.openmpt.org/Manual:_Samples",
+          "evidence": "采样循环点；MPTM 外部样本引用与素材修改的传播。",
+          "revision": "4983"
+        }
+      ]
+    },
+    {
+      "id": "levels",
+      "title": "电平与接口：从插头回到规格",
+      "author": "monome / VCV 文档；编辑解释",
+      "type": "知识笔记",
+      "sources": [
+        {
+          "title": "norns play",
+          "url": "https://monome.org/docs/norns/play/",
+          "evidence": "norns 线路电平要求，不接模块电平。"
+        },
+        {
+          "title": "Voltage Standards",
+          "url": "https://vcvrack.com/manual/VoltageStandards",
+          "evidence": "典型音频/CV 电平及 Eurorack 例外，软件规则不能泛化为设备输入规格。"
+        }
+      ]
+    },
+    {
+      "id": "loops",
+      "title": "循环的接缝与过渡",
+      "author": "编辑解释；OpenMPT / monome 文档",
+      "type": "知识与工具笔记",
+      "sources": [
+        {
+          "title": "Sample Crossfader",
+          "url": "https://wiki.openmpt.org/Manual:_Samples",
+          "evidence": "在 loop 起止做 crossfade。"
+        },
+        {
+          "title": "作者项目文件",
+          "url": "https://github.com/monome/norns/blob/main/lua/core/softcut.lua",
+          "evidence": "fade_time 为以秒表示的 crossfade 时间。",
+          "blobSha": "889acd328b6b197d315e7e95e8042702a2bafa49"
+        }
+      ]
+    },
+    {
+      "id": "poly555",
+      "title": "POLY555：重复电路与逐键调音",
+      "author": "Oskitone",
+      "type": "项目制作资料选读",
+      "sources": [
+        {
+          "title": "作者项目文件",
+          "url": "https://github.com/oskitone/poly555/blob/main/readme.md",
+          "evidence": "KiCad、OpenSCAD、装配资料；模拟方波复音合成器。",
+          "blobSha": "f1ea04420c1b53150ee8b611b0c71b80e968d777"
+        },
+        {
+          "title": "How Does It Work?",
+          "url": "https://oskitone.github.io/poly555/how-does-it-work",
+          "evidence": "20 个 555 振荡器，4×5；9 V 供电、7805 到 5 V。"
+        },
+        {
+          "title": "Tuning",
+          "url": "https://oskitone.github.io/poly555/tuning",
+          "evidence": "S1/RV1 到 S20/RV20，F3 至 C5，独立调音。"
+        }
+      ]
+    },
+    {
+      "id": "culture",
+      "title": "Nam June Paik / Magnet TV",
+      "author": "Nam June Paik；Whitney Museum of American Art",
+      "type": "文化短栏 / 历史作品",
+      "sources": [
+        {
+          "title": "Magnet TV",
+          "url": "https://whitney.org/collection/works/6139",
+          "evidence": "1965，改装黑白电视与磁铁；Whitney 馆藏编号 86.60，原作版权 Nam June Paik Estate，页面不复制作品图。",
+          "date": "1965"
+        }
+      ]
+    },
+    {
+      "id": "records",
+      "title": "xicada / Interastral Communications",
+      "author": "Ilyse Krivel / Sounds Of Paimon",
+      "type": "预售唱片，非已发行新闻",
+      "sources": [
+        {
+          "title": "发行页",
+          "url": "https://soundsofpaimon.bandcamp.com/album/interastral-communications",
+          "evidence": "release_date 2026-11-20，is_preorder true，六曲中两曲可预览；About 与 Credits。",
+          "date": "2026-11-20"
+        },
+        {
+          "title": "Richard Allen 乐评",
+          "url": "https://acloserlisten.com/2026/11/17/xicada-interastral-communications/",
+          "evidence": "2026-11-17，乐评不是发行日期。",
+          "date": "2026-11-17"
+        }
+      ]
+    }
+  ],
+  "linkCheck": {
+    "checkedAt": "2026-11-18T08:34:28.323050+00:00",
+    "pageExternalUrls": 24,
+    "http200": 24,
+    "unverified": [],
+    "playbackVerified": false
+  }
+}

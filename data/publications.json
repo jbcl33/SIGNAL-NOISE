@@ -63,6 +63,15 @@
       "path": "lab/2026-11-18/",
       "summary": "MiniDexed 裸机音源与 FamiStudio 采样编辑，四款制作工具、I²S/MIDI 接口笔记、USBSID-Pico 制作记录与 Bridget Riley 文化短栏。",
       "musicCount": 0
+    },
+    {
+      "date": "2026-11-18",
+      "edition": "night",
+      "issue": "002",
+      "title": "AFTER HOURS · 晚刊 002",
+      "path": "night/2026-11-18/",
+      "summary": "Turing Machine 移位寄存器与 norns 采样系统，四款声音软件、电平和循环笔记、POLY555 制作及白南准影像艺术短栏，附 xicada 预售唱片。",
+      "musicCount": 1
     }
   ]
 }

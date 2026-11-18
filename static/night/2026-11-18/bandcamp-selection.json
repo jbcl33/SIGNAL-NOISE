@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-18",
+  "edition": "night",
+  "issue": "002",
+  "albums": [
+    {
+      "artist": "xicada",
+      "title": "Interastral Communications",
+      "label": "Sounds Of Paimon",
+      "url": "https://soundsofpaimon.bandcamp.com/album/interastral-communications",
+      "releaseDate": "2026-11-20",
+      "status": "preorder",
+      "availablePreviewTracks": 2,
+      "trackCount": 6,
+      "bandcampAlbumId": 2671907638,
+      "cover": "assets/xicada-cover.jpg",
+      "discoverySource": "https://acloserlisten.com/2026/11/17/xicada-interastral-communications/",
+      "discoveryType": "review",
+      "reviewAuthor": "Richard Allen",
+      "reviewDate": "2026-11-17",
+      "aboutEvidence": "Ilyse Krivel 的旧日记转为同名曲歌词；Eyin Sof、Y.F. Tamashi 客串；母带与封面 Jesse Osborne-Lanthier。",
+      "listened": false,
+      "checkedAt": "2026-11-18T08:32:09.359579+00:00"
+    }
+  ]
+}

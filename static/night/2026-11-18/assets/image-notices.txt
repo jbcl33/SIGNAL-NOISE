@@ -1,0 +1,8 @@
+Turing Machine MkII photo and schematics: Tom Whitwell / Music Thing Modular, CC BY-SA 3.0, https://creativecommons.org/licenses/by-sa/3.0/ . Photo bytes unchanged, cover CSS grayscale. PDF pages 1 and 2 rasterized for display without circuit changes; original PDF included.
+Turing Machine MkII project photo and schematics: Tom Whitwell / Music Thing Modular, CC BY-SA 3.0, https://creativecommons.org/licenses/by-sa/3.0/ , as stated in the project README. PDF pages rendered to PNG without changing circuits; original PDF retained. Cover displayed with CSS grayscale; original photo bytes unchanged.
+norns photograph: monome documentation contributors. monome/docs is CC BY 4.0; original terms in monome-docs-cc-by-4.0.txt. Original bytes unchanged.
+POLY555 photograph: Oskitone, CC BY-SA 3.0. Full project README notice retained in poly555-project-notice.txt, license in poly555-cc-by-sa-3.0.txt. Original bytes unchanged.
+Orca project preview: Copyright (c) 2017 Hundredrabbits, MIT; see orca-mit.txt. Original bytes unchanged.
+plugdata README interface image: plugdata contributors. Repository source files GPL-3.0; compiled full JUCE application AGPL-3.0 and third-party components have separate licenses. See plugdata-gpl-3.0.txt and original project. Original image bytes unchanged.
+xicada cover: artwork credited by release page to Jesse Osborne-Lanthier. Sounds Of Paimon release page; rights retained by respective holders. Small editorial album image; no open license asserted, original image bytes unchanged.
+Original structural SVG diagrams: SIGNAL / NOISE, 2026, CC BY 4.0, https://creativecommons.org/licenses/by/4.0/ ; conceptual explanations, not hardware captures, software runs, or original artwork reproductions.
