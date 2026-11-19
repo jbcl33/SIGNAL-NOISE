@@ -1,0 +1,222 @@
+{
+  "checkedAt": "2026-11-19T08:35:38.456991+00:00",
+  "date": "2026-11-19",
+  "edition": "night",
+  "issue": "003",
+  "timeZone": "Asia/Shanghai",
+  "hardwareTested": false,
+  "softwareRunClaimed": false,
+  "musicListened": false,
+  "technicalAndCultureCount": 9,
+  "musicCount": 1,
+  "deduplicatedAgainst": "All 11 existing publication pages through 2026-11-19 lab 003 and their album selections",
+  "sources": [
+    {
+      "key": "linn",
+      "url": "https://www.rogerlinndesign.com/linnstrument",
+      "kind": "original_project_or_institution",
+      "blobSha": null,
+      "note": ""
+    },
+    {
+      "key": "mpe",
+      "url": "https://www.rogerlinndesign.com/support/support-linnstrument-what-is-mpe",
+      "kind": "original_project_or_institution",
+      "blobSha": null,
+      "note": ""
+    },
+    {
+      "key": "midi",
+      "url": "https://www.rogerlinndesign.com/support/support-linnstrument-linnstruments-smart-midi",
+      "kind": "original_project_or_institution",
+      "blobSha": null,
+      "note": ""
+    },
+    {
+      "key": "firmware",
+      "url": "https://github.com/rogerlinndesign/linnstrument-firmware",
+      "kind": "original_project_or_institution",
+      "blobSha": "6af3a561544d1c25777a990ce9762dd4d4a35068",
+      "note": "Repository blob SHA identifies the fetched file, not a release commit."
+    },
+    {
+      "key": "zyn",
+      "url": "https://www.zynthian.com/technical-specifications",
+      "kind": "original_project_or_institution",
+      "blobSha": null,
+      "note": ""
+    },
+    {
+      "key": "ui",
+      "url": "https://wiki.zynthian.org/index.php/Zynthian_UI_User_Guide_-_V5",
+      "kind": "original_project_or_institution",
+      "blobSha": null,
+      "note": ""
+    },
+    {
+      "key": "assembly",
+      "url": "https://wiki.zynthian.org/index.php/Assembling_Zynthian_Kit_V5.1",
+      "kind": "original_project_or_institution",
+      "blobSha": null,
+      "note": ""
+    },
+    {
+      "key": "bespoke",
+      "url": "https://github.com/BespokeSynth/BespokeSynth",
+      "kind": "original_project_or_institution",
+      "blobSha": "00921c5a66d2bafd577d9b4af2d297637f55a35c",
+      "note": "Repository blob SHA identifies the fetched file, not a release commit."
+    },
+    {
+      "key": "hydra",
+      "url": "https://github.com/hydra-synth/hydra",
+      "kind": "original_project_or_institution",
+      "blobSha": "02cd25c5eb4e52fd2187a85ec95bc5971d7537c9",
+      "note": "Repository blob SHA identifies the fetched file, not a release commit."
+    },
+    {
+      "key": "chuck",
+      "url": "https://github.com/ccrma/chuck",
+      "kind": "original_project_or_institution",
+      "blobSha": "425f00e9687e253b563b51f7453eb40ed81cbaec",
+      "note": "Repository blob SHA identifies the fetched file, not a release commit."
+    },
+    {
+      "key": "demo",
+      "url": "https://github.com/ccrma/chuck/blob/main/examples/basic/demo0.ck",
+      "kind": "original_project_or_institution",
+      "blobSha": "91a28ecd595eb500b7beaf0d0e117ff1151a14e3",
+      "note": "Repository blob SHA identifies the fetched file, not a release commit."
+    },
+    {
+      "key": "ring",
+      "url": "https://github.com/ccrma/chuck/blob/main/examples/basic/ring.ck",
+      "kind": "original_project_or_institution",
+      "blobSha": "cfcee4231af743f8c841c43ee59df2ea79e86796",
+      "note": "Repository blob SHA identifies the fetched file, not a release commit."
+    },
+    {
+      "key": "cut",
+      "url": "https://github.com/mifi/lossless-cut",
+      "kind": "original_project_or_institution",
+      "blobSha": "cf5b0dc4595b3f8caa56dc5e36a5d5b95d1be0e7",
+      "note": "Repository blob SHA identifies the fetched file, not a release commit."
+    },
+    {
+      "key": "faq",
+      "url": "https://github.com/mifi/lossless-cut/blob/master/docs/faq.md",
+      "kind": "original_project_or_institution",
+      "blobSha": "d2634e11f7c275b25759a0efa2334822998bdc71",
+      "note": "Repository blob SHA identifies the fetched file, not a release commit."
+    },
+    {
+      "key": "theremin",
+      "url": "https://github.com/GaudiLabs/OpenThereminV4",
+      "kind": "original_project_or_institution",
+      "blobSha": "d54c699bbb32d838aaf19cc6ebc22cec9cb84a88",
+      "note": "Repository blob SHA identifies the fetched file, not a release commit."
+    },
+    {
+      "key": "entry",
+      "url": "https://github.com/GaudiLabs/OpenThereminV4/blob/main/Software/Open_Theremin_V4/Open_Theremin_V4.ino",
+      "kind": "original_project_or_institution",
+      "blobSha": "ccbed665e43d74b3b3e92e8f3a5b7a02683f4f4e",
+      "note": "Repository blob SHA identifies the fetched file, not a release commit."
+    },
+    {
+      "key": "film",
+      "url": "https://www.nfb.ca/film/begone_dull_care/",
+      "kind": "original_project_or_institution",
+      "blobSha": null,
+      "note": ""
+    },
+    {
+      "key": "album",
+      "url": "https://arovane.bandcamp.com/album/gestalt",
+      "kind": "release_page",
+      "blobSha": null,
+      "note": ""
+    }
+  ],
+  "assetDownloads": [
+    {
+      "file": "linn-touch.avif",
+      "url": "https://cdn.prod.website-files.com/5ad24a891dee8925107423d0/5db79e2124ac07026463fa52_linn-touch_01.avif",
+      "status": "ok",
+      "bytes": 1875
+    },
+    {
+      "file": "linn-instrument.avif",
+      "url": "https://cdn.prod.website-files.com/5ad24a891dee8925107423d0/5d1118090a0a59af063b24eb_LinnS-34-L.avif",
+      "status": "ok",
+      "bytes": 50044
+    },
+    {
+      "file": "zynthian-board.jpg",
+      "url": "https://wiki.zynthian.org/images/thumb/9/93/Main_board_blue_sticker.jpeg/800px-Main_board_blue_sticker.jpeg",
+      "status": "ok",
+      "bytes": 60535
+    },
+    {
+      "file": "zynthian-flow.png",
+      "url": "https://wiki.zynthian.org/images/thumb/9/94/Zynthian_Signal_Flow.png/800px-Zynthian_Signal_Flow.png",
+      "status": "ok",
+      "bytes": 103005
+    },
+    {
+      "file": "bespoke.png",
+      "url": "https://raw.githubusercontent.com/BespokeSynth/BespokeSynth/main/screenshot-1.png",
+      "status": "ok",
+      "bytes": 2531320
+    },
+    {
+      "file": "hydra.png",
+      "url": "https://raw.githubusercontent.com/hydra-synth/hydra/main/docs/assets/hydra-3-01.png",
+      "status": "ok",
+      "bytes": 372841
+    },
+    {
+      "file": "losslesscut.jpg",
+      "url": "https://static.mifi.no/media/InHeghy_4DwVeujK/2000.jpg",
+      "status": "error",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "file": "film-keyart.jpg",
+      "url": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2025/begonedullcare_en_keyart_16x9.jpg?w=2048&h=",
+      "status": "ok",
+      "bytes": 159380
+    },
+    {
+      "file": "gestalt-cover.jpg",
+      "url": "https://f4.bcbits.com/img/a2533117275_5.jpg",
+      "status": "ok",
+      "bytes": 129590
+    },
+    {
+      "file": "theremin-pcb.png",
+      "url": "https://raw.githubusercontent.com/GaudiLabs/OpenThereminV4/main/Electronics/OpenThereminV45_PCB_front.png",
+      "status": "ok",
+      "bytes": 152007
+    },
+    {
+      "file": "theremin-license.txt",
+      "url": "https://raw.githubusercontent.com/GaudiLabs/OpenThereminV4/main/LICENSE",
+      "status": "ok",
+      "bytes": 35149
+    },
+    {
+      "file": "bespoke-license.txt",
+      "url": "https://raw.githubusercontent.com/BespokeSynth/BespokeSynth/main/LICENSE",
+      "status": "ok",
+      "bytes": 35141
+    }
+  ],
+  "mathEvidence": "Analytical product-to-sum identity for ideal unit sines 400 Hz and 1000 Hz; no FFT or hardware claims",
+  "linkCheck": {
+    "checkedAt": "2026-11-19T08:36:47.977410+00:00",
+    "http200": 20,
+    "failures": 0,
+    "scope": "All external article links and the matching Bandcamp embed; player audio playback not tested"
+  }
+}

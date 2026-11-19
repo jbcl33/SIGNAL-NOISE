@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "collectedAt": "2026-11-19T06:12:17.563672+00:00",
+  "collectedAt": "2026-11-19T08:19:49.253574+00:00",
   "note": "RSS titles/dates/categories only; discovery candidates are not scored recommendations. Failed feeds retain visibly dated previous entries.",
   "sources": [
     {
@@ -9,9 +9,9 @@
       "url": "https://pitchfork.com/",
       "feed": "https://pitchfork.com/feed/feed-album-reviews/rss",
       "focus": "专业乐评 / Experimental / Electronic",
-      "checkedAt": "2026-11-19T06:12:17.563672+00:00",
+      "checkedAt": "2026-11-19T08:19:49.253574+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-19T06:12:17.563672+00:00",
+      "lastSuccessAt": "2026-11-19T08:19:49.253574+00:00",
       "entries": [
         {
           "title": "Echo",
@@ -71,9 +71,9 @@
       "url": "https://theneedledrop.com/",
       "feed": "https://theneedledrop.com/rss/",
       "focus": "视频乐评 / 个人评分",
-      "checkedAt": "2026-11-19T06:12:17.563672+00:00",
+      "checkedAt": "2026-11-19T08:19:49.253574+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-19T06:12:17.563672+00:00",
+      "lastSuccessAt": "2026-11-19T08:19:49.253574+00:00",
       "entries": []
     },
     {
@@ -82,9 +82,9 @@
       "url": "https://igloomag.com/",
       "feed": "https://igloomag.com/feed",
       "focus": "IDM / Glitch / Braindance / 地下电子",
-      "checkedAt": "2026-11-19T06:12:17.563672+00:00",
+      "checkedAt": "2026-11-19T08:19:49.253574+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-19T06:12:17.563672+00:00",
+      "lastSuccessAt": "2026-11-19T08:19:49.253574+00:00",
       "entries": [
         {
           "title": "Solypsis :: Invisible Ticks (Component)",
@@ -217,9 +217,9 @@
       "url": "https://acloserlisten.com/",
       "feed": "https://acloserlisten.com/feed/",
       "focus": "实验 / Ambient / Drone / 田野录音",
-      "checkedAt": "2026-11-19T06:12:17.563672+00:00",
+      "checkedAt": "2026-11-19T08:19:49.253574+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-19T06:12:17.563672+00:00",
+      "lastSuccessAt": "2026-11-19T08:19:49.253574+00:00",
       "entries": [
         {
           "title": "Lorenzo Senni ~ All Ages",
@@ -299,9 +299,9 @@
       "url": "https://headphonecommute.com/",
       "feed": "https://headphonecommute.com/feed/",
       "focus": "Ambient / 电声 / 艺术家访谈",
-      "checkedAt": "2026-11-19T06:12:17.563672+00:00",
+      "checkedAt": "2026-11-19T08:19:49.253574+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-19T06:12:17.563672+00:00",
+      "lastSuccessAt": "2026-11-19T08:19:49.253574+00:00",
       "entries": [
         {
           "title": "Featured Artist: Arovane",
@@ -363,10 +363,20 @@
       "url": "https://thequietus.com/reviews/",
       "feed": "https://thequietus.com/feed/",
       "focus": "独立地下 / Experimental / Electronic",
-      "checkedAt": "2026-11-19T06:12:17.563672+00:00",
+      "checkedAt": "2026-11-19T08:19:49.253574+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-19T06:12:17.563672+00:00",
+      "lastSuccessAt": "2026-11-19T08:19:49.253574+00:00",
       "entries": [
+        {
+          "title": "Worlds Apart: Noon by Richard Skelton & Lawrence English",
+          "url": "https://thequietus.com/quietus-reviews/album-of-the-week/noon-richard-skelton-lawrence-english-review/",
+          "publishedAt": "2026-11-19T07:00:00+00:00",
+          "categories": [
+            "Album of the Week"
+          ],
+          "status": "discovery-only",
+          "score": null
+        },
         {
           "title": "Maria Teresa Pirrigheddu and Vieri Mura – Rundinas",
           "url": "https://thequietus.com/quietus-reviews/maria-teresa-pirrigheddu-and-vieri-mura-rundinas-review/",
@@ -406,16 +416,6 @@
           ],
           "status": "discovery-only",
           "score": null
-        },
-        {
-          "title": "The Body & Cel Genesis – Whole Wide World",
-          "url": "https://thequietus.com/quietus-reviews/the-body-cel-genesis-whole-wide-world-review/",
-          "publishedAt": "2026-11-16T10:42:29+00:00",
-          "categories": [
-            "Reviews"
-          ],
-          "status": "discovery-only",
-          "score": null
         }
       ]
     },
@@ -425,9 +425,9 @@
       "url": "https://inverted-audio.com/",
       "feed": "https://inverted-audio.com/feed/",
       "focus": "地下舞曲 / 厂牌 / 制作人",
-      "checkedAt": "2026-11-19T06:12:17.563672+00:00",
+      "checkedAt": "2026-11-19T08:19:49.253574+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-19T06:12:17.563672+00:00",
+      "lastSuccessAt": "2026-11-19T08:19:49.253574+00:00",
       "entries": [
         {
           "title": "Florian Kupfer launches Lifetrax imprint with reissue of his L.I.E.S. debut",

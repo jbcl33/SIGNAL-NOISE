@@ -1,0 +1,4 @@
+Image authors, source URLs, original asset URLs and changes are listed in ../credits.json.
+Zynthian Wiki images: CC BY-SA 3.0 https://creativecommons.org/licenses/by-sa/3.0/
+Manufacturer photographs, film promotional art and record artwork retain the copyrights of their respective authors. Software project licenses do not relicense unrelated photographs.
+LosslessCut screenshot was unavailable (HTTP 403); no substitute image is used.

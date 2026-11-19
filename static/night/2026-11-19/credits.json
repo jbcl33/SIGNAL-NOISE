@@ -1,0 +1,95 @@
+{
+  "date": "2026-11-19",
+  "images": [
+    {
+      "file": "assets/linn-touch.avif",
+      "author": "Roger Linn Design",
+      "license": "Copyright retained; official pressure illustration",
+      "sourceUrl": "https://www.rogerlinndesign.com/linnstrument",
+      "imageUrl": "https://cdn.prod.website-files.com/5ad24a891dee8925107423d0/5db79e2124ac07026463fa52_linn-touch_01.avif",
+      "changes": "None; explanatory icon, not a photograph"
+    },
+    {
+      "file": "assets/linn-instrument.avif",
+      "author": "Roger Linn Design",
+      "license": "Copyright retained; official product photograph",
+      "sourceUrl": "https://www.rogerlinndesign.com/linnstrument",
+      "imageUrl": "https://cdn.prod.website-files.com/5ad24a891dee8925107423d0/5d1118090a0a59af063b24eb_LinnS-34-L.avif",
+      "changes": "CSS grayscale on cover; file unchanged"
+    },
+    {
+      "file": "assets/zynthian-board.jpg",
+      "author": "Zynthian Wiki contributors",
+      "license": "CC BY-SA 3.0",
+      "sourceUrl": "https://wiki.zynthian.org/index.php/Assembling_Zynthian_Kit_V5.1",
+      "imageUrl": "https://wiki.zynthian.org/images/thumb/9/93/Main_board_blue_sticker.jpeg/800px-Main_board_blue_sticker.jpeg",
+      "changes": "None; original wiki thumbnail"
+    },
+    {
+      "file": "assets/zynthian-flow.png",
+      "author": "Zynthian Wiki contributors",
+      "license": "CC BY-SA 3.0",
+      "sourceUrl": "https://wiki.zynthian.org/index.php/Zynthian_UI_User_Guide_-_V5",
+      "imageUrl": "https://wiki.zynthian.org/images/thumb/9/94/Zynthian_Signal_Flow.png/800px-Zynthian_Signal_Flow.png",
+      "changes": "None; original wiki thumbnail"
+    },
+    {
+      "file": "assets/bespoke.png",
+      "author": "Bespoke Synth contributors",
+      "license": "Project GPL-3.0; screenshot from project README",
+      "sourceUrl": "https://github.com/BespokeSynth/BespokeSynth",
+      "imageUrl": "https://raw.githubusercontent.com/BespokeSynth/BespokeSynth/main/screenshot-1.png",
+      "changes": "None"
+    },
+    {
+      "file": "assets/hydra.png",
+      "author": "Olivia Jack / Hydra contributors",
+      "license": "Project AGPL-3.0; screenshot from project README",
+      "sourceUrl": "https://github.com/hydra-synth/hydra",
+      "imageUrl": "https://raw.githubusercontent.com/hydra-synth/hydra/main/docs/assets/hydra-3-01.png",
+      "changes": "None"
+    },
+    {
+      "file": "assets/film-keyart.jpg",
+      "author": "National Film Board of Canada",
+      "license": "Copyright retained; contemporary promotional key art",
+      "sourceUrl": "https://www.nfb.ca/film/begone_dull_care/",
+      "imageUrl": "https://assets.nfbcdn.ca/medias/norman/thumbs_xlarge/2025/begonedullcare_en_keyart_16x9.jpg?w=2048&h=",
+      "changes": "None; not an original 1949 poster or a film frame"
+    },
+    {
+      "file": "assets/gestalt-cover.jpg",
+      "author": "John Whitlock / arovane",
+      "license": "Copyright retained; original release cover",
+      "sourceUrl": "https://arovane.bandcamp.com/album/gestalt",
+      "imageUrl": "https://f4.bcbits.com/img/a2533117275_5.jpg",
+      "changes": "None"
+    },
+    {
+      "file": "assets/theremin-pcb.png",
+      "author": "Urs Gaudenz / GaudiLabs",
+      "license": "Project GPL-3.0",
+      "sourceUrl": "https://github.com/GaudiLabs/OpenThereminV4",
+      "imageUrl": "https://raw.githubusercontent.com/GaudiLabs/OpenThereminV4/main/Electronics/OpenThereminV45_PCB_front.png",
+      "changes": "None; EDA board rendering, not a hardware photograph"
+    },
+    {
+      "file": "assets/ring-mod.svg",
+      "author": "SIGNAL / NOISE",
+      "license": "Original explanatory diagram",
+      "sourceUrl": "https://github.com/ccrma/chuck/blob/main/examples/basic/ring.ck",
+      "changes": "Analytical ideal-sine derivation, no measured data"
+    }
+  ],
+  "licenseLinks": [
+    "https://creativecommons.org/licenses/by-sa/3.0/"
+  ],
+  "assetFailures": [
+    {
+      "file": "losslesscut.jpg",
+      "url": "https://static.mifi.no/media/InHeghy_4DwVeujK/2000.jpg",
+      "status": "error",
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ]
+}

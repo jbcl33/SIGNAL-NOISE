@@ -53,11 +53,11 @@ typedef struct {
 const Issue issues[] = {
     { &quot;晨刊&quot;, &quot;morning/2026-11-19/&quot; },
     { &quot;午刊&quot;, &quot;noon/2026-11-19/&quot; },
-    { &quot;晚刊&quot;, &quot;night/2026-11-18/&quot; },
+    { &quot;晚刊&quot;, &quot;night/2026-11-19/&quot; },
     { &quot;工具实验室&quot;, &quot;lab/2026-11-19/&quot; },
 };
 
-const size_t published = 11;
+const size_t published = 12;
 const char updated[] = "2026-11-19";
 
 void read_issue(const Issue *issue);
@@ -66,18 +66,18 @@ void open_archive(void);
 int main(void)
 {
 <span class="comment">    // 最新一期 ↗</span>
-    <a class="latest-link" href="lab/2026-11-19/" aria-label="阅读最新一期">read_issue(&amp;issues[3]);</a>
+    <a class="latest-link" href="night/2026-11-19/" aria-label="阅读最新一期">read_issue(&amp;issues[2]);</a>
 
 <span class="comment">    // 分刊导航：点击函数打开</span>
     <a href="morning/2026-11-19/" aria-label="阅读晨刊">read_issue(&amp;issues[0]);</a> <span class="comment">// 晨刊 ↗</span>
     <a href="noon/2026-11-19/" aria-label="阅读午刊">read_issue(&amp;issues[1]);</a> <span class="comment">// 午刊 ↗</span>
-    <a href="night/2026-11-18/" aria-label="阅读晚刊">read_issue(&amp;issues[2]);</a> <span class="comment">// 晚刊 ↗</span>
+    <a href="night/2026-11-19/" aria-label="阅读晚刊">read_issue(&amp;issues[2]);</a> <span class="comment">// 晚刊 ↗</span>
     <a href="lab/2026-11-19/" aria-label="阅读工具实验室">read_issue(&amp;issues[3]);</a> <span class="comment">// 工具实验室 ↗</span>
     <a class="archive-link" href="archive.html" aria-label="历史归档">open_archive();</a> <span class="comment">// 归档 ↗</span>
     return 0;
 }</code></pre>
 </section>
-<footer><p class="latest-title">// TOOL LAB · 工具实验室 003</p><p class="prompt">C:\SIGNAL-NOISE&gt; <span class="cursor" aria-hidden="true">_</span></p><p class="colophon">信号与噪声 / CIRCUITS · SOUND · CODE</p></footer>
+<footer><p class="latest-title">// AFTER HOURS · 晚刊 003</p><p class="prompt">C:\SIGNAL-NOISE&gt; <span class="cursor" aria-hidden="true">_</span></p><p class="colophon">信号与噪声 / CIRCUITS · SOUND · CODE</p></footer>
 </main>
 </body>
 </html>
