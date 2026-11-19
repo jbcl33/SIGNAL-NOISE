@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-19T07:52:08Z",
+  "lessons": [
+    {
+      "date": "2026-11-17",
+      "id": "dma-buffer-deadline",
+      "track": "software",
+      "title": "DMA 在写，CPU 还能读多久？",
+      "summary": "用半传输中断算清一段音频缓冲的处理期限。",
+      "question": "48 kHz 采样，128 个单声道样本组成一个循环缓冲。前半区填满时，CPU 开始处理，最晚什么时候要交出前半区？",
+      "mechanism": [
+        "半传输事件发生时，DMA 刚写满前 64 个样本，随即开始写后 64 个。传输完成事件发生后，循环 DMA 回到缓冲起点。CPU 只有后半区的采集时间可以安全读取前半区。",
+        "这里的 128 是样本数。立体声 I²S 每帧含左右两个声道，DMA 长度参数还可能按半字计数。看手册确定一次 DMA 传输对应几个采样值，否则相同的长度数字会算出不同期限。",
+        "中断可以只记录半区和序号，主循环做峰值或滤波。若队列吃满，要能区分处理跟不上、DMA 错误和输入信号本身间断。检查最慢的一次处理时间，平均时间达标也可能丢块。"
+      ],
+      "calculation": "半区处理期限 ≈ 64 ÷ 48,000 秒 ≈ 1.33 ms",
+      "steps": [
+        "在 ADC 或音频 RX 的循环 DMA 里配置 128 个单声道样本，给半传输和全传输事件分别打序号。",
+        "在半区处理函数前后翻转一个调试 GPIO，测脉宽并与事件间隔比较。",
+        "暂时把处理延迟增加到约 2 ms，记录落后次数，允许它丢块并确认记录能指出是哪一块。"
+      ],
+      "expected": "事件应约每 1.33 ms 交替出现。处理延迟超过一次半区采集时间时，某些半区会在消费完成前开始被覆盖。",
+      "debug": "若测得间隔恰好是预测的一半或两倍，先核对 DMA 宽度、样本和帧的关系。若间隔对但偶尔丢块，测最长处理用时和其他中断占用。",
+      "sources": [
+        {
+          "title": "ST · STM32F1 参考手册 RM0008",
+          "url": "https://www.st.com/resource/en/reference_manual/rm0008-stm32f103xx-advanced-armbased-32bit-mcus-stmicroelectronics.pdf"
+        }
+      ],
+      "magazine": {
+        "title": "工具实验室 · ADC、FIFO 与 DMA 缓冲",
+        "url": "https://jbcl33.github.io/SIGNAL-NOISE/lab/2026-11-17/#buffers"
+      }
+    },
+    {
+      "date": "2026-11-18",
+      "id": "i2c-rise-time",
+      "track": "hardware",
+      "title": "I²C 降速就正常，先看哪条边？",
+      "summary": "同一块板在 100 kHz 正常、400 kHz 偶发 NACK，可以先量一次上升时间。",
+      "question": "3.3 V 总线，4.7 kΩ 上拉，估算总电容 200 pF。如果换到 400 kHz，先凭计算判断上升边沿有没有可能超规格。",
+      "mechanism": [
+        "I²C 开漏输出主动拉低，释放以后，上拉给总线电容充电。上升是 RC 过程，下降主要由驱动器决定。会解码的总线也可能在时序裕量不足时偶发失败。",
+        "上升时间以 30% 到 70% 电源电压之间的时间计。用一阶模型，tᵣ≈0.8473 RₚC，4.7 kΩ 和 200 pF 得到约 796 ns。它可能落在 100 kHz 标准模式的 1000 ns 内，却超过 400 kHz 快速模式的 300 ns。",
+        "把等效上拉降到 1.5 kΩ，模型约 254 ns。3.3 V 时低态下拉电流约 2 mA，仍需核对总线上每个器件能拉到的低电平和下拉能力。有几块模块时，各自已有的上拉要先算并联。"
+      ],
+      "calculation": "4.7 kΩ × 200 pF × 0.8473 ≈ 796 ns",
+      "steps": [
+        "固定设备和线长，在同一测点用示波器量 SDA、SCL 各自的 30%→70% 上升时间。",
+        "保持 400 kHz，让程序重复一次已知正确的寄存器读，记下 NACK 或超时次数。",
+        "仅改线长或上拉其中一项，重测边沿与失败次数。"
+      ],
+      "expected": "如果慢上升是主因，边沿缩短后错误率应该下降。切回 100 kHz 可作为对照。",
+      "debug": "若上升已满足规格却仍有 NACK，观察第九拍，检查地址和读写位，再确认寄存器读是否要求重复起始。",
+      "sources": [
+        {
+          "title": "NXP · UM10204 I²C 总线规范",
+          "url": "https://www.nxp.com/docs/en/user-guide/UM10204.pdf"
+        }
+      ],
+      "magazine": {
+        "title": "午刊 · 重复起始与总线解码",
+        "url": "https://jbcl33.github.io/SIGNAL-NOISE/noon/2026-11-18/#i2c-repeated-start"
+      }
+    },
+    {
+      "date": "2026-11-19",
+      "id": "adc-window",
+      "track": "hardware",
+      "title": "ADC 读偏，先改采样时间",
+      "summary": "同一节点上万用表读得很准，ADC 却因上一个通道而变。复现这个现象，就能把排障范围缩到采样阶段。",
+      "question": "A 接近 0 V，B 接近 2 V。B 串入电阻后，以 A→B 顺序读时偏低，单读 B 又不那么明显。哪一步携带了 A 的影响？",
+      "mechanism": [
+        "在一阶采样模型里，输入开关接通后，信号源经源阻抗及内部开关给采样电容充电。切换通道带来电压阶跃，采样时间短时，电容到断开前还没到达新的输入电压。后续 SAR 转换只看保持下来的值。",
+        "假设满量程阶跃，12 位量化的一半 LSB 等于 1/8192 满量程。剩余误差按 e^(−t/RC) 降低，所以需要约 9.01 个时间常数。取合计电阻 10 kΩ、等效电容 20 pF，τ=0.20 μs，半 LSB 所需采样窗约 1.80 μs。这两个器件参数只是算例，板上按芯片资料和信号源实际情况复核。",
+        "转换总耗时还要加上芯片后续逐次逼近耗时。采样窗开长能提高建立精度，但一般会减少能完成的每秒转换数。先用两档采样时间和同一信号确定偏差来自建立过程，再决定要改采样率还是降低源阻抗。"
+      ],
+      "calculation": "t ≥ ln(8192) × 0.20 μs ≈ 1.80 μs",
+      "steps": [
+        "在低压开发板上准备一高一低、都在 ADC 允许范围内的两路直流，和板子共地。量下两路实际电压。",
+        "固定 ADC 时钟，交替采 A、B。先用低阻连接，再在 B 串入 10 kΩ；分别记录短窗、长窗下 B 的连续读数与均值。",
+        "让程序改为重复读 B，比较第一笔和后续样本。再把前一通道改到高于 B 的已知电压，观察偏差是否改变方向。"
+      ],
+      "expected": "采样窗过短且前后通道压差较大时，B 的读数可能偏向前一通道。加长窗口或降低源阻抗，误差预计减小。",
+      "debug": "若偏差不随通道顺序或采样窗变化，再查 VREF、地电位、对齐位和校准。固定方向的比例误差往往值得优先检查参考电压。",
+      "sources": [
+        {
+          "title": "ST · AN2834 STM32 ADC 精度",
+          "url": "https://www.st.com/resource/en/application_note/an2834-how-to-optimize-the-adc-accuracy-in-the-stm32-mcus-stmicroelectronics.pdf"
+        },
+        {
+          "title": "ST · STM32F1 参考手册 RM0008",
+          "url": "https://www.st.com/resource/en/reference_manual/rm0008-stm32f103xx-advanced-armbased-32bit-mcus-stmicroelectronics.pdf"
+        }
+      ],
+      "demo": "adc",
+      "magazine": {
+        "title": "午刊 · ADC 采集时间与源阻抗",
+        "url": "https://jbcl33.github.io/SIGNAL-NOISE/noon/2026-11-19/#acquisition"
+      }
+    }
+  ]
+}

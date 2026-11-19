@@ -2,6 +2,8 @@
 
 先读 `docs/editorial-brief.md` 与 `docs/automation-prompts.json`。本次已将仍有效的要求合并，以下保留历史，旧方案不得覆盖最新明确要求。
 
+午刊制作同时维护 [随刊小课](docs/embedded-daily.md)，供 Android 应用同步。当日缺稿时由工具实验室补位。
+
 > 项目仍在开发：开发自述已收至 `docs/development-notes.md`，不在根目录、.github 或 docs 下放置名为 README 的文件，避免 GitHub 自动展示。开发时查阅该文档，不把它发布到 Pages。
 
 > 当前首页改用CMD/C语言索引，覆盖下方历史视觉要求：黑底灰白字、字符方框，Issue结构体描述刊别和URL，NULL表示未发布，变量显示实际发布数和更新日期，read_issue/open_archive函数名作为原生导航链接。无浏览器脚本，CSS继续内联。页面展示的C源码已做C11语法检查；这是网站导航的C语言表达，未声称在浏览器运行C编译器或链接成可执行程序。不要恢复小票、PCB或动画。
