@@ -1,0 +1,6 @@
+Winterbloom / Alethea Katherine Flowers (c) 2020. User guide photos CC BY-SA 4.0, https://creativecommons.org/licenses/by-sa/4.0/ . Functional hardware design CERN-OHL-P v2. Full notice: winterbloom-license.txt.
+KiBuzzard: MIT, kibuzzard-license.txt.
+OpenScan, Freerouting, OSCR: original project illustrations credited in credits.json; image rights are not inferred from software licenses.
+Carmen Herrera, Blanco y Verde (1959), Whitney Museum of American Art, 2014.63. © Carmen Herrera; courtesy Lisson Gallery, London. Image unmodified, for specific artwork commentary.
+Album artwork remains copyright of artists/designers credited in credits.json.
+Original explanatory diagrams by SIGNAL / NOISE, CC BY 4.0.

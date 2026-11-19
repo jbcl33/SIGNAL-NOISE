@@ -1,0 +1,173 @@
+{
+  "checkedAt": "2026-11-19T03:30:27.206304+00:00",
+  "date": "2026-11-19",
+  "edition": "noon",
+  "issue": "003",
+  "timeZone": "Asia/Shanghai",
+  "technicalAndCultureCount": 9,
+  "musicCount": 3,
+  "hardwareTested": false,
+  "softwareRunClaimed": false,
+  "musicListened": false,
+  "deduplicatedAgainst": [
+    "morning/001/",
+    "noon/2026-11-17/",
+    "lab/2026-11-17/",
+    "night/2026-11-17/",
+    "morning/2026-11-18/",
+    "noon/2026-11-18/",
+    "lab/2026-11-18/",
+    "night/2026-11-18/",
+    "morning/2026-11-19/"
+  ],
+  "sources": [
+    {
+      "id": "castor",
+      "title": "Castor & Pollux 数字定时与模拟声源",
+      "author": "Thea Flowers",
+      "type": "2021-03-31 项目回看",
+      "sources": [
+        {
+          "url": "https://blog.thea.codes/designing-castor-and-pollux/"
+        },
+        {
+          "url": "https://github.com/wntrblm/Castor_and_Pollux"
+        },
+        {
+          "url": "https://github.com/wntrblm/Castor_and_Pollux/blob/main/user_guide/docs/build.md"
+        }
+      ],
+      "evidence": "SAM D21、MCP4728、TL074，五轮修板；照片为现行指南，电路文章为2021年。"
+    },
+    {
+      "id": "openscan",
+      "title": "OpenScan Mini V1 机电装配",
+      "author": "OpenScan 项目",
+      "type": "项目文档选读",
+      "sources": [
+        {
+          "url": "https://openscan-org.github.io/OpenScan-Doc/hardware/OpenScanMini/"
+        },
+        {
+          "url": "https://github.com/OpenScan-org/OpenScan-Design/tree/main/files/Mini/V1"
+        }
+      ],
+      "evidence": "Pi3B+/4、两台NEMA17、相机变体、排线走向、镜头居中及偏振模块。作者精度未作本刊实测。"
+    },
+    {
+      "id": "blackmagic",
+      "title": "GDB服务在探针中",
+      "author": "Black Magic Debug / 1BitSquared",
+      "type": "文档选读",
+      "sources": [
+        {
+          "url": "https://black-magic.org/docs/usage/gdb-commands/"
+        },
+        {
+          "url": "https://codeberg.org/blackmagic-debug/blackmagic"
+        }
+      ],
+      "evidence": "连接串口、SWD扫描、attach分阶段；GitHub archive README指向Codeberg。未连接目标。"
+    },
+    {
+      "id": "kibuzzard",
+      "title": "KiBuzzard 丝印标签",
+      "author": "Greg Davill 与贡献者",
+      "type": "工具分享",
+      "sources": [
+        {
+          "url": "https://github.com/gregdavill/KiBuzzard"
+        }
+      ],
+      "evidence": "字体与反白标签；README 兼容说明仍列5.1/6/Nightly，不推断新版已测试。"
+    },
+    {
+      "id": "freerouting",
+      "title": "DSN 与 SES 的交接",
+      "author": "Freerouting 贡献者 / Andras Fuchs",
+      "type": "工具分享",
+      "sources": [
+        {
+          "url": "https://github.com/freerouting/freerouting"
+        }
+      ],
+      "evidence": "DSN输入SES输出，本地Java和在线API分清，未实跑。"
+    },
+    {
+      "id": "acquisition",
+      "title": "ADC采集时间",
+      "author": "Alan Walsh / Analog Devices",
+      "type": "原理笔记",
+      "sources": [
+        {
+          "url": "https://www.analog.com/en/resources/analog-dialogue/articles/front-end-amp-and-rc-filter-design.html"
+        }
+      ],
+      "evidence": "采集窗口、外部RC、运放与回冲；12位例子为本刊理想单极点计算。"
+    },
+    {
+      "id": "decoupling",
+      "title": "去耦的闭合回路",
+      "author": "Texas Instruments",
+      "type": "2020-01 SLAA896 第2.3节",
+      "sources": [
+        {
+          "url": "https://www.ti.com/lit/an/slaa896/slaa896.pdf"
+        }
+      ],
+      "evidence": "供电脚到电容、电容ESL、回地脚的完整回路；不泛化器件专用距离要求。"
+    },
+    {
+      "id": "oscr",
+      "title": "读取器配置与迁移状态",
+      "author": "sanni / OSCR 社区",
+      "type": "源码与制作经验",
+      "sources": [
+        {
+          "url": "https://github.com/sanni/cartreader"
+        },
+        {
+          "url": "https://github.com/sanni/cartreader/blob/master/Cart_Reader/Config.h"
+        },
+        {
+          "url": "https://github.com/oscartreader/oscr-firmware"
+        }
+      ],
+      "evidence": "ROM/存档写SD；板型/模块/平台开关；新固件高度实验并推荐多数用户旧固件。"
+    },
+    {
+      "id": "culture",
+      "title": "Blanco y Verde, 1959",
+      "author": "Carmen Herrera / Whitney Museum of American Art",
+      "type": "馆藏短评",
+      "sources": [
+        {
+          "url": "https://whitney.org/collection/works/45126"
+        }
+      ],
+      "evidence": "丙烯画布173×153.7cm，2014.63；Dana Miller的1959年双画布接缝解读，不混用1966–67音频。"
+    }
+  ],
+  "mathematicalChecks": {
+    "adcTauSeconds": 2e-07,
+    "adc12bitHalfLsbSeconds": 1.8021826694558575e-06,
+    "decouplingIllustrativeVolts": 0.1
+  },
+  "discoveryLimits": [
+    {
+      "url": "https://thequietus.com/quietus-reviews/anthony-child-beginning-of-the-shadow-review/",
+      "status": "HTTP 403",
+      "claim": "RSS metadata only, not a read review"
+    },
+    {
+      "url": "https://api.artic.edu/api/v1/artworks/search",
+      "status": "HTTP 403",
+      "claim": "Rejected exploratory source; published artwork is sourced from Whitney"
+    }
+  ],
+  "linkCheck": {
+    "checkedAt": "2026-11-19T03:31:10.499553+00:00",
+    "externalUrls": 21,
+    "http200": 21
+  }
+}

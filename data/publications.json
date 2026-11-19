@@ -81,6 +81,15 @@
       "path": "morning/2026-11-19/",
       "summary": "Bus Pirate 5 接口电路与 GBS-Control 改装，三款工程软件、上拉和 Net tie 笔记、PicoCart64 制作约束及 Agnes Martin 文化短栏，附三张唱片。",
       "musicCount": 3
+    },
+    {
+      "date": "2026-11-19",
+      "edition": "noon",
+      "issue": "003",
+      "title": "OPEN CIRCUIT · 午刊 003",
+      "path": "noon/2026-11-19/",
+      "summary": "Castor & Pollux 双振荡器与 OpenScan Mini，三款工程工具、ADC采集与去耦笔记、卡带读取器制作经验及 Carmen Herrera 文化短栏，附三张唱片。",
+      "musicCount": 3
     }
   ]
 }

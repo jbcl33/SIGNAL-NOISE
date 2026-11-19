@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "collectedAt": "2026-11-18T23:14:31.505040+00:00",
+  "collectedAt": "2026-11-19T03:17:46.389969+00:00",
   "note": "RSS titles/dates/categories only; discovery candidates are not scored recommendations. Failed feeds retain visibly dated previous entries.",
   "sources": [
     {
@@ -9,9 +9,9 @@
       "url": "https://pitchfork.com/",
       "feed": "https://pitchfork.com/feed/feed-album-reviews/rss",
       "focus": "专业乐评 / Experimental / Electronic",
-      "checkedAt": "2026-11-18T23:14:31.505040+00:00",
+      "checkedAt": "2026-11-19T03:17:46.389969+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-18T23:14:31.505040+00:00",
+      "lastSuccessAt": "2026-11-19T03:17:46.389969+00:00",
       "entries": [
         {
           "title": "U, Me & My Ego (Deluxe)",
@@ -71,9 +71,9 @@
       "url": "https://theneedledrop.com/",
       "feed": "https://theneedledrop.com/rss/",
       "focus": "视频乐评 / 个人评分",
-      "checkedAt": "2026-11-18T23:14:31.505040+00:00",
+      "checkedAt": "2026-11-19T03:17:46.389969+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-18T23:14:31.505040+00:00",
+      "lastSuccessAt": "2026-11-19T03:17:46.389969+00:00",
       "entries": []
     },
     {
@@ -82,9 +82,9 @@
       "url": "https://igloomag.com/",
       "feed": "https://igloomag.com/feed",
       "focus": "IDM / Glitch / Braindance / 地下电子",
-      "checkedAt": "2026-11-18T23:14:31.505040+00:00",
+      "checkedAt": "2026-11-19T03:17:46.389969+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-18T23:14:31.505040+00:00",
+      "lastSuccessAt": "2026-11-19T03:17:46.389969+00:00",
       "entries": [
         {
           "title": "Solypsis :: Invisible Ticks (Component)",
@@ -217,10 +217,23 @@
       "url": "https://acloserlisten.com/",
       "feed": "https://acloserlisten.com/feed/",
       "focus": "实验 / Ambient / Drone / 田野录音",
-      "checkedAt": "2026-11-18T23:14:31.505040+00:00",
+      "checkedAt": "2026-11-19T03:17:46.389969+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-18T23:14:31.505040+00:00",
+      "lastSuccessAt": "2026-11-19T03:17:46.389969+00:00",
       "entries": [
+        {
+          "title": "Lorenzo Senni ~ All Ages",
+          "url": "https://acloserlisten.com/2026/11/19/lorenzo-senni-all-ages/",
+          "publishedAt": "2026-11-19T00:01:55+00:00",
+          "categories": [
+            "Electronic",
+            "gianmarco del re",
+            "Lorenzo Senni",
+            "Warp Records"
+          ],
+          "status": "discovery-only",
+          "score": null
+        },
         {
           "title": "Erland Cooper ~ Dawn Chorus",
           "url": "https://acloserlisten.com/2026/11/18/erland-cooper-dawn-chorus/",
@@ -277,39 +290,6 @@
           ],
           "status": "discovery-only",
           "score": null
-        },
-        {
-          "title": "Ukrainian Field Notes LX",
-          "url": "https://acloserlisten.com/2026/11/14/ukrainian-field-notes-lx/",
-          "publishedAt": "2026-11-14T00:01:34+00:00",
-          "categories": [
-            "Featured Articles",
-            "58918012",
-            "Acid Division",
-            "Brainhack Musicbox",
-            "Музична Шкатулка",
-            "вже",
-            "неймовіра × нетрі",
-            "Eazyopoluse",
-            "gianmarco del re",
-            "Horizon Resonances",
-            "Iklañ",
-            "Lostlojic",
-            "Mires",
-            "NFNR",
-            "Otoy",
-            "Proletarskyi",
-            "Raavel",
-            "Renata Kazhan",
-            "Ship Her Son",
-            "Simple Pimple",
-            "Solimpulse",
-            "sominaryst",
-            "Vera Logdanidi",
-            "Yuliia Nidzelska"
-          ],
-          "status": "discovery-only",
-          "score": null
         }
       ]
     },
@@ -319,9 +299,9 @@
       "url": "https://headphonecommute.com/",
       "feed": "https://headphonecommute.com/feed/",
       "focus": "Ambient / 电声 / 艺术家访谈",
-      "checkedAt": "2026-11-18T23:14:31.505040+00:00",
+      "checkedAt": "2026-11-19T03:17:46.389969+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-18T23:14:31.505040+00:00",
+      "lastSuccessAt": "2026-11-19T03:17:46.389969+00:00",
       "entries": [
         {
           "title": "Featured Artist: Arovane",
@@ -383,9 +363,9 @@
       "url": "https://thequietus.com/reviews/",
       "feed": "https://thequietus.com/feed/",
       "focus": "独立地下 / Experimental / Electronic",
-      "checkedAt": "2026-11-18T23:14:31.505040+00:00",
+      "checkedAt": "2026-11-19T03:17:46.389969+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-18T23:14:31.505040+00:00",
+      "lastSuccessAt": "2026-11-19T03:17:46.389969+00:00",
       "entries": [
         {
           "title": "Anthony Child – Beginning of the Shadow",
@@ -445,9 +425,9 @@
       "url": "https://inverted-audio.com/",
       "feed": "https://inverted-audio.com/feed/",
       "focus": "地下舞曲 / 厂牌 / 制作人",
-      "checkedAt": "2026-11-18T23:14:31.505040+00:00",
+      "checkedAt": "2026-11-19T03:17:46.389969+00:00",
       "status": "ok",
-      "lastSuccessAt": "2026-11-18T23:14:31.505040+00:00",
+      "lastSuccessAt": "2026-11-19T03:17:46.389969+00:00",
       "entries": [
         {
           "title": "Florian Kupfer launches Lifetrax imprint with reissue of his L.I.E.S. debut",
