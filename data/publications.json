@@ -90,6 +90,15 @@
       "path": "noon/2026-11-19/",
       "summary": "Castor & Pollux 双振荡器与 OpenScan Mini，三款工程工具、ADC采集与去耦笔记、卡带读取器制作经验及 Carmen Herrera 文化短栏，附三张唱片。",
       "musicCount": 3
+    },
+    {
+      "date": "2026-11-19",
+      "edition": "lab",
+      "issue": "003",
+      "title": "TOOL LAB · 工具实验室 003",
+      "path": "lab/2026-11-19/",
+      "summary": "WVR采样播放与BlueRetro接口工程，四款制作软件、PCM位置和运放压摆率笔记、Open Book装配取舍与Donald Judd文化短栏。",
+      "musicCount": 0
     }
   ]
 }

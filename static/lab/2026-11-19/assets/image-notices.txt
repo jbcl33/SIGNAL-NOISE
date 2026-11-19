@@ -1,0 +1,7 @@
+WVR project images: marchingband / WVR. Project GPL-3.0 notice, wvr-license.txt; no separately stated image license found. Files unchanged.
+BlueRetro DIY v1.2 and NES v1.3 original diagrams: ©2020 / ©2020–2022 Jacques Gagnon. Title blocks CC BY 4.0, https://creativecommons.org/licenses/by/4.0/ . PDF render only; original PDFs retained. Hardware repository CERN-OHL-P v2, bluehw-license.txt. NES input-buffer supply annotation is discussed in article and is not a verified wiring recipe.
+Polyphone screenshot: Davy Triponney / contributors; project GPL-3.0. Original project screenshot.
+easyeda2kicad screenshot: uPesy / contributors, AGPL-3.0, easyeda-license.txt.
+Open Book photographs: Joey Castillo, CC BY-SA 4.0, https://creativecommons.org/licenses/by-sa/4.0/ . Trademarks and bear logo are not separately licensed. Files unchanged. openbook-license.txt retained.
+Donald Judd, Untitled (1968). Whitney Museum of American Art 68.36a-b. © Judd Foundation / Artists Rights Society (ARS), New York. Unmodified museum artwork image for specific artwork commentary; no open license asserted.
+Original explanatory diagrams: SIGNAL / NOISE, CC BY 4.0.

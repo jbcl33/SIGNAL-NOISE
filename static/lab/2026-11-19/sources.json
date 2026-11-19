@@ -1,0 +1,236 @@
+{
+  "checkedAt": "2026-11-19T06:23:47.648721+00:00",
+  "date": "2026-11-19",
+  "edition": "lab",
+  "issue": "003",
+  "timeZone": "Asia/Shanghai",
+  "technicalAndCultureCount": 10,
+  "musicCount": 0,
+  "hardwareTested": false,
+  "softwareRunClaimed": false,
+  "deduplicatedAgainst": [
+    "morning/001/",
+    "noon/2026-11-17/",
+    "lab/2026-11-17/",
+    "night/2026-11-17/",
+    "morning/2026-11-18/",
+    "noon/2026-11-18/",
+    "lab/2026-11-18/",
+    "night/2026-11-18/",
+    "morning/2026-11-19/",
+    "noon/2026-11-19/"
+  ],
+  "sources": [
+    {
+      "id": "wvr",
+      "title": "WVR 声音、事件与引脚",
+      "author": "WVR / marchingband",
+      "type": "公开项目文档选读",
+      "sources": [
+        {
+          "url": "https://github.com/marchingband/wvr"
+        },
+        {
+          "url": "https://github.com/marchingband/wvr_hardware"
+        },
+        {
+          "url": "https://www.sparkfun.com/wvr-audio-development-board.html"
+        }
+      ],
+      "evidence": "ESP32、8GB音频存储，GPIO edge、Note Off、retrigger四模式、exclusive group与velocity racks；D6启动脚、D7–D10无内部上拉、ADC2/WiFi限制。没有采用作者延迟和复音数作为本刊实测。",
+      "sourceBlobShas": {
+        "softwareReadme": "665344626d7ddb27a021d144f35efa81045c5645",
+        "hardwareReadme": "54ff70096b4c1f735dea41e5c3404853414b7e7a"
+      }
+    },
+    {
+      "id": "blueretro",
+      "title": "BlueRetro 协议与旧图核对",
+      "author": "Jacques Gagnon",
+      "type": "归档工程回看",
+      "sources": [
+        {
+          "url": "https://github.com/darthcloud/BlueRetro"
+        },
+        {
+          "url": "https://github.com/darthcloud/BlueRetro/wiki/BlueRetro-DIY-Build-Instructions"
+        },
+        {
+          "url": "https://github.com/darthcloud/BlueRetro/wiki/BlueRetro-Cables-Build-Instructions"
+        },
+        {
+          "url": "https://github.com/darthcloud/BlueRetroHW/blob/master/DIY/BlueRetroDIY.pdf"
+        },
+        {
+          "url": "https://github.com/darthcloud/BlueRetroHW/blob/master/DIY/NES.pdf"
+        },
+        {
+          "url": "https://www.ti.com/lit/ds/symlink/sn74ahct125.pdf"
+        }
+      ],
+      "evidence": "原仓库已归档；DIY DevKitC/WROOM32与DB25；2020NES v1.3 U2标74AHCT125N且供电3.3V，对照TI SN74AHCT125推荐4.5–5.5V。只指出标注与具体器件应核对，不声称作者整机失败或提供已验证替代电路。",
+      "sourceBlobShas": {
+        "readme": "c393605d2aeaf6a1851a1ebc30b8e6e7b61d26db"
+      }
+    },
+    {
+      "id": "polyphone",
+      "title": "Polyphone 声音库映射",
+      "author": "Davy Triponney / contributors",
+      "type": "软件分享",
+      "sources": [
+        {
+          "url": "https://github.com/davy7125/polyphone"
+        },
+        {
+          "url": "https://www.polyphone.io/documentation"
+        }
+      ],
+      "evidence": "样本/乐器/预置、键区与力度区、循环及频率分析；未实际运行或制作声音库。",
+      "sourceBlobShas": {
+        "readme": "223141a6b12edc96133f7f0d2bbff0d6bb644dd7"
+      }
+    },
+    {
+      "id": "spek",
+      "title": "Spek 频谱显示",
+      "author": "alexkay / Spek contributors",
+      "type": "软件与源码分享",
+      "sources": [
+        {
+          "url": "https://github.com/alexkay/spek"
+        },
+        {
+          "url": "https://github.com/alexkay/spek/blob/master/src/spek-spectrogram.cc"
+        }
+      ],
+      "evidence": "FFmpeg解码、FFT尺寸、窗函数及dB显示范围参数；官网HTTP403，未声称已访问官网教程。",
+      "sourceBlobShas": {
+        "spectrogramSource": "9d025dcb6e17cb5550da0b9cafa2c769a9be144b"
+      }
+    },
+    {
+      "id": "easyeda",
+      "title": "easyeda2kicad 库对象迁移",
+      "author": "uPesy / contributors",
+      "type": "软件分享",
+      "sources": [
+        {
+          "url": "https://github.com/uPesy/easyeda2kicad.py"
+        }
+      ],
+      "evidence": "LCSC/EasyEDA到符号/封装/模型，支持KiCad6+为README声明，不当本刊运行验证。",
+      "sourceBlobShas": {
+        "readme": "cbe49439bd8c90104d196c164e2606631eb0f429"
+      }
+    },
+    {
+      "id": "kibot",
+      "title": "KiBot 输出配置",
+      "author": "INTI-CMNB / contributors",
+      "type": "工具及官方配置选读",
+      "sources": [
+        {
+          "url": "https://github.com/INTI-CMNB/KiBot"
+        },
+        {
+          "url": "https://github.com/INTI-CMNB/KiBot/blob/master/docs/print_top_bot.kibot.yaml"
+        },
+        {
+          "url": "https://github.com/INTI-CMNB/KiBot/blob/master/docs/KiPlotYAML.md"
+        }
+      ],
+      "evidence": "pcb_print、PNG与正反面图层清单；ReadTheDocs HTTP403，使用作者仓库公开示例。",
+      "sourceBlobShas": {
+        "printExample": "0a54a08940d3e311ea99cd6fbd4f3a552cfa0840"
+      }
+    },
+    {
+      "id": "frames",
+      "title": "PCM frame 与位置单位",
+      "author": "Microsoft / WVR documentation",
+      "type": "数据笔记",
+      "sources": [
+        {
+          "url": "https://learn.microsoft.com/en-us/windows/win32/api/mmeapi/ns-mmeapi-waveformatex"
+        },
+        {
+          "url": "https://learn.microsoft.com/en-us/windows/win32/xaudio2/resource-interchange-file-format--riff-"
+        },
+        {
+          "url": "https://github.com/marchingband/wvr#understanding-playback-mode"
+        }
+      ],
+      "evidence": "16位双声道PCM4字节/帧；从0编号1000帧=2000通道值=4000数据区字节；不假设44字节WAV头，不将WVR循环点单位武断规定为所有DAW通用。"
+    },
+    {
+      "id": "slew",
+      "title": "幅度与压摆率",
+      "author": "Ronald Michallick / Texas Instruments",
+      "type": "SLOA332A 应用文档选读",
+      "sources": [
+        {
+          "url": "https://www.ti.com/lit/an/sloa332a/sloa332a.pdf"
+        }
+      ],
+      "evidence": "2023-07/2024-09修订，SR=πfVpp，GBWP与slew boost；20kHz/4Vpeak为本刊理想计算。"
+    },
+    {
+      "id": "openbook",
+      "title": "Open Book Abridged 制造取舍",
+      "author": "Joey Castillo",
+      "type": "早期Pico版回看",
+      "sources": [
+        {
+          "url": "https://www.oddlyspecificobjects.com/projects/openbook/"
+        },
+        {
+          "url": "https://github.com/joeycastillo/The-Open-Book"
+        }
+      ],
+      "evidence": "Pico与AAA、手装主板/PCBA邮票孔模块、PCB印制装配说明；不混作S3或Touch版本，不推断当前整机售卖状态。",
+      "sourceBlobShas": {
+        "readme": "b3daf9a64e0187b5f60a1b0da989bb9952d9d2e2"
+      }
+    },
+    {
+      "id": "culture",
+      "title": "Untitled, 1968",
+      "author": "Donald Judd / Whitney Museum of American Art",
+      "type": "馆藏作品短评",
+      "sources": [
+        {
+          "url": "https://whitney.org/collection/works/619"
+        }
+      ],
+      "evidence": "不锈钢与有机玻璃83.8×172.7×121.9cm，68.36a-b；元描述内馆方关于开放/封闭体积和琥珀色透明板的解释。"
+    }
+  ],
+  "mathematicalChecks": {
+    "pcmBits": 16,
+    "pcmChannels": 2,
+    "bytesPerFrame": 4,
+    "frameIndex": 1000,
+    "scalarIndex": 2000,
+    "dataRelativeByteOffset": 4000,
+    "slew20kHz4VPeakVoltsPerMicrosecond": 0.5026548245743669,
+    "slew20kHz1VPeakVoltsPerMicrosecond": 0.12566370614359174
+  },
+  "accessLimits": [
+    {
+      "url": "https://www.spek.cc/",
+      "status": "HTTP403",
+      "fallback": "作者GitHub源码"
+    },
+    {
+      "url": "https://kibot.readthedocs.io/en/master/",
+      "status": "HTTP403",
+      "fallback": "作者仓库官方配置文件"
+    }
+  ],
+  "linkCheck": {
+    "checkedAt": "2026-11-19T06:24:47.155831+00:00",
+    "externalUrls": 22,
+    "http200": 22
+  }
+}
